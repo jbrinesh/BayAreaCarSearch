@@ -3,16 +3,20 @@
 ## Rails
 ### Models
 * Classified(update)
+
 ### Controllers
 
 
 ### Views
 ## Flux
+
 ### Views (React Components)
 * DetailsDisplay
 * GalleryDisplay
+
 ### Stores
 Classified(update)
+
 ### Actions
 ### ApiUtil
 ## Gems/Libraries

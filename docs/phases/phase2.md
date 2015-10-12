@@ -10,16 +10,21 @@
 ### Views
 
 ## Flux
+
 ### Views (React Components)
 * MainSearchPage
 * TitleBar
 * SearchInputField
 * ListDisplay
-* ClassifiedView   
+* ClassifiedView  
+
 ### Stores
 * Classified
+
 ### Actions
 * ApiAction.RecivedNewQueryResults
+
 ### ApiUtil
 * ApiUtil.fetchClassifiedsForQuery
+
 ## Gems/Libraries

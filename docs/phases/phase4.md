@@ -8,16 +8,21 @@
 
 ### Views
 ## Flux
+
 ### Views (React Components)
 * AccountMain
 * TitleBar
 * ContentTabs
 * PostingIndex
 * NewClassifiedForm
+
 ### Stores
 * User
+
 ### Actions
 * ApiAction.createdClassified
+
 ### ApiUtil
 * ApiUtil.postClassified
+
 ## Gems/Libraries

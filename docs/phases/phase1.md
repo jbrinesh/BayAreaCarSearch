@@ -16,6 +16,7 @@
 * classifieds/show.json.jbuilder
 
 ## Flux
+
 ### Views (React Components)
 
 ### Stores
