@@ -1,4 +1,4 @@
-# FresherNote
+# BayAreaCarSearch
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
@@ -27,7 +27,7 @@ The most basic MVP is Phase one and two bellow.
 
 ## Implementation Timeline
 
-### Phase 1: Classifieds Model with basic API to respond to searches
+### Phase 1: Classifieds Model with basic API to respond to searches (1 day)
 
 Phase 1 sets up the basic back end to make Api requests for the data to respond
 to different searches. There is no user interface in this phase so request will
@@ -36,7 +36,7 @@ of the query.
 
 [Details][phase-one]
 
-### Phase 2: Flux Architecture for Search Area.
+### Phase 2: Flux Architecture for Search Area. (1 day)
 
 Phase 2 will set up the most basic front end for the site. At the end of this
 phase anonymous user will be able to make searches using the search Field and
@@ -45,7 +45,7 @@ view for that ad.
 
 [Details][phase-two]
 
-### Phase 3: User Model, Session Control, more CRUD for Classifieds
+### Phase 3: User Model, Session Control, more CRUD for Classifieds (1.5 days)
 
 Phase 3 sets up basic user authentication including a new data base table and
 session controller using secure methods including BCrypt. After we have users
@@ -56,7 +56,7 @@ request from the terminal.
 
 [Details][phase-three]
 
-### Phase 4: Remaining Flux interface for Account
+### Phase 4: Remaining Flux interface for Account (0.5 days)
 
 Phase 4 will set up the rest of the front end of phase 3. There will be a new
 section on the site for user accounts where the user can post classifieds and
@@ -64,7 +64,7 @@ view there post history.
 
 [Details][phase-four]
 
-### Phase 5: Add Gallery and Details Views for Search Results
+### Phase 5: Add Gallery and Details Views for Search Results (1 day)
 
 Phase 5 will add additional feature to how the user can view search results.
 First a Gallery view will be added so the user can see a mosaic of images
@@ -74,7 +74,7 @@ Both fetures will require modifications to the Api controller.
 
 [Details][phase-five]
 
-### Phase 6: Allow Draft editing and Favorites for Users
+### Phase 6: Allow Draft editing and Favorites for Users (1 day)
 
 Phase 6 will expand what a user can do in the Accounts page. In addition to
 posting classifieds a logged in user will be able to follow other classifieds by
@@ -85,7 +85,7 @@ Api::ClassifiedsController.
 
 [Details][phase-six]
 
-### Phase 7: Integrate Google maps API (possible bonus)
+### Phase 7: Integrate Google maps API (2 day possible bonus)
 
 Phase 5 Will integrate google maps into the user interface. First for the view
 of a single classified, there will be a small map showing the location if
@@ -102,6 +102,8 @@ There will be basic styling through out the project, but a day will be set aside
 mostly for improvements to the CSS for better usability and style.
 
 ### Bonus Features (TBD)
+* Real data seeding 
+* value based search filtering
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

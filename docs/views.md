@@ -1,26 +1,62 @@
 # View Wireframes
 
-## New User
-![new-user]
-
-## New Session
-![new-session]
-
-## NotesIndex / NoteIndexItem / NoteForm
-![notes]
-
-## NotebooksIndex / NotebookIndexItem
-![notebooks]
-
-## NoteBookForm
-![notebook-form]
-
 ## Component Heirarchy
 ![component-heirarchy]
 
-[new-user]: ./wireframes/new_user.png
-[new-session]: ./wireframes/new_session.png
-[notes]: ./wireframes/root_notes.png
-[notebooks]: ./wireframes/root_notebooks.png
-[notebook-form]: ./wireframes/notebook_form.png
+## Root Page
+![root]
+
+## Sign Up Page
+![sign-up]
+
+## Sign In Page
+![sign-in]
+
+## Main Search Page
+![main-search-page]
+
+## Missing Search Input Field
+
+## List Display
+![list-display]
+
+## Gallery Display
+![gallery-display]
+
+## Details Display
+![details-display]
+
+## Map Display
+![gallery_display]
+
+## Classified Listing
+![classified-display]
+
+## Main Account Page
+![main-account-page]
+
+## Content Tabs
+![content-tabs]
+
+## Posting, Drafts, and Favorites Indexes
+![account-indexes]
+
+## New & Edit Classified Ad From
+![new-edit-ad]
+
+
 [component-heirarchy]: ./wireframes/component_heirarchy.png
+[root]: ./wireframes/root.png
+[sign-up]: ./wireframes/sign_up_page.png
+[sign-in]: ./wireframes/sign_in_page.png
+[main-search-page]: ./wireframes/main_search_page.png
+
+[list-display]: ./wireframes/list_display.png
+[gallery-display]: ./wireframes/gallery_display.png
+[details-display]: ./wireframes/details_display.png
+[map-display]: ./wireframes/map_display.png
+[classified-display]: ./wireframes/ad_listing.png
+[main-account-page]: ./wireframes/account_main.png
+[content-tabs]: ./wireframes/account_tabs.png
+[account-indexes]: ./wireframes/posting_drafts_favorits_index.png
+[account-indexes]: ./wireframes/new_edit_post_form.png
