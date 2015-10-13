@@ -11,9 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20151013162947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cars", force: :cascade do |t|
+    t.string  "make",  null: false
+    t.string  "model", null: false
+    t.integer "year",  null: false
+  end
+
+  add_index "cars", ["make", "model", "year"], name: "index_cars_on_make_and_model_and_year", unique: true, using: :btree
+
+  create_table "classifieds", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.text     "body",       null: false
+    t.string   "status",     null: false
+    t.integer  "price",      null: false
+    t.integer  "odometer",   null: false
+    t.integer  "author_id",  null: false
+    t.integer  "car_id",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "classifieds", ["author_id"], name: "index_classifieds_on_author_id", using: :btree
+  add_index "classifieds", ["car_id"], name: "index_classifieds_on_car_id", using: :btree
 
 end
