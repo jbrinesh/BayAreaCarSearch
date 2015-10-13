@@ -24,7 +24,7 @@ car15 = Car.create(make: "bmw", model: "335i", year: 2009)
 
 
 ad1 = Classified.create(
-  title: "2007 Toyota Camery title",
+  title: "2007 Toyota Camery title foobar",
   body: " this is the body of  ad 1",
   status: "active",
   price: 13500,
@@ -34,7 +34,7 @@ ad1 = Classified.create(
 
 ad2 = Classified.create(
   title: "2005 Toyota Camery title",
-  body: " this is the body of  ad 2",
+  body: " this is the body of ad 2 foobar",
   status: "active",
   price: 11500,
   odometer: 73546,
@@ -99,17 +99,8 @@ ad9 = Classified.create(
   title: "2006 Toyota 4runner title",
   body: " this is the body of  ad 9",
   status: "active",
-  price: 10500,
-  odometer: 123546,
-  car_id: car7.id
-)
-
-ad10 = Classified.create(
-  title: "2006 Toyota 4runner title",
-  body: " this is the body of  ad 10",
-  status: "active",
-  price: 5500,
-  odometer: 323546,
+  price: 11500,
+  odometer: 85000,
   car_id: car7.id
 )
 
