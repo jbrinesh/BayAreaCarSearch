@@ -5,3 +5,173 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+car1 = Car.create(make: "toyota", model: "camery", year: 2005)
+car2 = Car.create(make: "toyota", model: "camery", year: 2006)
+car3 = Car.create(make: "toyota", model: "camery", year: 2007)
+car4 = Car.create(make: "toyota", model: "camery", year: 2008)
+car5 = Car.create(make: "toyota", model: "camery", year: 2009)
+car6 = Car.create(make: "toyota", model: "4runner", year: 2005)
+car7 = Car.create(make: "toyota", model: "4runner", year: 2006)
+car8 = Car.create(make: "toyota", model: "4runner", year: 2007)
+car9 = Car.create(make: "toyota", model: "4runner", year: 2008)
+car10 = Car.create(make: "toyota", model: "4runner", year: 2009)
+car11 = Car.create(make: "bmw", model: "330i", year: 2005)
+car12 = Car.create(make: "bmw", model: "330i", year: 2006)
+car13 = Car.create(make: "bmw", model: "335i", year: 2007)
+car14 = Car.create(make: "bmw", model: "335i", year: 2008)
+car15 = Car.create(make: "bmw", model: "335i", year: 2009)
+
+
+ad1 = Classified.create(
+  title: "2007 Toyota Camery title",
+  body: " this is the body of  ad 1",
+  status: "active",
+  price: 13500,
+  odometer: 23546,
+  car_id: car3.id
+)
+
+ad2 = Classified.create(
+  title: "2005 Toyota Camery title",
+  body: " this is the body of  ad 2",
+  status: "active",
+  price: 11500,
+  odometer: 73546,
+  car_id: car1.id
+)
+
+ad3 = Classified.create(
+  title: "2005 Toyota 4runner title",
+  body: " this is the body of  ad 3",
+  status: "active",
+  price: 7000,
+  odometer: 215000,
+  car_id: car6.id
+)
+
+ad4 = Classified.create(
+  title: "2009 Toyota 4runner title",
+  body: " this is the body of  ad 4",
+  status: "active",
+  price: 10500,
+  odometer: 123546,
+  car_id: car10.id
+)
+
+ad5 = Classified.create(
+  title: "2009 Toyota Camery title",
+  body: " this is the body of  ad 5",
+  status: "active",
+  price: 15500,
+  odometer: 12354,
+  car_id: car5.id
+)
+
+ad6 = Classified.create(
+  title: "2009 Toyota Camery diffrent title",
+  body: " this is the body of  ad 6",
+  status: "active",
+  price: 14000,
+  odometer: 22354,
+  car_id: car5.id
+)
+
+ad7 = Classified.create(
+  title: "2009 Toyota Camery another title",
+  body: " this is the body of  ad 7",
+  status: "active",
+  price: 20000,
+  odometer: 7354,
+  car_id: car5.id
+)
+
+ad8 = Classified.create(
+  title: "2008 Toyota 4runner title",
+  body: " this is the body of  ad 8",
+  status: "active",
+  price: 10500,
+  odometer: 123546,
+  car_id: car9.id
+)
+
+ad9 = Classified.create(
+  title: "2006 Toyota 4runner title",
+  body: " this is the body of  ad 9",
+  status: "active",
+  price: 10500,
+  odometer: 123546,
+  car_id: car7.id
+)
+
+ad10 = Classified.create(
+  title: "2006 Toyota 4runner title",
+  body: " this is the body of  ad 10",
+  status: "active",
+  price: 5500,
+  odometer: 323546,
+  car_id: car7.id
+)
+
+ad10 = Classified.create(
+  title: "2006 Toyota 4runner title",
+  body: " this is the body of  ad 10",
+  status: "active",
+  price: 5500,
+  odometer: 323546,
+  car_id: car7.id
+)
+
+ad11 = Classified.create(
+  title: "2006 BMW 330i title",
+  body: " this is the body of  ad 11",
+  status: "active",
+  price: 15500,
+  odometer: 83546,
+  car_id: car12.id
+)
+
+ad12 = Classified.create(
+  title: "2006 BMW 330i title",
+  body: " this is the body of  ad 12",
+  status: "active",
+  price: 6500,
+  odometer: 183546,
+  car_id: car12.id
+)
+
+ad12 = Classified.create(
+  title: "2006 BMW 330i title",
+  body: " this is the body of  ad 12",
+  status: "active",
+  price: 6500,
+  odometer: 183546,
+  car_id: car12.id
+)
+
+ad13 = Classified.create(
+  title: "2009 BMW 335i title",
+  body: " this is the body of  ad 13",
+  status: "active",
+  price: 36500,
+  odometer: 23546,
+  car_id: car15.id
+)
+
+ad14 = Classified.create(
+  title: "2008 BMW 335i title",
+  body: " this is the body of  ad 14",
+  status: "active",
+  price: 29500,
+  odometer: 53546,
+  car_id: car14.id
+)
+
+ad15 = Classified.create(
+  title: "2005 BMW 330i title",
+  body: " this is the body of  ad 15",
+  status: "active",
+  price: 7500,
+  odometer: 153546,
+  car_id: car11.id
+)

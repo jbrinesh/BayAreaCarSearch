@@ -669,3 +669,409 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveColumnFromClassifieds (20151013173733)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mALTER TABLE "classifieds" DROP "author_id"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151013173733"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'classifieds'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2005]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2006]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2007]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2008]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2009]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2005]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2007]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2008]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "330i"], ["year", 2005]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "330i"], ["year", 2006]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "335i"], ["year", 2007]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2008]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "335i"], ["year", 2009]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2005]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_cars_on_make_and_model_and_year"
+DETAIL:  Key (make, model, year)=(toyota, camery, 2005) already exists.
+: INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (5048.5ms)[0m  [1mDROP DATABASE IF EXISTS "Capstone_Project_development"[0m
+PG::ObjectInUse: ERROR:  database "Capstone_Project_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "Capstone_Project_development"
+  [1m[35m (111.7ms)[0m  DROP DATABASE IF EXISTS "Capstone_Project_test"
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "Capstone_Project_development" already exists
+: CREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'
+  [1m[35m (286.5ms)[0m  CREATE DATABASE "Capstone_Project_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.4ms)[0m  DROP TABLE "cars" CASCADE
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")
+  [1m[36m (1.9ms)[0m  [1mDROP TABLE "classifieds" CASCADE[0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")[0m
+  [1m[35m (4.3ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013173733')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151013162222')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013162947')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2005]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2008]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2005]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2006]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2007]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2008]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2009]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "330i"], ["year", 2005]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "330i"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "335i"], ["year", 2008]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 1"], ["status", "active"], ["price", 13500], ["odometer", 23546], ["car_id", 3], ["created_at", "2015-10-13 18:05:09.984136"], ["updated_at", "2015-10-13 18:05:09.984136"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 2"], ["status", "active"], ["price", 11500], ["odometer", 73546], ["car_id", 1], ["created_at", "2015-10-13 18:05:09.986850"], ["updated_at", "2015-10-13 18:05:09.986850"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 3"], ["status", "active"], ["price", 7000], ["odometer", 215000], ["car_id", 6], ["created_at", "2015-10-13 18:05:09.988225"], ["updated_at", "2015-10-13 18:05:09.988225"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 4"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 10], ["created_at", "2015-10-13 18:05:09.989644"], ["updated_at", "2015-10-13 18:05:09.989644"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 5"], ["status", "active"], ["price", 15500], ["odometer", 12354], ["car_id", 5], ["created_at", "2015-10-13 18:05:09.991051"], ["updated_at", "2015-10-13 18:05:09.991051"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 6"], ["status", "active"], ["price", 14000], ["odometer", 22354], ["car_id", 5], ["created_at", "2015-10-13 18:05:09.992452"], ["updated_at", "2015-10-13 18:05:09.992452"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 7"], ["status", "active"], ["price", 20000], ["odometer", 7354], ["car_id", 5], ["created_at", "2015-10-13 18:05:09.993782"], ["updated_at", "2015-10-13 18:05:09.993782"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 8"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 9], ["created_at", "2015-10-13 18:05:09.995112"], ["updated_at", "2015-10-13 18:05:09.995112"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 9"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 7], ["created_at", "2015-10-13 18:05:09.996478"], ["updated_at", "2015-10-13 18:05:09.996478"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 10"], ["status", "active"], ["price", 5500], ["odometer", 323546], ["car_id", 7], ["created_at", "2015-10-13 18:05:09.997848"], ["updated_at", "2015-10-13 18:05:09.997848"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 10"], ["status", "active"], ["price", 5500], ["odometer", 323546], ["car_id", 7], ["created_at", "2015-10-13 18:05:09.999147"], ["updated_at", "2015-10-13 18:05:09.999147"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 11"], ["status", "active"], ["price", 15500], ["odometer", 83546], ["car_id", 12], ["created_at", "2015-10-13 18:05:10.000422"], ["updated_at", "2015-10-13 18:05:10.000422"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 12"], ["status", "active"], ["price", 6500], ["odometer", 183546], ["car_id", 12], ["created_at", "2015-10-13 18:05:10.001814"], ["updated_at", "2015-10-13 18:05:10.001814"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 12"], ["status", "active"], ["price", 6500], ["odometer", 183546], ["car_id", 12], ["created_at", "2015-10-13 18:05:10.003300"], ["updated_at", "2015-10-13 18:05:10.003300"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 13"], ["status", "active"], ["price", 36500], ["odometer", 23546], ["car_id", 15], ["created_at", "2015-10-13 18:05:10.004977"], ["updated_at", "2015-10-13 18:05:10.004977"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "clean"], ["body", " this is the body of  ad 14"], ["status", "active"], ["price", 29500], ["odometer", 53546], ["car_id", 14], ["created_at", "2015-10-13 18:05:10.006540"], ["updated_at", "2015-10-13 18:05:10.006540"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "clean"], ["body", " this is the body of  ad 15"], ["status", "active"], ["price", 7500], ["odometer", 153546], ["car_id", 11], ["created_at", "2015-10-13 18:05:10.008164"], ["updated_at", "2015-10-13 18:05:10.008164"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  [1m[35mClassified Load (0.8ms)[0m  SELECT "classifieds".* FROM "classifieds"
+  [1m[36mClassified Load (1.0ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifieds"."make" = 'toyota' AND "classifieds"."model" = 'camery' AND ("classifieds"."year" BETWEEN 2006 AND 2009)[0m
+PG::UndefinedColumn: ERROR:  column classifieds.make does not exist
+LINE 1: ...E ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifie...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifieds"."make" = 'toyota' AND "classifieds"."model" = 'camery' AND ("classifieds"."year" BETWEEN 2006 AND 2009)
+  [1m[35mClassified Load (0.8ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifieds"."make" = 'toyota' AND "classifieds"."model" = 'camery' AND ("classifieds"."year" BETWEEN 2006 AND 2009)
+PG::UndefinedColumn: ERROR:  column classifieds.make does not exist
+LINE 1: ...E ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifie...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifieds"."make" = 'toyota' AND "classifieds"."model" = 'camery' AND ("classifieds"."year" BETWEEN 2006 AND 2009)
+  [1m[36mClassified Load (0.5ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifieds"."make" = 'toyota' AND "classifieds"."model" = 'camery' AND ("classifieds"."year" BETWEEN 2006 AND 2009)[0m
+PG::UndefinedColumn: ERROR:  column classifieds.make does not exist
+LINE 1: ...E ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifie...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND "classifieds"."make" = 'toyota' AND "classifieds"."model" = 'camery' AND ("classifieds"."year" BETWEEN 2006 AND 2009)
+  [1m[35mClassified Load (1.1ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery')
+  [1m[36m (5045.0ms)[0m  [1mDROP DATABASE IF EXISTS "Capstone_Project_development"[0m
+PG::ObjectInUse: ERROR:  database "Capstone_Project_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "Capstone_Project_development"
+  [1m[35m (116.5ms)[0m  DROP DATABASE IF EXISTS "Capstone_Project_test"
+  [1m[36m (0.4ms)[0m  [1mCREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "Capstone_Project_development" already exists
+: CREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'
+  [1m[35m (237.2ms)[0m  CREATE DATABASE "Capstone_Project_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.1ms)[0m  DROP TABLE "cars" CASCADE
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")
+  [1m[36m (1.7ms)[0m  [1mDROP TABLE "classifieds" CASCADE[0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.2ms)[0m  CREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")[0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013173733')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151013162222')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013162947')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2005]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2006]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2008]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2009]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2005]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2006]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2007]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2008]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2009]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "330i"], ["year", 2005]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "330i"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "335i"], ["year", 2008]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2007 Toyota Camery title"], ["body", " this is the body of  ad 1"], ["status", "active"], ["price", 13500], ["odometer", 23546], ["car_id", 3], ["created_at", "2015-10-13 18:32:09.588530"], ["updated_at", "2015-10-13 18:32:09.588530"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2005 Toyota Camery title"], ["body", " this is the body of  ad 2"], ["status", "active"], ["price", 11500], ["odometer", 73546], ["car_id", 1], ["created_at", "2015-10-13 18:32:09.590868"], ["updated_at", "2015-10-13 18:32:09.590868"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2005 Toyota 4runner title"], ["body", " this is the body of  ad 3"], ["status", "active"], ["price", 7000], ["odometer", 215000], ["car_id", 6], ["created_at", "2015-10-13 18:32:09.592230"], ["updated_at", "2015-10-13 18:32:09.592230"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2009 Toyota 4runner title"], ["body", " this is the body of  ad 4"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 10], ["created_at", "2015-10-13 18:32:09.593553"], ["updated_at", "2015-10-13 18:32:09.593553"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2009 Toyota Camery title"], ["body", " this is the body of  ad 5"], ["status", "active"], ["price", 15500], ["odometer", 12354], ["car_id", 5], ["created_at", "2015-10-13 18:32:09.594917"], ["updated_at", "2015-10-13 18:32:09.594917"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2009 Toyota Camery diffrent title"], ["body", " this is the body of  ad 6"], ["status", "active"], ["price", 14000], ["odometer", 22354], ["car_id", 5], ["created_at", "2015-10-13 18:32:09.596299"], ["updated_at", "2015-10-13 18:32:09.596299"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2009 Toyota Camery another title"], ["body", " this is the body of  ad 7"], ["status", "active"], ["price", 20000], ["odometer", 7354], ["car_id", 5], ["created_at", "2015-10-13 18:32:09.597659"], ["updated_at", "2015-10-13 18:32:09.597659"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2008 Toyota 4runner title"], ["body", " this is the body of  ad 8"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 9], ["created_at", "2015-10-13 18:32:09.599001"], ["updated_at", "2015-10-13 18:32:09.599001"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2006 Toyota 4runner title"], ["body", " this is the body of  ad 9"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 7], ["created_at", "2015-10-13 18:32:09.600334"], ["updated_at", "2015-10-13 18:32:09.600334"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2006 Toyota 4runner title"], ["body", " this is the body of  ad 10"], ["status", "active"], ["price", 5500], ["odometer", 323546], ["car_id", 7], ["created_at", "2015-10-13 18:32:09.601620"], ["updated_at", "2015-10-13 18:32:09.601620"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2006 Toyota 4runner title"], ["body", " this is the body of  ad 10"], ["status", "active"], ["price", 5500], ["odometer", 323546], ["car_id", 7], ["created_at", "2015-10-13 18:32:09.602921"], ["updated_at", "2015-10-13 18:32:09.602921"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2006 BMW 330i title"], ["body", " this is the body of  ad 11"], ["status", "active"], ["price", 15500], ["odometer", 83546], ["car_id", 12], ["created_at", "2015-10-13 18:32:09.604196"], ["updated_at", "2015-10-13 18:32:09.604196"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2006 BMW 330i title"], ["body", " this is the body of  ad 12"], ["status", "active"], ["price", 6500], ["odometer", 183546], ["car_id", 12], ["created_at", "2015-10-13 18:32:09.605474"], ["updated_at", "2015-10-13 18:32:09.605474"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2006 BMW 330i title"], ["body", " this is the body of  ad 12"], ["status", "active"], ["price", 6500], ["odometer", 183546], ["car_id", 12], ["created_at", "2015-10-13 18:32:09.606745"], ["updated_at", "2015-10-13 18:32:09.606745"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2009 BMW 335i title"], ["body", " this is the body of  ad 13"], ["status", "active"], ["price", 36500], ["odometer", 23546], ["car_id", 15], ["created_at", "2015-10-13 18:32:09.607997"], ["updated_at", "2015-10-13 18:32:09.607997"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "2008 BMW 335i title"], ["body", " this is the body of  ad 14"], ["status", "active"], ["price", 29500], ["odometer", 53546], ["car_id", 14], ["created_at", "2015-10-13 18:32:09.609317"], ["updated_at", "2015-10-13 18:32:09.609317"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "2005 BMW 330i title"], ["body", " this is the body of  ad 15"], ["status", "active"], ["price", 7500], ["odometer", 153546], ["car_id", 11], ["created_at", "2015-10-13 18:32:09.610697"], ["updated_at", "2015-10-13 18:32:09.610697"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClassified Load (2.0ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery')[0m
+  [1m[35mClassified Load (0.8ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery')
+  [1m[36mClassified Load (1.0ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year = 2006,2007,2008,2009)[0m
+PG::DatatypeMismatch: ERROR:  argument of AND must be type boolean, not type record
+LINE 1: ...rs.make = 'toyota' AND cars.model = 'camery') AND (cars.year...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year = 2006,2007,2008,2009)
+  [1m[35mClassified Load (0.7ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery' AND cars.year = 2006,2007,2008,2009)
+PG::DatatypeMismatch: ERROR:  argument of AND must be type boolean, not type record
+LINE 1: ...E ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery' AND cars.year = 2006,2007,2008,2009)
+  [1m[36mClassified Load (0.6ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery')[0m
+  [1m[35mClassified Load (0.6ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery' AND cars.year = 2006,2007,2008,2009)
+PG::DatatypeMismatch: ERROR:  argument of AND must be type boolean, not type record
+LINE 1: ...E ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery' AND cars.year = 2006,2007,2008,2009)
+  [1m[36mClassified Load (0.5ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery')[0m
+  [1m[35mClassified Load (0.4ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year BETWEEN 2006,2007,2008,2009.first AND 2006,2007,2008,2009.last)
+PG::SyntaxError: ERROR:  syntax error at or near ","
+LINE 1: ... cars.model = 'camery') AND (car.year BETWEEN 2006,2007,2008...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year BETWEEN 2006,2007,2008,2009.first AND 2006,2007,2008,2009.last)
+  [1m[36mClassified Load (0.4ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year IN 2006,2007,2008,2009)[0m
+PG::SyntaxError: ERROR:  syntax error at or near "2006"
+LINE 1: ...yota' AND cars.model = 'camery') AND (car.year IN 2006,2007,...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year IN 2006,2007,2008,2009)
+  [1m[35mClassified Load (0.6ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year BETWEEN 2006,2007,2008,2009[0] AND 2006,2007,2008,2009[-1])
+PG::SyntaxError: ERROR:  syntax error at or near ","
+LINE 1: ... cars.model = 'camery') AND (car.year BETWEEN 2006,2007,2008...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year BETWEEN 2006,2007,2008,2009[0] AND 2006,2007,2008,2009[-1])
+  [1m[36mClassified Load (0.7ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year BETWEEN 2006 AND 2009)[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "car"
+LINE 1: ...s.make = 'toyota' AND cars.model = 'camery') AND (car.year B...
+                                                             ^
+: SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (car.year BETWEEN 2006 AND 2009)
+  [1m[35mClassified Load (0.5ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2006 AND 2009)
+  [1m[36mClassified Load (0.5ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2006 AND 2009)[0m
+  [1m[35mClassified Load (0.8ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2006 AND 2009)
+  [1m[36mClassified Load (0.5ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 20000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2006 AND 2009)[0m
+  [1m[35mClassified Load (0.8ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mClassified Load (0.5ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)
+  [1m[36mClassified Load (0.5ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)[0m
+  [1m[35mClassified Load (0.5ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)
+  [1m[36mClassified Load (1.3ms)[0m  [1mSELECT  "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)  ORDER BY "classifieds"."id" ASC LIMIT 1[0m
+  [1m[35mClassified Load (0.5ms)[0m  SELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)
+  [1m[36mClassified Load (0.5ms)[0m  [1mSELECT "classifieds".* FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."odometer" BETWEEN 0 AND 100000) AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN 2009 AND 2009)

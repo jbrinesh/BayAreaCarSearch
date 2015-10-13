@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013162947) do
+ActiveRecord::Schema.define(version: 20151013173733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,13 +30,11 @@ ActiveRecord::Schema.define(version: 20151013162947) do
     t.string   "status",     null: false
     t.integer  "price",      null: false
     t.integer  "odometer",   null: false
-    t.integer  "author_id",  null: false
     t.integer  "car_id",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "classifieds", ["author_id"], name: "index_classifieds_on_author_id", using: :btree
   add_index "classifieds", ["car_id"], name: "index_classifieds_on_car_id", using: :btree
 
 end
