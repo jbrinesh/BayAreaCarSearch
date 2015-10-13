@@ -4882,3 +4882,1141 @@ Processing by Api::ClassifiedController#index as JSON
   Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
   [1m[35mSQL (0.8ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2005' AND '2009')
 Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-13 16:25:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 430ms (Views: 421.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:25:22 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:25:28 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing template api/classified/index, application/index with {:locale=>[:en], :formats=>[:json, :js, :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jbrinesh/workspace/Capstone_Project/app/views"
+:
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/path_set.rb:46:in `find'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/lookup_context.rb:121:in `find'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:8:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/api/classified_controller.rb:5:in `index'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-10-13 16:26:36 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 109ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:26:36 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:26:39 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing template api/classified/index, application/index with {:locale=>[:en], :formats=>[:json, :js, :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jbrinesh/workspace/Capstone_Project/app/views"
+:
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/path_set.rb:46:in `find'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/lookup_context.rb:121:in `find'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:8:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/api/classified_controller.rb:5:in `index'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-10-13 16:27:20 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:27:21 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:27:24 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+  Rendered api/classified/index.json.jbuilder (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError - syntax error, unexpected keyword_do, expecting keyword_end
+...late.new(self); @classifieds do |classified|
+...                               ^
+/Users/jbrinesh/workspace/Capstone_Project/app/views/api/classified/index.json.jbuilder:6: syntax error, unexpected keyword_ensure, expecting end-of-input:
+  app/views/api/classified/index.json.jbuilder:1:in `'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:296:in `compile'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:244:in `block in compile!'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:232:in `compile!'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:143:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/api/classified_controller.rb:5:in `index'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-10-13 16:32:27 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 98ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:32:27 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:32:30 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+  Rendered api/classified/index.json.jbuilder (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError - syntax error, unexpected keyword_do, expecting keyword_end
+...late.new(self); @classifieds do |classified|
+...                               ^
+/Users/jbrinesh/workspace/Capstone_Project/app/views/api/classified/index.json.jbuilder:6: syntax error, unexpected keyword_ensure, expecting end-of-input:
+  app/views/api/classified/index.json.jbuilder:1:in `'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:296:in `compile'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:244:in `block in compile!'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:232:in `compile!'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:143:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/api/classified_controller.rb:5:in `index'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-10-13 16:43:57 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:43:57 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:44:02 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+  Rendered api/classified/index.json.jbuilder (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+... collection: @classifieds, as :classified
+...                               ^:
+  app/views/api/classified/index.json.jbuilder:1:in `'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:296:in `compile'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:244:in `block in compile!'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:232:in `compile!'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:143:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/api/classified_controller.rb:5:in `index'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-10-13 16:44:32 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 48ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:44:32 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:44:35 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+  [1m[35mSQL (2.2ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2005' AND '2009')
+  Rendered api/classified/_classified.json.jbuilder (3.7ms)
+  Rendered api/classified/index.json.jbuilder (43.8ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 6.8ms)
+
+NoMethodError - undefined method `extract!' for nil:NilClass:
+  app/views/api/classified/_classified.json.jbuilder:2:in `_app_views_api_classified__classified_json_jbuilder___1394316916135688916_70323797809920'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:143:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/partial_renderer.rb:310:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/partial_renderer.rb:309:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:21:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  jbuilder (2.3.2) lib/jbuilder/jbuilder_template.rb:102:in `_render_partial'
+  jbuilder (2.3.2) lib/jbuilder/jbuilder_template.rb:93:in `block in _render_partial_with_options'
+  jbuilder (2.3.2) lib/jbuilder.rb:298:in `block (2 levels) in _map_collection'
+  jbuilder (2.3.2) lib/jbuilder.rb:305:in `_scope'
+  jbuilder (2.3.2) lib/jbuilder.rb:298:in `block in _map_collection'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/relation/delegation.rb:46:in `map'
+  jbuilder (2.3.2) lib/jbuilder.rb:297:in `_map_collection'
+  jbuilder (2.3.2) lib/jbuilder.rb:188:in `array!'
+  jbuilder (2.3.2) lib/jbuilder/jbuilder_template.rb:64:in `array!'
+  jbuilder (2.3.2) lib/jbuilder/jbuilder_template.rb:89:in `_render_partial_with_options'
+  jbuilder (2.3.2) lib/jbuilder/jbuilder_template.rb:163:in `_render_explicit_partial'
+  jbuilder (2.3.2) lib/jbuilder/jbuilder_template.rb:21:in `partial!'
+  app/views/api/classified/index.json.jbuilder:1:in `_app_views_api_classified_index_json_jbuilder__1039136969836456317_70323873548380'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:143:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/api/classified_controller.rb:5:in `index'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-10-13 16:45:32 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:45:32 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:45:36 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2005' AND '2009')[0m
+  Rendered api/classified/_classified.json.jbuilder (0.4ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (11.9ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.7ms)
