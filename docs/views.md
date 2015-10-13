@@ -15,7 +15,8 @@
 ## Main Search Page
 ![main-search-page]
 
-## Missing Search Input Field
+## Search Input Field
+![search-input]
 
 ## List Display
 ![list-display]
@@ -27,7 +28,7 @@
 ![details-display]
 
 ## Map Display
-![gallery_display]
+![map-display]
 
 ## Classified Listing
 ![classified-display]
@@ -50,7 +51,7 @@
 [sign-up]: ./wireframes/sign_up_page.png
 [sign-in]: ./wireframes/sign_in_page.png
 [main-search-page]: ./wireframes/main_search_page.png
-
+[search-input]: ./wireframes/search_input.png
 [list-display]: ./wireframes/list_display.png
 [gallery-display]: ./wireframes/gallery_display.png
 [details-display]: ./wireframes/details_display.png
@@ -59,4 +60,4 @@
 [main-account-page]: ./wireframes/account_main.png
 [content-tabs]: ./wireframes/account_tabs.png
 [account-indexes]: ./wireframes/posting_drafts_favorits_index.png
-[account-indexes]: ./wireframes/new_edit_post_form.png
+[new-edit-ad]: ./wireframes/new_edit_post_form.png
