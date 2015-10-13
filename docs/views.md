@@ -59,5 +59,5 @@
 [classified-display]: ./wireframes/ad_listing.png
 [main-account-page]: ./wireframes/account_main.png
 [content-tabs]: ./wireframes/account_tabs.png
-[account-indexes]: ./wireframes/posting_drafts_favorits_index.png
+[account-indexes]: ./wireframes/Posting_drafts_favorits_index.png
 [new-edit-ad]: ./wireframes/new_edit_post_form.png
