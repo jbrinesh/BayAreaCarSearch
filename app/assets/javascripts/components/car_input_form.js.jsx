@@ -5,12 +5,7 @@
     mixins: [React.addons.LinkedStateMixin],
 
     getInitialState: function(){
-      return {
-        make: "",
-        model: "",
-        min_year: "",
-        max_year: ""
-      };
+      return QueryStore.car_params();
     },
 
     componentDidUpdate: function () {

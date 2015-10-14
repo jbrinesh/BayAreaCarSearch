@@ -9,7 +9,7 @@
         dataType: "json",
         data: params,
         success: function(response){
-          console.log(response);
+          ApiActions.recivedClassifieds(response);
         }
       })
     },

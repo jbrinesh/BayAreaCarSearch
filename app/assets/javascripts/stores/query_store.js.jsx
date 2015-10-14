@@ -37,6 +37,17 @@
       return $.extend ({}, _query_params);
     },
 
+    keyword: function(){
+      return $.extend ({}, _query_params["keyword"])
+    },
+
+    car_params: function(){
+      return $.extend ({}, _query_params["car_params"])
+    },
+
+    search_params: function(){
+      return $.extend ({}, _query_params["search_params"])
+    },
 
     DispatcherID: AppDispatcher.register(function(payload){
       switch (payload.actionType){

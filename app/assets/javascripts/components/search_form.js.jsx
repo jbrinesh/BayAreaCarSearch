@@ -5,12 +5,8 @@
     mixins: [React.addons.LinkedStateMixin],
 
     getInitialState: function(){
-      return {
-        min_price: "",
-        max_price: "",
-        min_odometer: "",
-        max_odometer: ""
-      };
+      return QueryStore.search_params();
+
     },
 
     componentDidUpdate: function () {

@@ -15,7 +15,8 @@ var App = React.createClass({
 
 var routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={SearchInputField}/>
+    <IndexRoute component={Search}/>
+      <Route path="/:id" component={Show}/>
   </Route>
 );
 

@@ -5,9 +5,7 @@
     mixins: [React.addons.LinkedStateMixin],
 
     getInitialState: function(){
-      return {
-        keyword: ""
-      };
+      return QueryStore.keyword();
     },
 
     componentDidUpdate: function () {

@@ -13,6 +13,16 @@
       return _classifieds.slice(0);
     },
 
+    find: function(id){
+      var result;
+      _classifieds.forEach(function(classified){
+        if (classified.id === parseInt(id) ){
+          result = classified;
+        };
+      })
+      return result;
+    },
+
     addChangeHandler: function(handler){
       ClassifiedStore.on(ClassifiedConstants.CLASSIFIEDS_CHANGED, handler)
     },

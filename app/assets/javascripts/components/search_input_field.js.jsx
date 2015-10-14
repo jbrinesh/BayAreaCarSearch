@@ -5,6 +5,7 @@
     mixins: [React.addons.LinkedStateMixin],
 
     runSearch: function(e){
+      e.preventDefault();
       var params = QueryStore.all();
       ApiUtil.fetch(params);
     },
