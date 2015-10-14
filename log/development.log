@@ -6020,3 +6020,136 @@ Processing by Api::ClassifiedController#index as JSON
   Rendered api/classified/_classified.json.jbuilder (0.1ms)
   Rendered api/classified/index.json.jbuilder (11.9ms)
 Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-13 16:58:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 436ms (Views: 428.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 16:58:30 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 16:58:33 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+  [1m[35mSQL (1.8ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2005' AND '2009')
+  Rendered api/classified/_classified.json.jbuilder (0.3ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (41.6ms)
+Completed 200 OK in 54ms (Views: 37.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-13 17:17:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 414ms (Views: 406.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/util/api_util.self-56512734671347b88968be91c872fef2dadf78686634b4fa3480f5be6ec28ffe.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-10-13 17:17:09 -0700
+
+
+Started GET "/api/classified?car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2005&car_params%5Bmax_year%5D=2009&search_params%5Bmax_price%5D=20000" for ::1 at 2015-10-13 17:18:17 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2005", "max_year"=>"2009"}, "search_params"=>{"max_price"=>"20000"}, "default"=>{"format"=>"json"}}
+  [1m[35mSQL (2.4ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 20000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2005' AND '2009')
+  Rendered api/classified/_classified.json.jbuilder (0.4ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (104.3ms)
+Completed 200 OK in 117ms (Views: 98.4ms | ActiveRecord: 9.6ms)
