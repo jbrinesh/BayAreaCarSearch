@@ -2,7 +2,7 @@
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://still-taiga-6718.herokuapp.com/
 
 ## Minimum Viable Product
 
@@ -102,7 +102,7 @@ There will be basic styling through out the project, but a day will be set aside
 mostly for improvements to the CSS for better usability and style.
 
 ### Bonus Features (TBD)
-* Real data seeding 
+* Real data seeding
 * value based search filtering
 
 [phase-one]: ./docs/phases/phase1.md
