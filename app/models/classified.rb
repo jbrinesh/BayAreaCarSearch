@@ -21,13 +21,13 @@ class Classified < ActiveRecord::Base
 
     if search_params["min_price"] || search_params["max_price"]
 
-      if search_params["min_price"].nil?
+      if search_params["min_price"] == ""
         start_price = 0
       else
         start_price = search_params["min_price"].to_i
       end
 
-      if search_params["max_price"].nil?
+      if search_params["max_price"] == ""
         end_price = 100000000
       else
         end_price = search_params["max_price"].to_i
@@ -38,13 +38,13 @@ class Classified < ActiveRecord::Base
 
     if search_params["min_odometer"] || search_params["max_odometer"]
 
-      if search_params["min_odometer"].nil?
+      if search_params["min_odometer"] == ""
         start_odometer = 0
       else
         start_odometer = search_params["min_odometer"].to_i
       end
 
-      if search_params["max_odometer"].nil?
+      if search_params["max_odometer"] == ""
         end_odometer = 100000000
       else
         end_odometer = search_params["max_odometer"].to_i
