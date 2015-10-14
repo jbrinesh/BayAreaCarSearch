@@ -16,7 +16,7 @@
 * TitleBar
 * SearchInputField
 * ListDisplay
-* ClassifiedView  
+* ClassifiedShow
 
 ### Stores
 * Classified
@@ -25,6 +25,5 @@
 * ApiAction.RecivedNewQueryResults
 
 ### ApiUtil
-* ApiUtil.fetchClassifiedsForQuery
 
 ## Gems/Libraries

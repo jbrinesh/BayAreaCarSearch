@@ -45,36 +45,43 @@ view for that ad.
 
 [Details][phase-two]
 
-### Phase 3: User Model, Session Control, more CRUD for Classifieds (1.5 days)
+### Phase 3: User Model, Session Control, more CRUD for Classifieds, Flux for Accounts (2 days)
 
 Phase 3 sets up basic user authentication including a new data base table and
 session controller using secure methods including BCrypt. After we have users
 we will add new and create CRUD actions for the Api::ClassifiedsController.
-There will also be two new views in rails to handle sign up and log in. By the
-end of this phase a user can sign in and make a new classified using and ajax
-request from the terminal.  
+There will also be two new views in rails to handle sign up and log in. This
+will also set up the flux front end for the user account page.
 
 [Details][phase-three]
 
-### Phase 4: Remaining Flux interface for Account (0.5 days)
 
-Phase 4 will set up the rest of the front end of phase 3. There will be a new
-section on the site for user accounts where the user can post classifieds and
-view there post history.
+###  Phase 4: Add Images, Gallery View and Details View for Search Results (1 day)
 
-[Details][phase-four]
-
-### Phase 5: Add Gallery and Details Views for Search Results (1 day)
-
-Phase 5 will add additional feature to how the user can view search results.
+Phase 4 will add additional feature to how the user can view search results.
 First a Gallery view will be added so the user can see a mosaic of images
 instead of just a list. The second feature will be a Details view that will be a
 more detailed list with a smaller thumbnail and more details about the ad.
-Both fetures will require modifications to the Api controller.
+Both features will require modifications to the Api controller.
 
-[Details][phase-five]
+[Details][phase-four]
 
-### Phase 6: Allow Draft editing and Favorites for Users (1 day)
+### Phase 5: Styling Cleanup and Seeding (1 day)
+
+There will be basic styling through out the project, but a day will be set aside
+mostly for improvements to the CSS for better usability and style.
+
+### Phase 6: Integrate Google maps API (2 day)
+
+Phase 5 Will integrate google maps into the user interface. First for the view
+of a single classified, there will be a small map showing the location if
+possible. The second feature will be a new search view so the user can see the
+results of a query plotted on a map. A user will then see a list of posts that
+area in the bounds of the maps to they and view the classified ad.
+
+[Details][phase-six]
+
+### Bonus Phase 1: Allow Draft editing and Favorites for Users (1 day)
 
 Phase 6 will expand what a user can do in the Accounts page. In addition to
 posting classifieds a logged in user will be able to follow other classifieds by
@@ -83,23 +90,7 @@ save drafts of classifieds without posting them publicly for later review and
 editing. This phase will require adding the rest of the CRUD actions to the
 Api::ClassifiedsController.
 
-[Details][phase-six]
-
-### Phase 7: Integrate Google maps API (2 day possible bonus)
-
-Phase 5 Will integrate google maps into the user interface. First for the view
-of a single classified, there will be a small map showing the location if
-possible. The second feature will be a new search view so the user can see the
-results of a query plotted on a map. A user will then see a list of posts that
-area in the bounds of the maps to they and view the classified ad.
-
-[Details][phase-seven]
-
-
-### Phase 8: Styling Cleanup and Seeding (1 day)
-
-There will be basic styling through out the project, but a day will be set aside
-mostly for improvements to the CSS for better usability and style.
+[Details][Phase B1]
 
 ### Bonus Features (TBD)
 * Real data seeding
@@ -109,6 +100,6 @@ mostly for improvements to the CSS for better usability and style.
 [phase-two]: ./docs/phases/phase2.md
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
+
 [phase-six]: ./docs/phases/phase6.md
-[phase-seven]: ./docs/phases/phase7.md
+[Phase B1]: ./docs/phases/phaseB1.md

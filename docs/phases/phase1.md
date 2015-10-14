@@ -13,7 +13,6 @@
 ### Views
 * static_page/index.html.erb
 * classifieds/index.json.jbuilder
-* classifieds/show.json.jbuilder
 
 ## Flux
 
@@ -24,5 +23,6 @@
 ### Actions
 
 ### ApiUtil
+* ApiUtil.fetch()
 
 ## Gems/Libraries

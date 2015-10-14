@@ -1,7 +1,8 @@
-# Phase 4: Remaining Flux interface for Account
+# Phase 4: Add Images, Gallery View and Details View for Search Results
 
 ## Rails
 ### Models
+* Classified(update)
 
 ### Controllers
 
@@ -10,19 +11,15 @@
 ## Flux
 
 ### Views (React Components)
-* AccountMain
-* TitleBar
-* ContentTabs
-* PostingIndex
-* NewClassifiedForm
+* DetailsDisplay
+* GalleryDisplay
+* ClassifiedShow(update)
 
 ### Stores
-* User
+Classified(update)
 
 ### Actions
-* ApiAction.createdClassified
+
 
 ### ApiUtil
-* ApiUtil.postClassified
-
 ## Gems/Libraries
