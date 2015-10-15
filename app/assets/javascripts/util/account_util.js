@@ -14,6 +14,16 @@
           debugger;
         }
       })
+    },
+
+    fetch: function(params){
+      $.ajax({
+        url: "api/classified/account",
+        type: "GET",
+        success: function(response){
+          console.log(response)
+        }
+      })
     }
   }
 

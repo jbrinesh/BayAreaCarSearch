@@ -16,6 +16,12 @@ class Classified < ActiveRecord::Base
       .where("cars.year BETWEEN :min_year AND :max_year", car_params)
   end
 
+  def self.find_by_author_id(author_id)
+    self.includes(:car)
+        .joins(:car)
+        .where("classifieds.author_id = ?", author_id)
+  end
+
   def self.convert_to_range(search_params)
     search_params_ranged = {}
 
