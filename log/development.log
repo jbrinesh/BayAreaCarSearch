@@ -42954,3 +42954,715 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/" for ::1 at 2015-10-15 12:51:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 492ms (Views: 491.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/application.self-88d6421da7e4c5b5dea292d9f4fad69a00f5e082ed083be5a0b793ca4ac9adf0.css?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/account.self-ce6811817ed312d5a273532e18d11b49e71fd92f2d897d4e0ef21701c6209709.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/car_input_form.self-0669f01492cc610c5e599d0e2007e851e3917ff46445151c5e274e73a2340014.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/keyword_form.self-dd3f06c0eb320f0deefc93bf5e9e0a9c2d9858946f177e975331114580862b93.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/list_index_item.self-018ba807b0befd86f21ee633a8331c5576aff2fc3a122e714b06882b2ccacb3d.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/search_form.self-30f7d7bebc106de412e3433f7467b324f6514207e2c51b70ab39938f71666113.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/search_input_field.self-27d00a9dbc1f42dd21782d8600b7a5ffad1b95d0a3ec499f66efc65c50e9c47c.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/show.self-28b7d2301ac8f842123d3c44bfb3bf83e40f84026daff35651051cd6873498de.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components/title_bar.self-7dd9dc17686c2371ed70185c1f9c070ec1fe0731facd475c131b85bf1d3a0942.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/actions/api_actions.self-1c1034493da16351ac3fec2a21f26ef06ca0a21295651465b1436cc15484eb03.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-213bb4fe965453baa84db23261d72e528dcd3414744db8a7356972585bb751c3.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/stores/classified_store.self-6070f46254d69cc520fb42a452c69eab524bc6afd27275e1dc779d005f6bbf6f.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/util/account_util.self-c42fe9d55ae471589cd28af0e7603d88e7b6f60575344212a9b66088f9f6eede.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 12:51:58 -0700
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 12:52:00 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "8POZP0X6MgZYLttLwz_ocw"]]
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 146ms (Views: 137.2ms | ActiveRecord: 1.4ms)
+  [1m[36m (5052.1ms)[0m  [1mDROP DATABASE IF EXISTS "Capstone_Project_development"[0m
+PG::ObjectInUse: ERROR:  database "Capstone_Project_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "Capstone_Project_development"
+  [1m[35m (111.8ms)[0m  DROP DATABASE IF EXISTS "Capstone_Project_test"
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "Capstone_Project_development" already exists
+: CREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'
+  [1m[35m (234.6ms)[0m  CREATE DATABASE "Capstone_Project_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.4ms)[0m  DROP TABLE "cars" CASCADE
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")
+  [1m[36m (2.1ms)[0m  [1mDROP TABLE "classifieds" CASCADE[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "author_id" character varying NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (2.2ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_users_on_session_token" ON "users" USING btree ("session_token")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.6ms)[0m  CREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "author_id" character varying NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_users_on_session_token" ON "users" USING btree ("session_token")[0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151015185434')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013162222')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151013162947')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013173733')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151015160405')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151015185112')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2005]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2006]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2008]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2005]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2006]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2007]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2008]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2009]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "330i"], ["year", 2005]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "330i"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "335i"], ["year", 2008]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_1"], ["password_digest", "$2a$10$rx2N/t842zTTRyhTF/uZ7Ohd/uqN.3Ta42DkUmRRz8Hc34/qn4F92"], ["session_token", "7BuLEKxTl1vZocu2HBAxtA"], ["created_at", "2015-10-15 19:57:32.402064"], ["updated_at", "2015-10-15 19:57:32.402064"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "user_2"], ["password_digest", "$2a$10$hA3.gUeLHzGH1hWg9OvxFO2VqJWdFi4/w7M2qUtxHFk5ySUSG7W2C"], ["session_token", "I90U9xjxB8BsTS61SvM8DA"], ["created_at", "2015-10-15 19:57:32.467151"], ["updated_at", "2015-10-15 19:57:32.467151"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_3"], ["password_digest", "$2a$10$E4qfrPLjeNoLpl4/VyUJSOB5OkvjEgEenAUwMPSnwCVuqPN0QqbjS"], ["session_token", "9v-_yIPDeNMDhpzdm6J9ww"], ["created_at", "2015-10-15 19:57:32.527502"], ["updated_at", "2015-10-15 19:57:32.527502"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "user_4"], ["password_digest", "$2a$10$Fw8UAr2hqz3MeX0hNdZ6KOmxtZNlWocMOvBLRQh1mJZPlelkyB1dW"], ["session_token", "oR4r4jIPlfV81c6SMh1NTw"], ["created_at", "2015-10-15 19:57:32.587897"], ["updated_at", "2015-10-15 19:57:32.587897"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_5"], ["password_digest", "$2a$10$YpiylBFAV7zce.fclpQPjeS3wLRP6rzq1cNvWhX0qXY8BKbXvITt."], ["session_token", "pLTVnIb6qpp-sZaPko5lgg"], ["created_at", "2015-10-15 19:57:32.648354"], ["updated_at", "2015-10-15 19:57:32.648354"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mClassified Load (0.8ms)[0m  SELECT "classifieds".* FROM "classifieds"
+  [1m[36mCar Load (0.5ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  [1m[35mClassified Load (0.4ms)[0m  SELECT "classifieds".* FROM "classifieds"
+  [1m[36m (5045.6ms)[0m  [1mDROP DATABASE IF EXISTS "Capstone_Project_development"[0m
+PG::ObjectInUse: ERROR:  database "Capstone_Project_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "Capstone_Project_development"
+  [1m[35m (113.1ms)[0m  DROP DATABASE IF EXISTS "Capstone_Project_test"
+  [1m[36m (0.4ms)[0m  [1mCREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "Capstone_Project_development" already exists
+: CREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'
+  [1m[35m (229.4ms)[0m  CREATE DATABASE "Capstone_Project_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.8ms)[0m  DROP TABLE "cars" CASCADE
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")
+  [1m[36m (1.9ms)[0m  [1mDROP TABLE "classifieds" CASCADE[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "author_id" character varying NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (1.6ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_users_on_session_token" ON "users" USING btree ("session_token")
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.5ms)[0m  CREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "author_id" character varying NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_users_on_session_token" ON "users" USING btree ("session_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151015185434')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013162222')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151013162947')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013173733')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151015160405')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151015185112')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2005]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2008]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2005]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2006]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2007]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2008]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2009]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "330i"], ["year", 2005]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "330i"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "335i"], ["year", 2008]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_1"], ["password_digest", "$2a$10$7bnQnAlAqqIU/q3pZMcx/OYbLWUWxih5Ui0m7jOc/4OtmfVMr2k8K"], ["session_token", "bpltzzbd7xDwHTUXABT2Vg"], ["created_at", "2015-10-15 19:58:51.738885"], ["updated_at", "2015-10-15 19:58:51.738885"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "user_2"], ["password_digest", "$2a$10$5pYzK481zcGZPvWSNhF1FeVtObIB8HYeLjpLFIt1OmU2dy80bgYM2"], ["session_token", "eSBrFYRxp9z08ZNVM6noBQ"], ["created_at", "2015-10-15 19:58:51.818133"], ["updated_at", "2015-10-15 19:58:51.818133"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_3"], ["password_digest", "$2a$10$tzqWapAcXQp8514OAib7LuW3e1zP/2pPFd/L6yQZzc/SrXBUQO6PW"], ["session_token", "AkcZOOJpCw_YDdqheRpCeg"], ["created_at", "2015-10-15 19:58:51.893057"], ["updated_at", "2015-10-15 19:58:51.893057"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "user_4"], ["password_digest", "$2a$10$..LF9A7H3wsbkpvlVmdypONNekhlCMuu/E1D12tmcRLLn1X72SsB6"], ["session_token", "sIReJ2hWdIxyu7G1ZpKF6w"], ["created_at", "2015-10-15 19:58:51.965459"], ["updated_at", "2015-10-15 19:58:51.965459"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_5"], ["password_digest", "$2a$10$cPThujKFkAAFVqDLt2EWE.hVXdoDhWALxeNOoRXIYcoaSUVck6DYG"], ["session_token", "lxm2ep4sF0KOvXvdjEieFQ"], ["created_at", "2015-10-15 19:58:52.039335"], ["updated_at", "2015-10-15 19:58:52.039335"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (5049.8ms)[0m  [1mDROP DATABASE IF EXISTS "Capstone_Project_development"[0m
+PG::ObjectInUse: ERROR:  database "Capstone_Project_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "Capstone_Project_development"
+  [1m[35m (112.2ms)[0m  DROP DATABASE IF EXISTS "Capstone_Project_test"
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "Capstone_Project_development" already exists
+: CREATE DATABASE "Capstone_Project_development" ENCODING = 'unicode'
+  [1m[35m (227.3ms)[0m  CREATE DATABASE "Capstone_Project_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.8ms)[0m  DROP TABLE "cars" CASCADE
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")
+  [1m[36m (1.9ms)[0m  [1mDROP TABLE "classifieds" CASCADE[0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "author_id" character varying NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (2.1ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_users_on_session_token" ON "users" USING btree ("session_token")
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "cars" ("id" serial primary key, "make" character varying NOT NULL, "model" character varying NOT NULL, "year" integer NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_cars_on_make_and_model_and_year" ON "cars" USING btree ("make", "model", "year")[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "classifieds" ("id" serial primary key, "title" character varying NOT NULL, "body" text NOT NULL, "status" character varying NOT NULL, "price" integer NOT NULL, "odometer" integer NOT NULL, "car_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "author_id" character varying NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mCREATE  INDEX  "index_classifieds_on_car_id" ON "classifieds" USING btree ("car_id")[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_users_on_session_token" ON "users" USING btree ("session_token")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151015185434')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013162222')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151013162947')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151013173733')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151015160405')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151015185112')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2005]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2007]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "camery"], ["year", 2008]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "camery"], ["year", 2009]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2005]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2006]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2007]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "toyota"], ["model", "4runner"], ["year", 2008]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "toyota"], ["model", "4runner"], ["year", 2009]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "330i"], ["year", 2005]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "330i"], ["year", 2006]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2007]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"[0m  [["make", "bmw"], ["model", "335i"], ["year", 2008]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cars" ("make", "model", "year") VALUES ($1, $2, $3) RETURNING "id"  [["make", "bmw"], ["model", "335i"], ["year", 2009]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_1"], ["password_digest", "$2a$10$6LF1Q.qi3tSQc7z0rraNNO4c0Gu2.DD1xhqqFBmXrz1obEelh6xNm"], ["session_token", "FgU3Zw7aKZCnP1A5A0OgQA"], ["created_at", "2015-10-15 19:59:34.197420"], ["updated_at", "2015-10-15 19:59:34.197420"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "user_2"], ["password_digest", "$2a$10$sd7Qiol0tEWIgRpldiDpn.eWrdInHTD43COJsCvceQEBzTfEqAEv6"], ["session_token", "V03g7En5IN7CEo-SwFUddg"], ["created_at", "2015-10-15 19:59:34.265396"], ["updated_at", "2015-10-15 19:59:34.265396"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_3"], ["password_digest", "$2a$10$pQnda7nKzw0CO6vqaroZhuabUrPPP9gKVEAIEm.jFfvVsMonvPC0a"], ["session_token", "miR9Zg-ZdsHYkqasgVTPNw"], ["created_at", "2015-10-15 19:59:34.323198"], ["updated_at", "2015-10-15 19:59:34.323198"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "user_4"], ["password_digest", "$2a$10$PU0EAxGrlAFUTS0LpYh8MOSLVUrfruD9UbafzNW6b4a.b39B5/AAe"], ["session_token", "akk6_QZU2UyzyExZhrCEKw"], ["created_at", "2015-10-15 19:59:34.391532"], ["updated_at", "2015-10-15 19:59:34.391532"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user_5"], ["password_digest", "$2a$10$i5CI2FCcNyoC7iz.SdhSqObOA34lGEMei1aYpHrjlKqT7rRPfol4u"], ["session_token", "6OasUh3o_UEaibLd5808bw"], ["created_at", "2015-10-15 19:59:34.463389"], ["updated_at", "2015-10-15 19:59:34.463389"]]
+  [1m[35m (3.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2007 Toyota Camery title foobar"], ["body", " this is the body of  ad 1"], ["status", "active"], ["price", 13500], ["odometer", 23546], ["car_id", 3], ["author_id", "1"], ["created_at", "2015-10-15 19:59:34.479005"], ["updated_at", "2015-10-15 19:59:34.479005"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2005 Toyota Camery title"], ["body", " this is the body of ad 2 foobar"], ["status", "active"], ["price", 11500], ["odometer", 73546], ["car_id", 1], ["author_id", "1"], ["created_at", "2015-10-15 19:59:34.482134"], ["updated_at", "2015-10-15 19:59:34.482134"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2005 Toyota 4runner title"], ["body", " this is the body of  ad 3"], ["status", "active"], ["price", 7000], ["odometer", 215000], ["car_id", 6], ["author_id", "1"], ["created_at", "2015-10-15 19:59:34.484523"], ["updated_at", "2015-10-15 19:59:34.484523"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2009 Toyota 4runner title"], ["body", " this is the body of  ad 4"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 10], ["author_id", "1"], ["created_at", "2015-10-15 19:59:34.486635"], ["updated_at", "2015-10-15 19:59:34.486635"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2009 Toyota Camery title"], ["body", " this is the body of  ad 5"], ["status", "active"], ["price", 15500], ["odometer", 12354], ["car_id", 5], ["author_id", "1"], ["created_at", "2015-10-15 19:59:34.488879"], ["updated_at", "2015-10-15 19:59:34.488879"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2009 Toyota Camery diffrent title"], ["body", " this is the body of  ad 6"], ["status", "active"], ["price", 14000], ["odometer", 22354], ["car_id", 5], ["author_id", "2"], ["created_at", "2015-10-15 19:59:34.490618"], ["updated_at", "2015-10-15 19:59:34.490618"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2009 Toyota Camery another title"], ["body", " this is the body of  ad 7"], ["status", "active"], ["price", 20000], ["odometer", 7354], ["car_id", 5], ["author_id", "2"], ["created_at", "2015-10-15 19:59:34.492303"], ["updated_at", "2015-10-15 19:59:34.492303"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2008 Toyota 4runner title"], ["body", " this is the body of  ad 8"], ["status", "active"], ["price", 10500], ["odometer", 123546], ["car_id", 9], ["author_id", "2"], ["created_at", "2015-10-15 19:59:34.493837"], ["updated_at", "2015-10-15 19:59:34.493837"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2006 Toyota 4runner title"], ["body", " this is the body of  ad 9"], ["status", "active"], ["price", 11500], ["odometer", 85000], ["car_id", 7], ["author_id", "2"], ["created_at", "2015-10-15 19:59:34.495333"], ["updated_at", "2015-10-15 19:59:34.495333"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2006 Toyota 4runner title"], ["body", " this is the body of  ad 10"], ["status", "active"], ["price", 5500], ["odometer", 323546], ["car_id", 7], ["author_id", "3"], ["created_at", "2015-10-15 19:59:34.496704"], ["updated_at", "2015-10-15 19:59:34.496704"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2006 BMW 330i title"], ["body", " this is the body of  ad 11"], ["status", "active"], ["price", 15500], ["odometer", 83546], ["car_id", 12], ["author_id", "3"], ["created_at", "2015-10-15 19:59:34.498045"], ["updated_at", "2015-10-15 19:59:34.498045"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2006 BMW 330i title"], ["body", " this is the body of  ad 12"], ["status", "active"], ["price", 6500], ["odometer", 183546], ["car_id", 12], ["author_id", "3"], ["created_at", "2015-10-15 19:59:34.499360"], ["updated_at", "2015-10-15 19:59:34.499360"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2006 BMW 330i title"], ["body", " this is the body of  ad 12"], ["status", "active"], ["price", 6500], ["odometer", 183546], ["car_id", 12], ["author_id", "4"], ["created_at", "2015-10-15 19:59:34.500783"], ["updated_at", "2015-10-15 19:59:34.500783"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2009 BMW 335i title"], ["body", " this is the body of  ad 13"], ["status", "active"], ["price", 36500], ["odometer", 23546], ["car_id", 15], ["author_id", "4"], ["created_at", "2015-10-15 19:59:34.502215"], ["updated_at", "2015-10-15 19:59:34.502215"]]
+  [1m[35m (4.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "2008 BMW 335i title"], ["body", " this is the body of  ad 14"], ["status", "active"], ["price", 29500], ["odometer", 53546], ["car_id", 14], ["author_id", "4"], ["created_at", "2015-10-15 19:59:34.508256"], ["updated_at", "2015-10-15 19:59:34.508256"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "classifieds" ("title", "body", "status", "price", "odometer", "car_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "2005 BMW 330i title"], ["body", " this is the body of  ad 15"], ["status", "active"], ["price", 7500], ["odometer", 153546], ["car_id", 11], ["author_id", "4"], ["created_at", "2015-10-15 19:59:34.512423"], ["updated_at", "2015-10-15 19:59:34.512423"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mClassified Load (0.9ms)[0m  SELECT "classifieds".* FROM "classifieds"
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:02:16 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "8POZP0X6MgZYLttLwz_ocw"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/session" for ::1 at 2015-10-15 13:02:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ufwllS2uebOZiTfKkd3ljjWGKyyz9LfhrTB7jFZwZxH6xLn1jES2dYdwBjucdz/D3np0kMOgEczg6GaZok7+mw==", "user"=>{"username"=>"user_1", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "user_1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "Fwtkr3WGr8KbOHQlyw3yqA"], ["updated_at", "2015-10-15 20:02:27.932002"], ["id", 1]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 76ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:27 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 165ms (Views: 164.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:34 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 83ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:02:37 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Fwtkr3WGr8KbOHQlyw3yqA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:37 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 142ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:41 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:43 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 87ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:02:44 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Fwtkr3WGr8KbOHQlyw3yqA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:44 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 159ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:46 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:02:47 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Fwtkr3WGr8KbOHQlyw3yqA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:47 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 154ms (Views: 153.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/session" for ::1 at 2015-10-15 13:02:48 -0700
+Processing by SessionsController#destroy as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:02:48 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 89ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:02:50 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/classified?keyword=&car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2000&car_params%5Bmax_year%5D=2007&search_params%5Bmin_odometer%5D=&search_params%5Bmax_odometer%5D=&search_params%5Bmin_price%5D=&search_params%5Bmax_price%5D=" for ::1 at 2015-10-15 13:03:22 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"keyword"=>"", "car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2000", "max_year"=>"2007"}, "search_params"=>{"min_odometer"=>"", "max_odometer"=>"", "min_price"=>"", "max_price"=>""}, "default"=>{"format"=>"json"}}
+  [1m[35mSQL (1.2ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 100000000) AND ("classifieds"."odometer" BETWEEN 0 AND 100000000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2000' AND '2007')
+  Rendered api/classified/_classified.json.jbuilder (0.3ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (28.3ms)
+Completed 200 OK in 106ms (Views: 27.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:03:29 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/session" for ::1 at 2015-10-15 13:03:39 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"dq8CRXFRnOtF5eXxxNMs24pJlipgo4RG1Gfki72UFKE1l54l0LtTLVsc1ADJefaWYbXJlhD3ImuZv/meSaqNKw==", "user"=>{"username"=>"user_1", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "user_1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "rWe4GkIhH4Xh4qffczcENg"], ["updated_at", "2015-10-15 20:03:39.250187"], ["id", 1]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 67ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:03:39 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 138ms (Views: 137.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:03:40 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 84ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified?keyword=&car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2000&car_params%5Bmax_year%5D=2007&search_params%5Bmin_odometer%5D=&search_params%5Bmax_odometer%5D=&search_params%5Bmin_price%5D=&search_params%5Bmax_price%5D=" for ::1 at 2015-10-15 13:03:48 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"keyword"=>"", "car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2000", "max_year"=>"2007"}, "search_params"=>{"min_odometer"=>"", "max_odometer"=>"", "min_price"=>"", "max_price"=>""}, "default"=>{"format"=>"json"}}
+  [1m[35mSQL (0.8ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 100000000) AND ("classifieds"."odometer" BETWEEN 0 AND 100000000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2000' AND '2007')
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (4.5ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:03:51 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 141ms (Views: 140.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:03:52 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "rWe4GkIhH4Xh4qffczcENg"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:03:52 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:03:54 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 88ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:05:22 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 149ms (Views: 148.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:05:25 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 74ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:05:25 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 149ms (Views: 148.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:05:27 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "rWe4GkIhH4Xh4qffczcENg"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:05:27 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 76ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:05:29 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 13:05:34 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "rWe4GkIhH4Xh4qffczcENg"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 13:05:34 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 165ms (Views: 164.8ms | ActiveRecord: 0.0ms)

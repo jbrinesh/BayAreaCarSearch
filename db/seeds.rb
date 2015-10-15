@@ -22,6 +22,12 @@ car13 = Car.create(make: "bmw", model: "335i", year: 2007)
 car14 = Car.create(make: "bmw", model: "335i", year: 2008)
 car15 = Car.create(make: "bmw", model: "335i", year: 2009)
 
+user1 = User.create(username: "user_1", password: "password")
+user2 = User.create(username: "user_2", password: "password")
+user3 = User.create(username: "user_3", password: "password")
+user4 = User.create(username: "user_4", password: "password")
+user5 = User.create(username: "user_5", password: "password")
+
 
 ad1 = Classified.create(
   title: "2007 Toyota Camery title foobar",
@@ -29,7 +35,8 @@ ad1 = Classified.create(
   status: "active",
   price: 13500,
   odometer: 23546,
-  car_id: car3.id
+  car_id: car3.id,
+  author_id: user1.id
 )
 
 ad2 = Classified.create(
@@ -38,7 +45,8 @@ ad2 = Classified.create(
   status: "active",
   price: 11500,
   odometer: 73546,
-  car_id: car1.id
+  car_id: car1.id,
+  author_id: user1.id
 )
 
 ad3 = Classified.create(
@@ -47,7 +55,8 @@ ad3 = Classified.create(
   status: "active",
   price: 7000,
   odometer: 215000,
-  car_id: car6.id
+  car_id: car6.id,
+  author_id: user1.id
 )
 
 ad4 = Classified.create(
@@ -56,7 +65,8 @@ ad4 = Classified.create(
   status: "active",
   price: 10500,
   odometer: 123546,
-  car_id: car10.id
+  car_id: car10.id,
+  author_id: user1.id
 )
 
 ad5 = Classified.create(
@@ -65,7 +75,8 @@ ad5 = Classified.create(
   status: "active",
   price: 15500,
   odometer: 12354,
-  car_id: car5.id
+  car_id: car5.id,
+  author_id: user1.id
 )
 
 ad6 = Classified.create(
@@ -74,7 +85,8 @@ ad6 = Classified.create(
   status: "active",
   price: 14000,
   odometer: 22354,
-  car_id: car5.id
+  car_id: car5.id,
+  author_id: user2.id
 )
 
 ad7 = Classified.create(
@@ -83,7 +95,8 @@ ad7 = Classified.create(
   status: "active",
   price: 20000,
   odometer: 7354,
-  car_id: car5.id
+  car_id: car5.id,
+  author_id: user2.id
 )
 
 ad8 = Classified.create(
@@ -92,7 +105,9 @@ ad8 = Classified.create(
   status: "active",
   price: 10500,
   odometer: 123546,
-  car_id: car9.id
+  car_id: car9.id,
+  author_id: user2.id
+
 )
 
 ad9 = Classified.create(
@@ -101,7 +116,8 @@ ad9 = Classified.create(
   status: "active",
   price: 11500,
   odometer: 85000,
-  car_id: car7.id
+  car_id: car7.id,
+  author_id: user2.id
 )
 
 ad10 = Classified.create(
@@ -110,7 +126,8 @@ ad10 = Classified.create(
   status: "active",
   price: 5500,
   odometer: 323546,
-  car_id: car7.id
+  car_id: car7.id,
+  author_id: user3.id
 )
 
 ad11 = Classified.create(
@@ -119,7 +136,8 @@ ad11 = Classified.create(
   status: "active",
   price: 15500,
   odometer: 83546,
-  car_id: car12.id
+  car_id: car12.id,
+  author_id: user3.id
 )
 
 ad12 = Classified.create(
@@ -128,7 +146,8 @@ ad12 = Classified.create(
   status: "active",
   price: 6500,
   odometer: 183546,
-  car_id: car12.id
+  car_id: car12.id,
+  author_id: user3.id
 )
 
 ad12 = Classified.create(
@@ -137,7 +156,8 @@ ad12 = Classified.create(
   status: "active",
   price: 6500,
   odometer: 183546,
-  car_id: car12.id
+  car_id: car12.id,
+  author_id: user4.id
 )
 
 ad13 = Classified.create(
@@ -146,7 +166,8 @@ ad13 = Classified.create(
   status: "active",
   price: 36500,
   odometer: 23546,
-  car_id: car15.id
+  car_id: car15.id,
+  author_id: user4.id
 )
 
 ad14 = Classified.create(
@@ -155,7 +176,8 @@ ad14 = Classified.create(
   status: "active",
   price: 29500,
   odometer: 53546,
-  car_id: car14.id
+  car_id: car14.id,
+  author_id: user4.id
 )
 
 ad15 = Classified.create(
@@ -164,5 +186,6 @@ ad15 = Classified.create(
   status: "active",
   price: 7500,
   odometer: 153546,
-  car_id: car11.id
+  car_id: car11.id,
+  author_id: user4.id
 )
