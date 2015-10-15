@@ -6,7 +6,7 @@ var App = React.createClass({
   render: function(){
     return(
       <div>
-        <header><h1>Bay Area Car Search</h1></header>
+        <TitleBar/>
         {this.props.children}
       </div>
     );
