@@ -14,7 +14,7 @@
 
     render: function(){
       return (
-        <form className="keyword_form" onChange={this.pushStore}>
+        <form className="keyword_form">
           <label htmlFor="keyword"> Keyword (optional)</label>
           <input type="text" id="keyword" valueLink={this.linkState('keyword')}/>
         </form>

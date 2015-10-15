@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api, default: { format: 'json'} do
     get 'classified/account', :to => 'classified#account_index'
-    resources :classified, only: [:index]
+    resources :classified, only: [:index, :create]
   end
 
 end

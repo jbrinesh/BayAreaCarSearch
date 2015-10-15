@@ -15,7 +15,7 @@
 
     render: function(){
       return (
-        <form className="car_form" onChange={this.pushStore}>
+        <form className="car_form">
           <label htmlFor="make"> Make </label>
           <input type="text" id="make" valueLink={this.linkState('make')}/>
           <br/>

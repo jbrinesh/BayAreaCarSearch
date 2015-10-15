@@ -16,6 +16,13 @@
         classifieds: classifieds
       }
       AppDispatcher.dispatch(action);
+    },
+
+    createdNewClassified: function (){
+      var action = {
+        actionType: ClassifiedConstants.CREATED_NEW_CLASSIFIED
+      }
+      AppDispatcher.dispatch(action);
     }
 
 

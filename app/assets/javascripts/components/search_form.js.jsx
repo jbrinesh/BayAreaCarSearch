@@ -15,7 +15,7 @@
 
     render: function(){
       return (
-        <form className="search_form" onChange={this.pushStore}>
+        <form className="search_form" >
           <label> Price(optional) </label> <br/>
           <label htmlFor="min_price"> From </label>
           <input type="text" id="min_price" valueLink={this.linkState('min_price')}/>

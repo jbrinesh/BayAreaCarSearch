@@ -24,6 +24,18 @@
           ApiActions.recivedAccountClassifieds(response);
         }
       })
+    },
+
+    post: function (attr){
+      $.ajax({
+        url: "api/classified",
+        type: "POST",
+        dataType: "json",
+        data: attr,
+        success: function(response){
+          AccountUtil.fetch();
+        }
+      })
     }
   }
 
