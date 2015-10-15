@@ -46515,3 +46515,702 @@ Processing by Api::ClassifiedController#account_index as */*
   Rendered api/classified/_classified.json.jbuilder (0.1ms)
   Rendered api/classified/index.json.jbuilder (87.6ms)
 Completed 200 OK in 95ms (Views: 87.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 14:33:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 581ms (Views: 580.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 14:33:30 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 14ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 14:33:30 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 142ms (Views: 141.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 14:33:38 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 83ms (Views: 82.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 14:33:40 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 14:33:40 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 143ms (Views: 143.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 14:33:42 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 84ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 14:59:42 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 1841ms (ActiveRecord: 0.0ms)
+
+ExecJS::RuntimeError - SyntaxError: unknown: Unexpected token (9:4)
+   7 |     }
+   8 | 
+>  9 |     componentDidMount: function(){
+     |     ^
+  10 |       ClassifiedStore.addChangeHandler(_accountClassifiedsChanged);
+  11 |       AccountUtil.fetch();
+  12 |     },:
+  execjs (2.6.0) lib/execjs/external_runtime.rb:84:in `extract_result'
+  execjs (2.6.0) lib/execjs/external_runtime.rb:39:in `exec'
+  execjs (2.6.0) lib/execjs/external_runtime.rb:21:in `eval'
+  execjs (2.6.0) lib/execjs/external_runtime.rb:46:in `call'
+  babel-transpiler (0.7.0) lib/babel/transpiler.rb:28:in `transform'
+  react-rails (1.3.1) lib/react/jsx/babel_transformer.rb:17:in `transform'
+  react-rails (1.3.1) lib/react/jsx.rb:20:in `transform'
+  react-rails (1.3.1) lib/react/jsx/template.rb:13:in `evaluate'
+  tilt (2.0.1) lib/tilt/template.rb:96:in `render'
+  sprockets (3.4.0) lib/sprockets/legacy_tilt_processor.rb:25:in `call'
+  sprockets (3.4.0) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.4.0) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.4.0) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.4.0) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.4.0) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.4.0) lib/sprockets/loader.rb:318:in `fetch_asset_from_dependency_cache'
+  sprockets (3.4.0) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.4.0) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.4.0) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.4.0) lib/sprockets/bundle.rb:23:in `block in call'
+  sprockets (3.4.0) lib/sprockets/utils.rb:183:in `dfs'
+  sprockets (3.4.0) lib/sprockets/bundle.rb:24:in `call'
+  sprockets (3.4.0) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.4.0) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.4.0) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.4.0) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.4.0) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.4.0) lib/sprockets/loader.rb:318:in `fetch_asset_from_dependency_cache'
+  sprockets (3.4.0) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.4.0) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.4.0) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.4.0) lib/sprockets/base.rb:66:in `find_asset'
+  sprockets (3.4.0) lib/sprockets/environment.rb:30:in `find_asset'
+  sprockets (3.4.0) lib/sprockets/base.rb:92:in `[]'
+  sprockets-rails (2.3.3) lib/sprockets/rails/helper.rb:230:in `lookup_asset_for_path'
+  sprockets-rails (2.3.3) lib/sprockets/rails/helper.rb:190:in `check_errors_for'
+  sprockets-rails (2.3.3) lib/sprockets/rails/helper.rb:137:in `block in javascript_include_tag'
+  sprockets-rails (2.3.3) lib/sprockets/rails/helper.rb:136:in `javascript_include_tag'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1408985181935471158_70106450832420'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:333:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/template.rb:143:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/static_page_controller.rb:3:in `index'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+   () Users/jbrinesh/.rvm/gems/ruby-2.0.0-p643@global/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jbrinesh/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/1fafe2b48983bfb6/variables" for ::1 at 2015-10-15 14:59:44 -0700
+
+
+Started GET "/" for ::1 at 2015-10-15 15:00:00 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1677ms (Views: 1676.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/account.self-e034eb99eefe0feae9a9a751329125118cebc87afacba4fa87dc4175275a56f6.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/application.self-88d6421da7e4c5b5dea292d9f4fad69a00f5e082ed083be5a0b793ca4ac9adf0.css?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/account_index.self-798275554cf8d340a0b8549540a2ce6af321044056f1c87bf1ba20ab58e79877.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/actions/api_actions.self-f65184f10290cb173a30c2f1f712ee11d26402aa0c616b07f3a287efdc6b3806.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/car_input_form.self-0669f01492cc610c5e599d0e2007e851e3917ff46445151c5e274e73a2340014.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/keyword_form.self-dd3f06c0eb320f0deefc93bf5e9e0a9c2d9858946f177e975331114580862b93.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/list_index_item.self-018ba807b0befd86f21ee633a8331c5576aff2fc3a122e714b06882b2ccacb3d.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/search_form.self-30f7d7bebc106de412e3433f7467b324f6514207e2c51b70ab39938f71666113.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/search_input_field.self-27d00a9dbc1f42dd21782d8600b7a5ffad1b95d0a3ec499f66efc65c50e9c47c.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/show.self-28b7d2301ac8f842123d3c44bfb3bf83e40f84026daff35651051cd6873498de.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components/title_bar.self-7dd9dc17686c2371ed70185c1f9c070ec1fe0731facd475c131b85bf1d3a0942.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/stores/classified_store.self-4b99136c13a9c13ee923dee27037d77939360d8175d10a480e5a00d1d6d32dad.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/util/account_util.self-66e6087ff0a2b33ae480ab762c8b66216b59ff9cc0771ef1ab3e2b3646a6fe48.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 15:00:02 -0700
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 15:00:04 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:00:04 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 80ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:00:40 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 993ms (Views: 992.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/application.self-88d6421da7e4c5b5dea292d9f4fad69a00f5e082ed083be5a0b793ca4ac9adf0.css?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/account.self-e034eb99eefe0feae9a9a751329125118cebc87afacba4fa87dc4175275a56f6.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/car_input_form.self-0669f01492cc610c5e599d0e2007e851e3917ff46445151c5e274e73a2340014.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/keyword_form.self-dd3f06c0eb320f0deefc93bf5e9e0a9c2d9858946f177e975331114580862b93.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/list_index_item.self-018ba807b0befd86f21ee633a8331c5576aff2fc3a122e714b06882b2ccacb3d.js?body=1" for ::1 at 2015-10-15 15:00:41 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/components/search_form.self-30f7d7bebc106de412e3433f7467b324f6514207e2c51b70ab39938f71666113.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/components/search_input_field.self-27d00a9dbc1f42dd21782d8600b7a5ffad1b95d0a3ec499f66efc65c50e9c47c.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/components/show.self-28b7d2301ac8f842123d3c44bfb3bf83e40f84026daff35651051cd6873498de.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/components/title_bar.self-7dd9dc17686c2371ed70185c1f9c070ec1fe0731facd475c131b85bf1d3a0942.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/actions/api_actions.self-f65184f10290cb173a30c2f1f712ee11d26402aa0c616b07f3a287efdc6b3806.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/stores/classified_store.self-4b99136c13a9c13ee923dee27037d77939360d8175d10a480e5a00d1d6d32dad.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/util/account_util.self-66e6087ff0a2b33ae480ab762c8b66216b59ff9cc0771ef1ab3e2b3646a6fe48.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 15:00:42 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:00:42 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.9ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.4ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (34.9ms)
+Completed 200 OK in 123ms (Views: 34.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:00:49 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (7.1ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:00:52 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.5ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (6.6ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:00:54 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.5ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (6.3ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:00:57 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.7ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (7.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:01:00 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (6.5ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:01:03 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (6.2ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:01:18 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 86ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified?keyword=&car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2000&car_params%5Bmax_year%5D=2007&search_params%5Bmin_odometer%5D=&search_params%5Bmax_odometer%5D=&search_params%5Bmin_price%5D=&search_params%5Bmax_price%5D=" for ::1 at 2015-10-15 15:01:26 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"keyword"=>"", "car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2000", "max_year"=>"2007"}, "search_params"=>{"min_odometer"=>"", "max_odometer"=>"", "min_price"=>"", "max_price"=>""}, "default"=>{"format"=>"json"}}
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 100000000) AND ("classifieds"."odometer" BETWEEN 0 AND 100000000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2000' AND '2007')[0m
+  Rendered api/classified/_classified.json.jbuilder (0.4ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (5.9ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 15:01:28 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:01:28 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 153ms (Views: 152.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:01:28 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "i3D-t5amDdgTTM2iN-B5vA"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (8.7ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/session" for ::1 at 2015-10-15 15:01:35 -0700
+Processing by SessionsController#destroy as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:01:35 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 84ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 15:01:36 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 95ms (Views: 93.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-10-15 15:01:45 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"siSmnCvo1OnPNc5GLKXRrjwBROOYuyfBQJRaS5dQp1vxHDr8igIbL9HM/7chDwvj1/0bX+jvgewNTEdeY24+0Q==", "user"=>{"username"=>"user_2", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "user_2"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "Bntr3iPVkq2F2KZa-n7KyA"], ["updated_at", "2015-10-15 22:01:45.836438"], ["id", 2]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 73ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:01:45 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 164ms (Views: 163.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:01:46 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Bntr3iPVkq2F2KZa-n7KyA"]]
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 2)[0m
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (7.3ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:02:30 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 82ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:04:05 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 956ms (Views: 955.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 15:04:06 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Bntr3iPVkq2F2KZa-n7KyA"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:04:06 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/components/new_classified_form.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 15:04:07 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 15:04:07 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Bntr3iPVkq2F2KZa-n7KyA"]]
+  [1m[35mSQL (0.8ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 2)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (8.8ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 15:04:11 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 173ms (Views: 172.8ms | ActiveRecord: 0.0ms)

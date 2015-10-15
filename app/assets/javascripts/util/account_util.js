@@ -21,7 +21,7 @@
         url: "api/classified/account",
         type: "GET",
         success: function(response){
-          console.log(response)
+          ApiActions.recivedAccountClassifieds(response);
         }
       })
     }
