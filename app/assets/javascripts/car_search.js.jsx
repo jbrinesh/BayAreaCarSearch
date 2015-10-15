@@ -16,11 +16,14 @@ var App = React.createClass({
 var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Search}/>
-      <Route path="/:id" component={Show}/>
+    <Route path="account" component={Account}/>
+    <Route path="/:id" component={Show}/>
   </Route>
 );
 
-$(document).ready(function() {
-  var root = document.getElementById('content');
-  React.render(<Router>{routes}</Router>, root);
-});
+var mount_parent_component = function(){
+  $(document).ready(function() {
+    var root = document.getElementById('content');
+    React.render(<Router>{routes}</Router>, root);
+  });
+};

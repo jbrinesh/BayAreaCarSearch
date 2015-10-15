@@ -11,6 +11,7 @@
     render: function(){
       return (
         <div className="search">
+          <AccountButton/>
           <SearchInputField/>
           <ListIndex clickHandler={this.clickHandler}/>
         </div>

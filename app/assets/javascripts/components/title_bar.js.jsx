@@ -2,11 +2,13 @@
   'use strict';
 
   root.TitleBar = React.createClass({
-
+    goHome: function (){
+      window.location = "/";
+    },
     render: function() {
       return (
         <div className="title_bar">
-          <header><h1>Bay Area Car Search</h1></header>
+          <header onClick={this.goHome}><h1>Bay Area Car Search</h1></header>
         </div>
       )
     }

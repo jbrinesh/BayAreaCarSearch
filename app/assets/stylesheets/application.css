@@ -37,6 +37,22 @@ h1, h2, p, strong, em, a, li, ul {
   padding-left: 20px;
 }
 
+.account-button {
+  position: relative;
+  float: right;
+  margin: 30px;
+  margin-top: 0px;
+  top: -35px;
+}
+
+.sign-out-button {
+  position: relative;
+  float: right;
+  margin: 30px;
+  margin-top: 0px;
+  top: -35px;
+}
+
 .search_input_field {
    background-color: #D9D4D4;
    float: left;
