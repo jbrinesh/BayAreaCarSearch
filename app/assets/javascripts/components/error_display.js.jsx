@@ -4,7 +4,7 @@
   root.ErrorDisplay = React.createClass({
 
     getInitialState: function(){
-      return { errors: ["test error"] }
+      return { errors: [] }
     },
 
     componentDidMount: function (){

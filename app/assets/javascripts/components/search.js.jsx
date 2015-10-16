@@ -13,6 +13,7 @@
         <div className="search">
           <AccountButton/>
           <SearchInputField/>
+          <KeywordForm/>
           <ListIndex clickHandler={this.clickHandler}/>
         </div>
       )

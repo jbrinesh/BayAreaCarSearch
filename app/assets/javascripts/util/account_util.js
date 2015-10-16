@@ -33,7 +33,7 @@
         },
         error: function(response){
           var errors = response.responseJSON;
-          ErrorActions.recivedErrors(errors); 
+          ErrorActions.recivedErrors(errors);
         }
       })
     }

@@ -21,6 +21,15 @@
       AccountUtil.post(this.state);
     },
 
+    launch_widget: function (e){
+      e.preventDefault();
+      cloudinary.openUploadWidget({ cloud_name: 'dfb4gjjt4', upload_preset: 'hbhindyk'},
+        function(error, result) {
+          this.setState({ img_ref: result[0].path });
+        }.bind(this));
+    },
+
+
     render: function (){
       return (
         <div className="new-user-container">
@@ -40,8 +49,10 @@
             <input type="text" id="year" valueLink={this.linkState('year')}/>
             <label htmlFor="odometer">Current Millage</label>
             <input type="text" id="odometer" valueLink={this.linkState('odometer')}/>
+            <button className="image-upload-button" onClick={this.launch_widget}>Upload Image</button>
             <input type="submit" value="Post Ad"/>
           </form>
+
         </div>
       )
     }

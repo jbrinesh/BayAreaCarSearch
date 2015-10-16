@@ -67,6 +67,7 @@ h1, h2, p, strong, em, a, li, ul {
   position: fixed;
    background-color: #D9D4D4;
    float: left;
+   top: 20px;
    width: 200px;
    height: 100%;
    padding-top: 30px;
@@ -89,6 +90,10 @@ h1, h2, p, strong, em, a, li, ul {
   clear: left;
 }
 
+.keyword-form {
+  
+}
+
 .keyword-form input{
   clear: both;
   float: middle;
@@ -97,12 +102,14 @@ h1, h2, p, strong, em, a, li, ul {
 }
 
 .list-index {
+ position: relative;
  background-color: #E4E4E9;
  width: 100%;
  height: 100%;
  margin: 0px;
+ top: 50px;
  list-style-type: none;
- z-index: 1;
+ z-index: 0;
 }
 
 .list-index-item {
@@ -150,4 +157,4 @@ h1, h2, p, strong, em, a, li, ul {
     top: 60px;
     position: relative;
 }
-user 
+user

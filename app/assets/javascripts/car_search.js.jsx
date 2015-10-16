@@ -2,6 +2,8 @@ var Route = ReactRouter.Route;
 var Router = ReactRouter.Router;
 var IndexRoute = ReactRouter.IndexRoute;
 
+$.cloudinary.config({ cloud_name: 'dfb4gjjt4', api_key: '298682488138135'});
+
 var App = React.createClass({
   render: function(){
     return(

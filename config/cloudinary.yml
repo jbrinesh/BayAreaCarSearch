@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dfb4gjjt4
+  api_key: '298682488138135'
+  api_secret: Rp-0F1WMQh586XjY-T0sRVDN4Vo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dfb4gjjt4
+  api_key: '298682488138135'
+  api_secret: Rp-0F1WMQh586XjY-T0sRVDN4Vo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dfb4gjjt4
+  api_key: '298682488138135'
+  api_secret: Rp-0F1WMQh586XjY-T0sRVDN4Vo
+  enhance_image_tag: true
+  static_image_support: false

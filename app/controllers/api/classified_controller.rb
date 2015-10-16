@@ -26,7 +26,8 @@ class Api::ClassifiedController < ApplicationController
       title: params['title'],
       body: params['body'],
       price: params['price'],
-      odometer: params['odometer']
+      odometer: params['odometer'],
+      img_ref: params['img_ref']
     }
 
 

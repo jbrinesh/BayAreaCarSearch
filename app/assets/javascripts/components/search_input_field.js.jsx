@@ -14,7 +14,6 @@
       return (
         <div className="search-input-field">
           <ErrorDisplay/>
-          <KeywordForm/>
           <CarForm/>
           <SearchForm/>
           <form onSubmit={this.runSearch}>
