@@ -1,0 +1,4 @@
+ErrorConstants = {
+  RECIVED_ERRORS: "RECIVED_ERRORS",
+  NEW_ERRORS: "NEW_ERRORS"
+}
