@@ -28,21 +28,31 @@ h1, h2, p, strong, em, a, li, ul {
   background: transparent;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .title-bar {
+  position: fixed;
+  width: 100%;
   background-color: #D9D4D4;
   margin: 0px;
   font-size: 30px;
   height: 40px;
   padding: 5px;
   padding-left: 20px;
+  z-index: 2;
 }
 
 .account-button {
-  position: relative;
-  float: right;
-  margin: 30px;
-  margin-top: 0px;
-  top: -35px;
+    position: fixed;
+    right: 0;
+    margin: 30px;
+    margin-top: 15px;
+    z-index: 3;
+    padding: 5px;
 }
 
 .sign-out-button {
@@ -54,13 +64,14 @@ h1, h2, p, strong, em, a, li, ul {
 }
 
 .search-input-field {
+  position: fixed;
    background-color: #D9D4D4;
    float: left;
    width: 200px;
-   height: 600px;
+   height: 100%;
    padding-top: 30px;
    margin-top: 0px;
-   z-index: 2;
+   z-index: 1;
 }
 
 .search-input-field input {
@@ -88,7 +99,7 @@ h1, h2, p, strong, em, a, li, ul {
 .list-index {
  background-color: #E4E4E9;
  width: 100%;
- height: 634px;
+ height: 100%;
  margin: 0px;
  list-style-type: none;
  z-index: 1;
@@ -117,18 +128,26 @@ h1, h2, p, strong, em, a, li, ul {
   background-color: #E4E4E9;
 }
 
-.new-user-form {
-    position: relative;
-    background-color: #D9D4D4;
-    width: 500px;
-    padding: 30px;
-  }
+.new-user-container {
+  position: relative;
+  background-color: #D9D4D4;
+  width: 380px;
+  padding: 30px;
+  margin; auto;
+}
 
 .new-user-form input {
   margin: 10px;
 }
 
 .account-index li {
-    margin: 0px;
-    padding-left: 20px;
+  margin: 0px;
+  padding-left: 20px;
 }
+
+.show {
+    height: 300px;
+    top: 60px;
+    position: relative;
+}
+user 

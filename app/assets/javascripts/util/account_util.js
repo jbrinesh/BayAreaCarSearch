@@ -32,7 +32,8 @@
           AccountUtil.fetch();
         },
         error: function(response){
-          debugger; 
+          var errors = response.responseJSON;
+          ErrorActions.recivedErrors(errors); 
         }
       })
     }

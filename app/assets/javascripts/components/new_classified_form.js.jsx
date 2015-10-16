@@ -23,7 +23,7 @@
 
     render: function (){
       return (
-        <div>
+        <div className="new-user-container">
           <ErrorDisplay/>
           <form className="new-user-form" onSubmit={this.handleSubmit}>
             <label htmlFor="title">Title</label>

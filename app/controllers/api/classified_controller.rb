@@ -30,17 +30,23 @@ class Api::ClassifiedController < ApplicationController
     }
 
 
-    car = Car.where(car_params)
+    car = Car.find_by(car_params)
+    if car
+      classified_params['car_id'] = car.id
+      classified_params['status'] = 'active'
+      classified_params['author_id'] = current_user.id
+      @classified = Classified.new(classified_params)
 
-    classified_params['car_id'] = car.first.id
-    classified_params['status'] = 'active'
-    classified_params['author_id'] = current_user.id
-
-    @classified = Classified.new(classified_params)
-
-    if @classified.save
-      render json: @classified
+      if @classified.save
+        render json: @classified
+      else
+        render json: @classified.errors.full_messages, :status => 422
+      end
+    else
+      render json: ["Car not in database"], status: 422
     end
+
+
   end
 
 end

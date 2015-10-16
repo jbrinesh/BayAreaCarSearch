@@ -14,8 +14,11 @@
   root.ErrorStore = $.extend ({}, EventEmitter.prototype, {
 
     all: function (){
-      return _errors.slice(0);
-      clearErrors();
+      var errors = _errors.slice(0);
+      window.setTimeout( function (){
+        clearErrors();
+      }, 60)
+      return errors
     },
 
     addErrorHandler: function(handler){
