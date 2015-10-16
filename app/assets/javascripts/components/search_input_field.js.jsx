@@ -12,18 +12,11 @@
 
     render: function(){
       return (
-        <div className="search_input_field">
+        <div className="search-input-field">
           <ErrorDisplay/>
-          <br/>
           <KeywordForm/>
-          <br/>
-          <br/>
           <CarForm/>
-          <br/>
-          <br/>
           <SearchForm/>
-          <br/>
-          <br/>
           <form onSubmit={this.runSearch}>
             <input type="submit" value="Search"/>
           </form>

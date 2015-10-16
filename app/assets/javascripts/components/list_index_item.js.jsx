@@ -11,7 +11,7 @@
     render: function(){
       var string = this.props.classified.title + " ---- $" + this.props.classified.price;
       return (
-        <li className="list_index_item"
+        <li className="list-index-item"
             onClick={this.handleClick}
             >{string}</li>
       )

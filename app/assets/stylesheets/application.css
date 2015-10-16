@@ -28,7 +28,7 @@ h1, h2, p, strong, em, a, li, ul {
   background: transparent;
 }
 
-.title_bar {
+.title-bar {
   background-color: #D9D4D4;
   margin: 0px;
   font-size: 30px;
@@ -53,7 +53,7 @@ h1, h2, p, strong, em, a, li, ul {
   top: -35px;
 }
 
-.search_input_field {
+.search-input-field {
    background-color: #D9D4D4;
    float: left;
    width: 200px;
@@ -63,7 +63,7 @@ h1, h2, p, strong, em, a, li, ul {
    z-index: 2;
 }
 
-.search_input_field input {
+.search-input-field input {
   float: right;
   margin-left: 15px;
   margin-right: 15px;
@@ -72,13 +72,13 @@ h1, h2, p, strong, em, a, li, ul {
   width: 100px;
   clear: right;
 }
-.search_input_field label {
+.search-input-field label {
   float: left;
   padding: 10px;
   clear: left;
 }
 
-.keyword_form input{
+.keyword-form input{
   clear: both;
   float: middle;
   width: 150px;
@@ -94,22 +94,22 @@ h1, h2, p, strong, em, a, li, ul {
  z-index: 1;
 }
 
-.list_index_item {
+.list-index-item {
   font-size: 20px;
   margin: 0px;
   margin-left: 200px;
   padding-right: 0px;
 }
 
-.list_index_item:hover {
+.list-index-item:hover {
   cursor: pointer;
 }
 
-.list_index_item:nth-child(even){
+.list-index-item:nth-child(even){
   background-color: #BEBBBB;
 }
 
-.list_index_item:nth-child(odd){
+.list-index-item:nth-child(odd){
   background-color: white;
 }
 
@@ -118,17 +118,17 @@ h1, h2, p, strong, em, a, li, ul {
 }
 
 .new-user-form {
-  position: fixed;
-  background-color: #D9D4D4;
-  float: left;
-  width: 500px;
-  height: 300px;
-  padding-left: 30px;
-  padding-top: 30px;
-  margin-top: 0px;
-  z-index: 2;
+    position: relative;
+    background-color: #D9D4D4;
+    width: 500px;
+    padding: 30px;
+  }
+
+.new-user-form input {
+  margin: 10px;
 }
 
-.new-user-form:child {
-  padding: 0px;
+.account-index li {
+    margin: 0px;
+    padding-left: 20px;
 }

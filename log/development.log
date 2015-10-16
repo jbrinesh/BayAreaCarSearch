@@ -56736,3 +56736,1256 @@ Started GET "/" for ::1 at 2015-10-15 18:32:27 -0700
 Processing by StaticPageController#index as HTML
   Rendered static_page/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 1390ms (Views: 1388.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:24:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 539ms (Views: 539.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:24:04 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 141ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 19:24:10 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 168ms (Views: 156.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/session" for ::1 at 2015-10-15 19:24:30 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"kNP60B2QeubZVJo37/ywwCCoH5Ju/K6dRGoQIpsHWQDT62awvHq1IMetq8biVmqNy1RALh6oCLAJsg03bznAig==", "user"=>{"username"=>"user_1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "user_1"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"], ["updated_at", "2015-10-16 02:24:30.792345"], ["id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 77ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:24:30 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 154ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:24:31 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (1.0ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.3ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (51.0ms)
+Completed 200 OK in 64ms (Views: 49.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:28:11 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1546ms (Views: 1545.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/application.self-d7829676896920b0257bf54b50a2b99aac0b8392f8a1a5324beefe5ed853b97c.css?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/account.self-b6e1bed44a6a905525db1e233be080ef5d1fb9141f6627dd16bf65e38ae05ed4.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/car_input_form.self-3f651ef292a3d00a3490a8a7735be09d7c65748cb313a661e90def3ecf9a3339.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/error_display.self-c87373ab505321b67318a10bbb331ca66743fe9118729b0e918a2e46b55bf898.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/keyword_form.self-ffe90889f32c783f1471d08b43772cc44a8e22975c42db10ce7d84e2696884e7.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/list_index_item.self-018ba807b0befd86f21ee633a8331c5576aff2fc3a122e714b06882b2ccacb3d.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/new_classified_form.self-f7bcd69299771fb6b3d8c067d8993693b27e323db08d8d34c06782685356b96a.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/search_form.self-8e82f6c2889c0934a336a34f2353c9c89238c8c614bd582189da74e518a58826.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/search_input_field.self-4db6bce951824c1676252eea46d57ccfe8d610df4637a87181ca4ee6a232af94.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/show.self-28b7d2301ac8f842123d3c44bfb3bf83e40f84026daff35651051cd6873498de.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components/title_bar.self-7dd9dc17686c2371ed70185c1f9c070ec1fe0731facd475c131b85bf1d3a0942.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/actions/api_actions.self-b7549c5e19631f680ff59d143e29c65cf7be6d620e73e443e4e924f1d90bd6c9.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/actions/error_actions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/constants/error_constants.self-2eb189a68434efff1187efd3011f918cc591105647a3387d7ed7c7d55eace759.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/stores/classified_store.self-c61a6a12375107d7eb58f359978e8a1b3fc559e011b9d56d2a5c05c637b83f58.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/stores/error_store.self-1e3bb227f4a7254f8c26f4072065ee99a356641d003204429eac1149b88479f5.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/util/account_util.self-625f5dfcb869a3e186a5eb7396efb9e01228691a2a07af594d1e0c7daf1c13c1.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 19:28:13 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:28:13 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.3ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (24.8ms)
+Completed 200 OK in 44ms (Views: 24.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:33:16 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5000ms (Views: 4999.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/application.self-1137ffd07766feae918c5cae4422f194ebb284c63d4221744809ef8f6262d48a.css?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/car_input_form.self-aa16e82c7570a6ad2bcda79f60def6177c7f3608dbfefeae0d913def3e1c15e8.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/error_display.self-845926893540c8bc84cafffe27ed08a280770bfc267d8e8b5f369edba78b18a2.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/keyword_form.self-f481fd0ad5248853e5854a02886ee6144744b8e934e711bbe35d0498c2a4aa57.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/list_index_item.self-d0d23aedddedc6119f8c988802a9111a255107d85cdd42f971dc2c786277968c.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/account.self-b6e1bed44a6a905525db1e233be080ef5d1fb9141f6627dd16bf65e38ae05ed4.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/search_form.self-f60d31d99c874a4c36ce764673c403d92959b0fe233ee786af56bfc6672457e6.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/search_input_field.self-9c6a94982804316ebcc2b0afa3cea40be2598a949e20c95cea44105f4cb3bbcc.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/show.self-c393b467eb2587c74d8edc5d1edfeecaaf6260ab6fb6c223e0e2a02a5c08e72d.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/title_bar.self-f34795f5ca5124b9ba416f3abfe5ca62bf2d104fb27ac0d403c2d75f6910324e.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/new_classified_form.self-f7bcd69299771fb6b3d8c067d8993693b27e323db08d8d34c06782685356b96a.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/actions/api_actions.self-b7549c5e19631f680ff59d143e29c65cf7be6d620e73e443e4e924f1d90bd6c9.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/actions/error_actions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/constants/error_constants.self-2eb189a68434efff1187efd3011f918cc591105647a3387d7ed7c7d55eace759.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/stores/classified_store.self-c61a6a12375107d7eb58f359978e8a1b3fc559e011b9d56d2a5c05c637b83f58.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/stores/error_store.self-1e3bb227f4a7254f8c26f4072065ee99a356641d003204429eac1149b88479f5.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/util/account_util.self-625f5dfcb869a3e186a5eb7396efb9e01228691a2a07af594d1e0c7daf1c13c1.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 19:33:22 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:33:22 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (22.6ms)
+Completed 200 OK in 41ms (Views: 22.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:33:25 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 84ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:33:26 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 86ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified?keyword=&car_params%5Bmake%5D=toyota&car_params%5Bmodel%5D=camery&car_params%5Bmin_year%5D=2000&car_params%5Bmax_year%5D=2007&search_params%5Bmin_odometer%5D=&search_params%5Bmax_odometer%5D=&search_params%5Bmin_price%5D=&search_params%5Bmax_price%5D=" for ::1 at 2015-10-15 19:33:38 -0700
+Processing by Api::ClassifiedController#index as JSON
+  Parameters: {"keyword"=>"", "car_params"=>{"make"=>"toyota", "model"=>"camery", "min_year"=>"2000", "max_year"=>"2007"}, "search_params"=>{"min_odometer"=>"", "max_odometer"=>"", "min_price"=>"", "max_price"=>""}, "default"=>{"format"=>"json"}}
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE ("classifieds"."price" BETWEEN 0 AND 100000000) AND ("classifieds"."odometer" BETWEEN 0 AND 100000000) AND (classifieds.body LIKE '%%' OR classifieds.title LIKE '%%') AND (cars.make = 'toyota' AND cars.model = 'camery') AND (cars.year BETWEEN '2000' AND '2007')[0m
+  Rendered api/classified/_classified.json.jbuilder (0.3ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (92.1ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 19:33:47 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:33:47 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 102ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:33:47 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (0.5ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/index.json.jbuilder (8.7ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:34:58 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 102ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/application.self-61a17d9269d77d20927a82ad26bc488c2601197d9d509239556725c754e3ed06.css?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/account.self-b6e1bed44a6a905525db1e233be080ef5d1fb9141f6627dd16bf65e38ae05ed4.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/car_input_form.self-aa16e82c7570a6ad2bcda79f60def6177c7f3608dbfefeae0d913def3e1c15e8.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/error_display.self-845926893540c8bc84cafffe27ed08a280770bfc267d8e8b5f369edba78b18a2.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/keyword_form.self-f481fd0ad5248853e5854a02886ee6144744b8e934e711bbe35d0498c2a4aa57.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/list_index_item.self-d0d23aedddedc6119f8c988802a9111a255107d85cdd42f971dc2c786277968c.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/new_classified_form.self-f7bcd69299771fb6b3d8c067d8993693b27e323db08d8d34c06782685356b96a.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/search_form.self-f60d31d99c874a4c36ce764673c403d92959b0fe233ee786af56bfc6672457e6.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/search_input_field.self-9c6a94982804316ebcc2b0afa3cea40be2598a949e20c95cea44105f4cb3bbcc.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/show.self-c393b467eb2587c74d8edc5d1edfeecaaf6260ab6fb6c223e0e2a02a5c08e72d.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components/title_bar.self-f34795f5ca5124b9ba416f3abfe5ca62bf2d104fb27ac0d403c2d75f6910324e.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/actions/api_actions.self-b7549c5e19631f680ff59d143e29c65cf7be6d620e73e443e4e924f1d90bd6c9.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/actions/error_actions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/constants/error_constants.self-2eb189a68434efff1187efd3011f918cc591105647a3387d7ed7c7d55eace759.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/stores/classified_store.self-c61a6a12375107d7eb58f359978e8a1b3fc559e011b9d56d2a5c05c637b83f58.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/stores/error_store.self-1e3bb227f4a7254f8c26f4072065ee99a356641d003204429eac1149b88479f5.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/util/account_util.self-625f5dfcb869a3e186a5eb7396efb9e01228691a2a07af594d1e0c7daf1c13c1.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 19:34:59 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:34:59 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (10.5ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:36:34 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (0.6ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (7.3ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:37:37 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 120ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/application.self-7afdaf2c3b5554e5b36003b631cd21358e1898cb7cc92ebd8ffe29d11f390378.css?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/account.self-b6e1bed44a6a905525db1e233be080ef5d1fb9141f6627dd16bf65e38ae05ed4.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/car_input_form.self-aa16e82c7570a6ad2bcda79f60def6177c7f3608dbfefeae0d913def3e1c15e8.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/error_display.self-845926893540c8bc84cafffe27ed08a280770bfc267d8e8b5f369edba78b18a2.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/keyword_form.self-f481fd0ad5248853e5854a02886ee6144744b8e934e711bbe35d0498c2a4aa57.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/list_index_item.self-d0d23aedddedc6119f8c988802a9111a255107d85cdd42f971dc2c786277968c.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/new_classified_form.self-f7bcd69299771fb6b3d8c067d8993693b27e323db08d8d34c06782685356b96a.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/search_form.self-f60d31d99c874a4c36ce764673c403d92959b0fe233ee786af56bfc6672457e6.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/search_input_field.self-9c6a94982804316ebcc2b0afa3cea40be2598a949e20c95cea44105f4cb3bbcc.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/show.self-c393b467eb2587c74d8edc5d1edfeecaaf6260ab6fb6c223e0e2a02a5c08e72d.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components/title_bar.self-f34795f5ca5124b9ba416f3abfe5ca62bf2d104fb27ac0d403c2d75f6910324e.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/actions/api_actions.self-b7549c5e19631f680ff59d143e29c65cf7be6d620e73e443e4e924f1d90bd6c9.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/actions/error_actions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/constants/error_constants.self-2eb189a68434efff1187efd3011f918cc591105647a3387d7ed7c7d55eace759.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/stores/classified_store.self-c61a6a12375107d7eb58f359978e8a1b3fc559e011b9d56d2a5c05c637b83f58.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/stores/error_store.self-1e3bb227f4a7254f8c26f4072065ee99a356641d003204429eac1149b88479f5.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/util/account_util.self-625f5dfcb869a3e186a5eb7396efb9e01228691a2a07af594d1e0c7daf1c13c1.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 19:37:37 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:37:37 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (0.7ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/index.json.jbuilder (10.0ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:40:16 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2645ms (Views: 2644.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/car_input_form.self-b6add6da64ee6e64b0b8cf0f6a1e6acd9855233b6b60f4f08abe0707c1fa58d0.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/application.self-7afdaf2c3b5554e5b36003b631cd21358e1898cb7cc92ebd8ffe29d11f390378.css?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/new_classified_form.self-da3b72e4c0ba9663ea0f64167594188b669bc0d60cdb8905a308a9b996183b74.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/search_form.self-bd89aafc20d217a913041eae5128eb2c3ff3cdb88bf961e0a5950196186a40db.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/search_input_field.self-3ecbda86d54ae4277af0e705c9c628dd1bf296078f712bcaf4f09fb4e146b0be.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/account.self-b6e1bed44a6a905525db1e233be080ef5d1fb9141f6627dd16bf65e38ae05ed4.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/error_display.self-845926893540c8bc84cafffe27ed08a280770bfc267d8e8b5f369edba78b18a2.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/keyword_form.self-f481fd0ad5248853e5854a02886ee6144744b8e934e711bbe35d0498c2a4aa57.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/list_index_item.self-d0d23aedddedc6119f8c988802a9111a255107d85cdd42f971dc2c786277968c.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/show.self-c393b467eb2587c74d8edc5d1edfeecaaf6260ab6fb6c223e0e2a02a5c08e72d.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components/title_bar.self-f34795f5ca5124b9ba416f3abfe5ca62bf2d104fb27ac0d403c2d75f6910324e.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/actions/api_actions.self-b7549c5e19631f680ff59d143e29c65cf7be6d620e73e443e4e924f1d90bd6c9.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/actions/error_actions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/constants/error_constants.self-2eb189a68434efff1187efd3011f918cc591105647a3387d7ed7c7d55eace759.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/stores/classified_store.self-c61a6a12375107d7eb58f359978e8a1b3fc559e011b9d56d2a5c05c637b83f58.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/stores/error_store.self-1e3bb227f4a7254f8c26f4072065ee99a356641d003204429eac1149b88479f5.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/util/account_util.self-625f5dfcb869a3e186a5eb7396efb9e01228691a2a07af594d1e0c7daf1c13c1.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 19:40:19 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:40:19 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[35mSQL (0.5ms)[0m  SELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (22.4ms)
+Completed 200 OK in 41ms (Views: 24.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:40:24 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 181ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:40:27 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 97ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-10-15 19:40:31 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+Redirected to http://localhost:3000/#/account
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:40:31 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 102ms (Views: 101.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:40:31 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)[0m
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (10.0ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:44:32 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 239ms (Views: 239.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/application.self-cf8660c45e5d3721ea8cca9aa99bbc03102a16f036229ee2836c10cccc5a691a.css?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/account.self-b6e1bed44a6a905525db1e233be080ef5d1fb9141f6627dd16bf65e38ae05ed4.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/car_input_form.self-b6add6da64ee6e64b0b8cf0f6a1e6acd9855233b6b60f4f08abe0707c1fa58d0.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/error_display.self-845926893540c8bc84cafffe27ed08a280770bfc267d8e8b5f369edba78b18a2.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/keyword_form.self-f481fd0ad5248853e5854a02886ee6144744b8e934e711bbe35d0498c2a4aa57.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/list_index_item.self-d0d23aedddedc6119f8c988802a9111a255107d85cdd42f971dc2c786277968c.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/new_classified_form.self-da3b72e4c0ba9663ea0f64167594188b669bc0d60cdb8905a308a9b996183b74.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/search_form.self-bd89aafc20d217a913041eae5128eb2c3ff3cdb88bf961e0a5950196186a40db.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/search_input_field.self-3ecbda86d54ae4277af0e705c9c628dd1bf296078f712bcaf4f09fb4e146b0be.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/show.self-c393b467eb2587c74d8edc5d1edfeecaaf6260ab6fb6c223e0e2a02a5c08e72d.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components/title_bar.self-f34795f5ca5124b9ba416f3abfe5ca62bf2d104fb27ac0d403c2d75f6910324e.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/actions/api_actions.self-b7549c5e19631f680ff59d143e29c65cf7be6d620e73e443e4e924f1d90bd6c9.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/actions/error_actions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/constants/error_constants.self-2eb189a68434efff1187efd3011f918cc591105647a3387d7ed7c7d55eace759.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/stores/classified_store.self-c61a6a12375107d7eb58f359978e8a1b3fc559e011b9d56d2a5c05c637b83f58.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/stores/error_store.self-1e3bb227f4a7254f8c26f4072065ee99a356641d003204429eac1149b88479f5.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/util/account_util.self-625f5dfcb869a3e186a5eb7396efb9e01228691a2a07af594d1e0c7daf1c13c1.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 19:44:33 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:44:33 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)[0m
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/index.json.jbuilder (10.9ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:44:37 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)[0m
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (8.0ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-15 19:45:42 -0700
+Processing by StaticPageController#index as HTML
+  Rendered static_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 252ms (Views: 251.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/static_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/application.self-0a96ca2f20c9530917ffe190b6de2927fd181fcede11b287999c6e76d13e2dba.css?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/react_ujs.self-0833fe72a25fcb9cc0686328cc2aa88975f128bf379c265b61ad1a5e1113a400.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/react_router.self-b2fb42fc48326928f091759585ae1eab0cd35ab15ba475d0fbb6c01c9dedc5bb.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/flux.self-d49657677b043fd9a5b56222b931c6dc76b57db2cff9d5967d80f300ee2f4545.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/account.self-b6e1bed44a6a905525db1e233be080ef5d1fb9141f6627dd16bf65e38ae05ed4.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/account_button.self-a421e9e0a26f635fb5a7ff2ebfafd66d63ffc87fb90d4e69f135e09b72966c0c.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/account_index.self-d985100be72f8bff61b426a28f1fa1f52c55d735856a1b86a14ec07d5db96429.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/car_input_form.self-b6add6da64ee6e64b0b8cf0f6a1e6acd9855233b6b60f4f08abe0707c1fa58d0.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/error_display.self-845926893540c8bc84cafffe27ed08a280770bfc267d8e8b5f369edba78b18a2.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/keyword_form.self-f481fd0ad5248853e5854a02886ee6144744b8e934e711bbe35d0498c2a4aa57.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/list_index.self-1b56841ab77ae4ebba2a1ca22ce38ff84a0e2174f8872ca40896254aeb4ef391.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/list_index_item.self-d0d23aedddedc6119f8c988802a9111a255107d85cdd42f971dc2c786277968c.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/new_classified_form.self-da3b72e4c0ba9663ea0f64167594188b669bc0d60cdb8905a308a9b996183b74.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/root.self-d772e3c0084442c48216505a59aca0f16952d49136fc65b7212dd946d6219552.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/search.self-d036112274eb08e1f5e08a6c41a6bb0c91001f77a470abe87c26a54fa11f7579.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/search_form.self-bd89aafc20d217a913041eae5128eb2c3ff3cdb88bf961e0a5950196186a40db.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/search_input_field.self-3ecbda86d54ae4277af0e705c9c628dd1bf296078f712bcaf4f09fb4e146b0be.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/show.self-c393b467eb2587c74d8edc5d1edfeecaaf6260ab6fb6c223e0e2a02a5c08e72d.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/sign_out_button.self-8e5fce9a0d485573cae81f3168a64a7dd96850fe285dccd22c012816c19e5215.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components/title_bar.self-f34795f5ca5124b9ba416f3abfe5ca62bf2d104fb27ac0d403c2d75f6910324e.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/actions/api_actions.self-b7549c5e19631f680ff59d143e29c65cf7be6d620e73e443e4e924f1d90bd6c9.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/actions/error_actions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/actions/query_actions.self-b68f917c2391da700f7ff098fd2cbb543ad78109df7e1cef1fdc9a17ac7535e3.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/car_search.self-6e56e1b931fe499fb99943eb13d2cd3d079edbe32a6507f0cf898ac6cbcff672.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/constants/classifieds_constants.self-cef90af2750157bd5071dfb4ec2ef49d37434be54a5c8bb137c838f8f94cc370.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/constants/error_constants.self-2eb189a68434efff1187efd3011f918cc591105647a3387d7ed7c7d55eace759.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/constants/query_constants.self-9d50ef8ad7026f8e925a09f3018eaaf0cec01908f51aec2ea74daca6c49dc3b1.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/dispatcher/dispatcher.self-27d32ce23a523f84ac3386e725bc78d6b63ecc0427feb3361640e6233142ae34.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/static_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/stores/classified_store.self-c61a6a12375107d7eb58f359978e8a1b3fc559e011b9d56d2a5c05c637b83f58.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/stores/error_store.self-1e3bb227f4a7254f8c26f4072065ee99a356641d003204429eac1149b88479f5.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/stores/query_store.self-c4e218d77175baa5cc1a43b3dec070794b04c49b28d30246529d1d1803218435.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/util/account_util.self-625f5dfcb869a3e186a5eb7396efb9e01228691a2a07af594d1e0c7daf1c13c1.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/util/api_util.self-62ce27b2f8e3fcc05a31aeb88cfe7275a35a13ca6da6ea39049f62b3d8f7e9ec.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-10-15 19:45:42 -0700
+
+
+Started GET "/api/classified/account" for ::1 at 2015-10-15 19:45:43 -0700
+Processing by Api::ClassifiedController#account_index as */*
+  Parameters: {"default"=>{"format"=>"json"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "TwtvwdTsjb0ZCRV7r9qA6g"]]
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT "classifieds"."id" AS t0_r0, "classifieds"."title" AS t0_r1, "classifieds"."body" AS t0_r2, "classifieds"."status" AS t0_r3, "classifieds"."price" AS t0_r4, "classifieds"."odometer" AS t0_r5, "classifieds"."car_id" AS t0_r6, "classifieds"."created_at" AS t0_r7, "classifieds"."updated_at" AS t0_r8, "classifieds"."author_id" AS t0_r9, "cars"."id" AS t1_r0, "cars"."make" AS t1_r1, "cars"."model" AS t1_r2, "cars"."year" AS t1_r3 FROM "classifieds" INNER JOIN "cars" ON "cars"."id" = "classifieds"."car_id" WHERE (classifieds.author_id = 1)[0m
+  Rendered api/classified/_classified.json.jbuilder (0.3ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.2ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/_classified.json.jbuilder (0.1ms)
+  Rendered api/classified/index.json.jbuilder (9.8ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.9ms)

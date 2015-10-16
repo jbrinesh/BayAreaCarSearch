@@ -7,7 +7,7 @@
     },
     render: function() {
       return (
-        <div className="title_bar">
+        <div className="title-bar">
           <header onClick={this.goHome}><h1>Bay Area Car Search</h1></header>
         </div>
       )

@@ -17,7 +17,7 @@
 
     render: function(){
       return (
-        <ul>
+        <ul className="error-display">
           {
             this.state.errors.map(function(error, idx){
               return <li key={idx}>{error}</li>

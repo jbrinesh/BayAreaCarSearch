@@ -11,7 +11,7 @@
 
     render: function(){
       return (
-        <div>
+        <div className="account">
           <SignOutButton/>
           <AccountIndex clickHandler={this.clickHandler}/>
           <NewClassifiedForm/>

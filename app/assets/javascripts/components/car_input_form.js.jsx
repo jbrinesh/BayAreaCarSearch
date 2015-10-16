@@ -15,15 +15,11 @@
 
     render: function(){
       return (
-        <form className="car_form">
+        <form className="car-form">
           <label htmlFor="make"> Make </label>
           <input type="text" id="make" valueLink={this.linkState('make')}/>
-          <br/>
-          <br/>
           <label htmlFor="model"> Model </label>
           <input type="text" id="model" valueLink={this.linkState('model')}/>
-          <br/>
-          <br/>
           <label> Year </label><br/>
           <label htmlFor="min_year"> From </label>
           <input type="text" id="min_year" valueLink={this.linkState('min_year')}/>

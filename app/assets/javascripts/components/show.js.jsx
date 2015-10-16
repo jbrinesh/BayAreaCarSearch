@@ -4,7 +4,7 @@
     render: function(){
       var classified = ClassifiedStore.find(this.props.params.id);
       return (
-        <div>
+        <div className="show">
           <h2>{classified.title}</h2>
         </div>
       )
