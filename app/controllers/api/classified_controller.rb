@@ -37,11 +37,10 @@ class Api::ClassifiedController < ApplicationController
     classified_params['author_id'] = current_user.id
 
     @classified = Classified.new(classified_params)
+
     if @classified.save
       render json: @classified
-    else
-      render json: @classified
-    end 
+    end
   end
 
 end

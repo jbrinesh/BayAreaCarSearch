@@ -112,3 +112,23 @@ h1, h2, p, strong, em, a, li, ul {
 .list_index_item:nth-child(odd){
   background-color: white;
 }
+
+.account-index {
+  background-color: #E4E4E9;
+}
+
+.new-user-form {
+  position: fixed;
+  background-color: #D9D4D4;
+  float: left;
+  width: 500px;
+  height: 300px;
+  padding-left: 30px;
+  padding-top: 30px;
+  margin-top: 0px;
+  z-index: 2;
+}
+
+.new-user-form:child {
+  padding: 0px;
+}

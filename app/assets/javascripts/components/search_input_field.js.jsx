@@ -13,6 +13,8 @@
     render: function(){
       return (
         <div className="search_input_field">
+          <ErrorDisplay/>
+          <br/>
           <KeywordForm/>
           <br/>
           <br/>

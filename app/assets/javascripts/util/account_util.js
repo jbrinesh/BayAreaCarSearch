@@ -7,11 +7,7 @@
         url: "/session",
         type: "DELETE",
         success: function(response){
-          console.log("success");
           window.location = "/";
-        },
-        error: function(response){
-          debugger;
         }
       })
     },
@@ -34,6 +30,9 @@
         data: attr,
         success: function(response){
           AccountUtil.fetch();
+        },
+        error: function(response){
+          debugger; 
         }
       })
     }

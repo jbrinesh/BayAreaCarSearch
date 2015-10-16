@@ -13,7 +13,6 @@
       return (
         <div>
           <SignOutButton/>
-          <h1>Account Page</h1>
           <AccountIndex clickHandler={this.clickHandler}/>
           <NewClassifiedForm/>
         </div>
