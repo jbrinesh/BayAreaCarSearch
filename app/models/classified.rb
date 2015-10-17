@@ -3,6 +3,8 @@ class Classified < ActiveRecord::Base
 
   belongs_to :car
 
+  has_many :images
+
   def self.find_by_params(params_hash)
     car_params = params_hash[:car_params]
     keyword = "%#{params_hash[:keyword]["keyword"]}%"

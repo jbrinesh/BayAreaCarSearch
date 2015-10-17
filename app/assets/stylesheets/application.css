@@ -91,14 +91,21 @@ h1, h2, p, strong, em, a, li, ul {
 }
 
 .keyword-form {
-  
+  position: fixed;
+  top: 50px;
+  left: 200px;
+  padding: 10px;
+  width: 100%;
+  background-color: #D9D4D4;
 }
 
 .keyword-form input{
   clear: both;
   float: middle;
-  width: 150px;
+  width: 300px;
+  height: 20px;
   padding: center;
+  margin: 5px;
 }
 
 .list-index {
@@ -107,7 +114,7 @@ h1, h2, p, strong, em, a, li, ul {
  width: 100%;
  height: 100%;
  margin: 0px;
- top: 50px;
+ top: 100px;
  list-style-type: none;
  z-index: 0;
 }

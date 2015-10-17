@@ -14,7 +14,7 @@
   root.ErrorStore = $.extend ({}, EventEmitter.prototype, {
 
     all: function (){
-      var errors = _errors.slice(0);
+      var errors = this._errors.slice(0);
       window.setTimeout( function (){
         clearErrors();
       }, 60)

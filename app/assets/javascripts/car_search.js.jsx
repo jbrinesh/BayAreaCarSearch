@@ -19,7 +19,7 @@ var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Search}/>
     <Route path="account" component={Account}/>
-    <Route path="/:id" component={Show}/>
+    <Route path=":id" component={Show}/>
   </Route>
 );
 

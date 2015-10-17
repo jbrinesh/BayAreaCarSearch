@@ -13,7 +13,7 @@
             <li>Year: {classified.year}</li>
             <li>Millage: {classified.odometer}</li>
           </ul><br/>
-          <body>{classified.body}</body>
+        <div>{classified.body}</div>
 
         </div>
       )

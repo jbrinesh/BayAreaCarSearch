@@ -36,8 +36,7 @@ ad1 = Classified.create(
   price: 13500,
   odometer: 23546,
   car_id: car3.id,
-  author_id: user1.id,
-  img_ref: "toyota-camry_tievpy.jpg"
+  author_id: user1.id
 )
 
 ad2 = Classified.create(
@@ -47,8 +46,7 @@ ad2 = Classified.create(
   price: 11500,
   odometer: 73546,
   car_id: car1.id,
-  author_id: user1.id,
-  img_ref: "toyota-camry_tievpy.jpg"
+  author_id: user1.id
 )
 
 ad3 = Classified.create(
@@ -78,8 +76,7 @@ ad5 = Classified.create(
   price: 15500,
   odometer: 12354,
   car_id: car5.id,
-  author_id: user1.id,
-  img_ref: "toyota-camry_tievpy.jpg"
+  author_id: user1.id
 )
 
 ad6 = Classified.create(
@@ -89,8 +86,7 @@ ad6 = Classified.create(
   price: 14000,
   odometer: 22354,
   car_id: car5.id,
-  author_id: user2.id,
-  img_ref: "toyota-camry_tievpy.jpg"
+  author_id: user2.id
 )
 
 ad7 = Classified.create(
@@ -100,8 +96,7 @@ ad7 = Classified.create(
   price: 20000,
   odometer: 7354,
   car_id: car5.id,
-  author_id: user2.id,
-  img_ref: "toyota-camry_tievpy.jpg"
+  author_id: user2.id
 )
 
 ad8 = Classified.create(
@@ -111,9 +106,7 @@ ad8 = Classified.create(
   price: 10500,
   odometer: 123546,
   car_id: car9.id,
-  author_id: user2.id,
-  img_ref: "toyota_4runner_nsmmdt.jpg"
-
+  author_id: user2.id
 )
 
 ad9 = Classified.create(
@@ -123,8 +116,7 @@ ad9 = Classified.create(
   price: 11500,
   odometer: 85000,
   car_id: car7.id,
-  author_id: user2.id,
-  img_ref: "toyota_4runner_nsmmdt.jpg"
+  author_id: user2.id
 )
 
 ad10 = Classified.create(
@@ -134,8 +126,7 @@ ad10 = Classified.create(
   price: 5500,
   odometer: 323546,
   car_id: car7.id,
-  author_id: user3.id,
-  img_ref: "toyota_4runner_nsmmdt.jpg"
+  author_id: user3.id
 )
 
 ad11 = Classified.create(
@@ -145,8 +136,7 @@ ad11 = Classified.create(
   price: 15500,
   odometer: 83546,
   car_id: car12.id,
-  author_id: user3.id,
-  img_ref: "bmw-330i_ep8e1o.jpg"
+  author_id: user3.id
 )
 
 ad12 = Classified.create(
@@ -156,8 +146,7 @@ ad12 = Classified.create(
   price: 6500,
   odometer: 183546,
   car_id: car12.id,
-  author_id: user4.id,
-  img_ref: "bmw-330i_ep8e1o.jpg"
+  author_id: user4.id
 )
 
 ad13 = Classified.create(
@@ -167,8 +156,7 @@ ad13 = Classified.create(
   price: 36500,
   odometer: 23546,
   car_id: car15.id,
-  author_id: user4.id,
-  img_ref: "bmw-330i_ep8e1o.jpg"
+  author_id: user4.id
 )
 
 ad14 = Classified.create(
@@ -178,9 +166,7 @@ ad14 = Classified.create(
   price: 29500,
   odometer: 53546,
   car_id: car14.id,
-  author_id: user4.id,
-  img_ref: "bmw-330i_ep8e1o.jpg"
-
+  author_id: user4.id
 )
 
 ad15 = Classified.create(
@@ -190,6 +176,5 @@ ad15 = Classified.create(
   price: 7500,
   odometer: 153546,
   car_id: car11.id,
-  author_id: user4.id,
-  img_ref: "bmw-330i_ep8e1o.jpg"
+  author_id: user4.id
 )

@@ -6,15 +6,17 @@
 
     getInitialState: function(){
       return {
-        title: "",
-        body: "",
-        make: "",
-        model: "",
-        year: "",
-        price: "",
-        odometer: ""
+        form_params: {
+          title: "",
+          body: "",
+          make: "",
+          model: "",
+          year: "",
+          price: "",
+          odometer: ""
+        },
+        image_paths: []
       }
-
     },
 
     handleSubmit: function (){
@@ -25,7 +27,11 @@
       e.preventDefault();
       cloudinary.openUploadWidget({ cloud_name: 'dfb4gjjt4', upload_preset: 'hbhindyk'},
         function(error, result) {
-          this.setState({ img_ref: result[0].path });
+          var paths;
+          paths = result.map(function(obj){
+            return obj.path
+          });
+          this.setState({ image_paths: paths });
         }.bind(this));
     },
 

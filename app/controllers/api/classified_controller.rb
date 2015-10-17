@@ -16,6 +16,7 @@ class Api::ClassifiedController < ApplicationController
   end
 
   def create
+    image_paths = params['image_paths']
     car_params = {
       make: params['make'],
       model: params['model'],
@@ -26,10 +27,8 @@ class Api::ClassifiedController < ApplicationController
       title: params['title'],
       body: params['body'],
       price: params['price'],
-      odometer: params['odometer'],
-      img_ref: params['img_ref']
+      odometer: params['odometer']
     }
-
 
     car = Car.find_by(car_params)
     if car
@@ -39,6 +38,7 @@ class Api::ClassifiedController < ApplicationController
       @classified = Classified.new(classified_params)
 
       if @classified.save
+        Image.add_paths(image_paths, @classified.id) unless image_paths.nil?
         render json: @classified
       else
         render json: @classified.errors.full_messages, :status => 422
