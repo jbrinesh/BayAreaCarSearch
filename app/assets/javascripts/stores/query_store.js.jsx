@@ -2,18 +2,22 @@
   'use strict';
 
   var _query_params = {
-    keyword: "",
+    keyword: {
+      keyword: ""
+    },
     car_params: {
       make: "",
       model: "",
       min_year: "",
       max_year: ""
     },
-    search_params: {
-      min_odometer: "",
-      max_odometer: "",
+    price_params: {
       min_price: "",
       max_price: ""
+    },
+    odometer_params: {
+      min_odometer: "",
+      max_odometer: ""
     }
   };
 
@@ -25,8 +29,12 @@
     _query_params["car_params"] = car_params;
   };
 
-  var updateSearchParams = function(search_params){
-    _query_params["search_params"] = search_params;
+  var updatePriceParams = function(price_params){
+    _query_params["price_params"] = price_params;
+  };
+
+  var updateOdometerParams = function(odometer_params){
+    _query_params["odometer_params"] = odometer_params;
   };
 
 
@@ -41,12 +49,16 @@
       return $.extend ({}, _query_params["keyword"])
     },
 
-    car_params: function(){
+    carParams: function(){
       return $.extend ({}, _query_params["car_params"])
     },
 
-    search_params: function(){
-      return $.extend ({}, _query_params["search_params"])
+    priceParams: function(){
+      return $.extend ({}, _query_params["price_params"])
+    },
+
+    odometerParams: function(){
+      return $.extend ({}, _query_params["odometer_params"])
     },
 
     DispatcherID: AppDispatcher.register(function(payload){
@@ -60,8 +72,12 @@
         updateCarParams(payload.car_params);
         break;
 
-        case QueryConstants.SEARCH_UPDATE:
-        updateSearchParams(payload.search_params);
+        case QueryConstants.PRICE_UPDATE:
+        updatePriceParams(payload.search_params);
+        break;
+
+        case QueryConstants.ODOMETER_UPDATE:
+        updateOdometerParams(payload.search_params);
         break;
       }
     })

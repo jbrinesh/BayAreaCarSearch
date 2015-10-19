@@ -5,7 +5,7 @@
     mixins: [React.addons.LinkedStateMixin],
 
     getInitialState: function(){
-      return QueryStore.car_params();
+      return QueryStore.carParams();
     },
 
     componentDidUpdate: function () {

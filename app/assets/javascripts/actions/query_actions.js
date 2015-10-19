@@ -18,13 +18,22 @@
       AppDispatcher.dispatch(action);
     },
 
-    updateSearchParams: function(search_params){
+    updatePriceParams: function(price_params){
       var action = {
-        actionType: QueryConstants.SEARCH_UPDATE,
-        search_params: search_params
+        actionType: QueryConstants.PRICE_UPDATE,
+        search_params: price_params
+      }
+      AppDispatcher.dispatch(action);
+    },
+
+    updateOdometerParams: function(odometer_params){
+      var action = {
+        actionType: QueryConstants.ODOMETER_UPDATE,
+        search_params: odometer_params
       }
       AppDispatcher.dispatch(action);
     }
+
 
   }
 

@@ -15,7 +15,8 @@
         <div className="search-input-field">
           <ErrorDisplay/>
           <CarForm/>
-          <SearchForm/>
+          <PriceForm/>
+          <OdometerForm/>
           <form onSubmit={this.runSearch}>
             <input type="submit" value="Search"/>
           </form>
