@@ -5,12 +5,27 @@ class Classified < ActiveRecord::Base
 
   has_many :images
 
+  DEFAULT_CAR_PARAMS = {
+    "make" => "",
+    "model" => "",
+    "min_year" => 1900,
+    "max_year" => 2020
+  }
+
+  DEFAULT_SEARCH_PARAMS = {
+    "min_price" => 0,
+    "max_price" => 1000000,
+    "min_odometer" => 0,
+    "max_odometer" => 1000000
+  }
+
+
   def self.find_by_params(params_hash)
-    car_params = params_hash[:car_params]
     keyword = "%#{params_hash[:keyword]["keyword"]}%"
+    car_params = params_hash[:car_params]
     search_params = Classified.convert_to_range(params_hash[:search_params])
     self.includes(:car)
-      .joins(:car)
+      .includes(:images)
       .where(search_params)
       .where("classifieds.body LIKE ? OR classifieds.title LIKE ?", keyword, keyword)
       .references(:cars)
@@ -20,7 +35,6 @@ class Classified < ActiveRecord::Base
 
   def self.find_by_author_id(author_id)
     self.includes(:car)
-        .joins(:car)
         .where("classifieds.author_id = ?", author_id)
   end
 

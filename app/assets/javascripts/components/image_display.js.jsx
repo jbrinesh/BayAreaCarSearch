@@ -3,15 +3,55 @@
 
   root.ImageDisplay = React.createClass({
 
+    getInitialState: function(){
+      return {
+        currentImgPath: this.props.classified.images[0].img_path,
+        clickedImgPath: this.props.classified.images[0].img_path
+        }
+    },
+
+    handleClick: function(e){
+      this.setState({
+        currentImgPath: e.target.id,
+        clickedImgPath: e.target.id
+      })
+    },
+
+    handleMouseEnter: function(e){
+      this.setState({
+        currentImgPath: e.target.id
+      })
+    },
+
+    handleMouseLeave: function(e){
+      this.setState({
+        currentImgPath: this.state.clickedImgPath
+      })
+    },
+
     render: function (){
-      var img_ref;
-      if (this.props.classified.img_ref){
-        img_ref = this.props.classified.img_ref;
+      if(this.props.classified.images[0] === undefined ){
+        var images = [{img_path: 'no-image_zsxss7.jpg'}];
       } else {
-        img_ref = 'no-image_zsxss7.jpg';
+        var images = this.props.classified.images;
       }
       return (
-          <img src={$.cloudinary.url( img_ref, { width: 500, height: 300, crop: 'fill' })} />
+        <div>
+          <img src={$.cloudinary.url( this.state.currentImgPath, { width: 500, height: 300, crop: 'fill' })} />
+          <ul>
+            {
+              images.map(function(image, idx){
+                return <img key={idx}
+                        id={image.img_path}
+                        src={$.cloudinary.url( image.img_path, { width: 100, height: 60, crop: 'fill' })}
+                        onClick={this.handleClick}
+                        onMouseEnter={this.handleMouseEnter}
+                        onMouseLeave={this.handleMouseLeave}
+                        />
+                    }.bind(this))
+            }
+          </ul>
+        </div>
       )
     }
   })
