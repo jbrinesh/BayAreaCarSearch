@@ -4,9 +4,15 @@
   root.ImageDisplay = React.createClass({
 
     getInitialState: function(){
+      var default_img_path;
+      if (this.props.classified.images[0] === undefined){
+        default_img_path = 'no-image_zsxss7.jpg';
+      } else {
+        default_img_path = this.props.classified.images[0].img_path;
+      }
       return {
-        currentImgPath: this.props.classified.images[0].img_path,
-        clickedImgPath: this.props.classified.images[0].img_path
+        currentImgPath: default_img_path,
+        clickedImgPath: default_img_path
         }
     },
 

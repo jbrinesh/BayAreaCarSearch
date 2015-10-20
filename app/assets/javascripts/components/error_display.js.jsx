@@ -11,6 +11,10 @@
       ErrorStore.addErrorHandler(this._newErrors)
     },
 
+    componentWillUnmount: function(){
+      ErrorStore.removeErrorHandler(this._newErrors)
+    },
+
     _newErrors: function(){
       this.setState({errors: ErrorStore.all()})
     },

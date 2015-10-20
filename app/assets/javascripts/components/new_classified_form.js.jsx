@@ -38,9 +38,9 @@
 
     render: function (){
       return (
-        <div className="new-user-container">
+        <div className="new-classified-container">
           <ErrorDisplay/>
-          <form className="new-user-form" onSubmit={this.handleSubmit}>
+          <form className="new-classified-form" onSubmit={this.handleSubmit}>
             <label htmlFor="title">Title</label>
             <input type="text" id="title" valueLink={this.linkState('title')}/>
             <label htmlFor="body">Body</label>

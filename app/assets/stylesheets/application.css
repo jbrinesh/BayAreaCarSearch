@@ -109,9 +109,10 @@ h1, h2, p, strong, em, a, li, ul {
 }
 
 .list-index {
- position: relative;
+ position: fixed;
  background-color: #E4E4E9;
- width: 100%;
+ left: 200px;
+ width: CALC(100% - 200px);
  height: 100%;
  margin: 0px;
  top: 100px;
@@ -122,8 +123,7 @@ h1, h2, p, strong, em, a, li, ul {
 .list-index-item {
   font-size: 20px;
   margin: 0px;
-  margin-left: 200px;
-  padding-right: 0px;
+  padding-left: 20px;
 }
 
 .list-index-item:hover {
@@ -139,19 +139,10 @@ h1, h2, p, strong, em, a, li, ul {
 }
 
 .account-index {
-  background-color: #E4E4E9;
-}
-
-.new-user-container {
-  position: relative;
-  background-color: #D9D4D4;
-  width: 380px;
-  padding: 30px;
-  margin: auto;
-}
-
-.new-user-form input {
-  margin: 10px;
+    background-color: #E4E4E9;
+    position: fixed;
+    top: 50px;
+    width: 100%;
 }
 
 .account-index li {
@@ -163,4 +154,46 @@ h1, h2, p, strong, em, a, li, ul {
     height: 300px;
     top: 60px;
     position: relative;
+}
+
+.filter-bar {
+    background-color: #B8B0B0;
+    height: 40px;
+}
+
+.filter-bar form {
+    margin: 10px;
+    float: left;
+}
+
+.filter-bar input {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.detail-index-item {
+  font-size: 20px;
+  height: 60px;
+  margin: 0px;
+  padding-right: 0px;
+}
+
+.detail-index-item:hover {
+  cursor: pointer;
+}
+
+.detail-index-item:nth-child(even){
+  background-color: #BEBBBB;
+}
+
+.detail-index-item:nth-child(odd){
+  background-color: white;
+}
+
+.gallery-index-item {
+    float: left;
+    height: 250px;
+    width: 300px;
+    position: relative;
+    margin: 20px;
 }

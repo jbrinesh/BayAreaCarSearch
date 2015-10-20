@@ -14,7 +14,6 @@
         <div className="account">
           <SignOutButton/>
           <AccountIndex clickHandler={this.clickHandler}/>
-          <NewClassifiedForm/>
         </div>
       )
     }
