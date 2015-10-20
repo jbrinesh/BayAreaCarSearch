@@ -6,17 +6,16 @@
 
     runSearch: function(e){
       e.preventDefault();
-      var params = QueryStore.all();
-      ApiUtil.fetch(params);
+      QueryStore.run();
     },
 
     render: function(){
       return (
         <div className="search-input-field">
-          <ErrorDisplay/>
           <CarForm/>
           <PriceForm/>
           <OdometerForm/>
+          <LocationForm/>
           <form onSubmit={this.runSearch}>
             <input type="submit" value="Search"/>
           </form>

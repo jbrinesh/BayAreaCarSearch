@@ -67,7 +67,7 @@ h1, h2, p, strong, em, a, li, ul {
    background-color: #D9D4D4;
    float: left;
    top: 20px;
-   width: 200px;
+   width: 225px;
    height: 100%;
    padding-top: 30px;
    margin-top: 0px;
@@ -92,7 +92,7 @@ h1, h2, p, strong, em, a, li, ul {
 .keyword-form {
   position: fixed;
   top: 50px;
-  left: 200px;
+  left: 225px;
   padding: 10px;
   width: 100%;
   background-color: #D9D4D4;
@@ -110,8 +110,8 @@ h1, h2, p, strong, em, a, li, ul {
 .list-index {
  position: fixed;
  background-color: #E4E4E9;
- left: 200px;
- width: CALC(100% - 200px);
+ left: 225px;
+ width: CALC(100% - 225px);
  height: 100%;
  margin: 0px;
  top: 100px;
@@ -191,7 +191,7 @@ h1, h2, p, strong, em, a, li, ul {
 
 .gallery-index-item {
     float: left;
-    height: 250px;
+    height: 225px;
     width: 300px;
     position: relative;
     margin: 20px;

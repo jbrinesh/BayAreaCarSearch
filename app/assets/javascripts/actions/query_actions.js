@@ -32,6 +32,14 @@
         search_params: odometer_params
       }
       AppDispatcher.dispatch(action);
+    },
+
+    updateLocationParams: function(location_params){
+      var action = {
+        actionType: QueryConstants.LOCATION_UPDATE,
+        location_params: location_params
+      }
+      AppDispatcher.dispatch(action);
     }
 
 

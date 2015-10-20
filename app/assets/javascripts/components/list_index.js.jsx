@@ -12,8 +12,7 @@
 
     componentDidMount: function(){
       ClassifiedStore.addChangeHandler(this._classifiedsChanged)
-      var params = QueryStore.all();
-      ApiUtil.fetch(params);
+      QueryStore.run();
     },
 
     componentWillUnmount: function(){

@@ -3,6 +3,7 @@
 
   root.ApiUtil = {
     fetch: function(params){
+      debugger;
       $.ajax({
         url: "api/classified",
         type: "GET",
@@ -13,6 +14,11 @@
         }
       })
     },
+
+    geocode: function (address, callback){
+      var Geocoder = new google.maps.Geocoder
+      Geocoder.geocode(address, callback)
+    }
 
   }
 }(this));
