@@ -56,11 +56,10 @@ h1, h2, p, strong, em, a, li, ul {
 }
 
 .sign-out-button {
-  position: relative;
-  float: right;
-  margin: 30px;
-  margin-top: 0px;
-  top: -35px;
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    z-index: 5;
 }
 
 .search-input-field {
@@ -196,4 +195,18 @@ h1, h2, p, strong, em, a, li, ul {
     width: 300px;
     position: relative;
     margin: 20px;
+}
+
+.new-classified-container {
+    position: relative;
+    top: 50px;
+    width: 500px;
+    margin: auto;
+}
+
+.new-classified-button {
+    position: fixed;
+    top: 15px;
+    right: 100px;
+    z-index: 5;
 }
