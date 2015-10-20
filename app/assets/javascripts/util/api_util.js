@@ -3,8 +3,7 @@
 
   root.ApiUtil = {
     fetch: function(params){
-      debugger;
-      $.ajax({
+       $.ajax({
         url: "api/classified",
         type: "GET",
         dataType: "json",

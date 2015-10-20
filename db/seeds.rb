@@ -36,7 +36,10 @@ ad1 = Classified.create(
   price: 13500,
   odometer: 23546,
   car_id: car3.id,
-  author_id: user1.id
+  author_id: user1.id,
+  lat: 37.783549,
+  lng: -122.439404,
+  address: "2186 Geary Blvd #103, San Francisco, CA 94115"
 )
 
 ad2 = Classified.create(
@@ -46,7 +49,10 @@ ad2 = Classified.create(
   price: 11500,
   odometer: 73546,
   car_id: car1.id,
-  author_id: user1.id
+  author_id: user1.id,
+  lat: 37.765121,
+  lng: -122.415044,
+  address: "2791 16th St, San Francisco, CA 94103"
 )
 
 ad3 = Classified.create(
@@ -56,7 +62,10 @@ ad3 = Classified.create(
   price: 7000,
   odometer: 215000,
   car_id: car6.id,
-  author_id: user1.id
+  author_id: user1.id,
+  lat: 37.804805,
+  lng: -122.419484,
+  address: "761 Bay St, San Francisco, CA 94109"
 )
 
 ad4 = Classified.create(
@@ -66,7 +75,10 @@ ad4 = Classified.create(
   price: 10500,
   odometer: 123546,
   car_id: car10.id,
-  author_id: user1.id
+  author_id: user1.id,
+  lat: 37.783859,
+  lng: -122.460470,
+  address: "257 2nd Ave, San Francisco, CA 94118"
 )
 
 ad5 = Classified.create(
@@ -76,7 +88,10 @@ ad5 = Classified.create(
   price: 15500,
   odometer: 12354,
   car_id: car5.id,
-  author_id: user1.id
+  author_id: user1.id,
+  lat: 37.757715,
+  lng: -122.431669,
+  address: "4067 20th St, San Francisco, CA 94114"
 )
 
 ad6 = Classified.create(
@@ -86,7 +101,10 @@ ad6 = Classified.create(
   price: 14000,
   odometer: 22354,
   car_id: car5.id,
-  author_id: user2.id
+  author_id: user2.id,
+  lat: 37.759655,
+  lng: -122.500586,
+  address: "1455 41st Ave, San Francisco, CA 94122"
 )
 
 ad7 = Classified.create(
@@ -96,7 +114,10 @@ ad7 = Classified.create(
   price: 20000,
   odometer: 7354,
   car_id: car5.id,
-  author_id: user2.id
+  author_id: user2.id,
+  lat: 37.740229,
+  lng: -122.487254,
+  address: "2518 30th Ave, San Francisco, CA 94116"
 )
 
 ad8 = Classified.create(
@@ -106,7 +127,10 @@ ad8 = Classified.create(
   price: 10500,
   odometer: 123546,
   car_id: car9.id,
-  author_id: user2.id
+  author_id: user2.id,
+  lat: 37.778231,
+  lng: -122.501852,
+  address: "553 41st Ave, San Francisco, CA 94121"
 )
 
 ad9 = Classified.create(
@@ -116,7 +140,10 @@ ad9 = Classified.create(
   price: 11500,
   odometer: 85000,
   car_id: car7.id,
-  author_id: user2.id
+  author_id: user2.id,
+  lat: 37.986660,
+  lng: -122.564701,
+  address: "230 San Francisco Blvd, San Anselmo, CA 94960"
 )
 
 ad10 = Classified.create(
@@ -126,7 +153,11 @@ ad10 = Classified.create(
   price: 5500,
   odometer: 323546,
   car_id: car7.id,
-  author_id: user3.id
+  author_id: user3.id,
+  lat: 37.923619,
+  lng: -122.525347,
+  address: "419 Oakdale Ave, Corte Madera, CA 94925"
+
 )
 
 ad11 = Classified.create(
@@ -136,7 +167,10 @@ ad11 = Classified.create(
   price: 15500,
   odometer: 83546,
   car_id: car12.id,
-  author_id: user3.id
+  author_id: user3.id,
+  lat: 37.956381,
+  lng: -122.538608,
+  address: "20 Cypress Ave, Kentfield, CA 94904"
 )
 
 ad12 = Classified.create(
@@ -146,7 +180,10 @@ ad12 = Classified.create(
   price: 6500,
   odometer: 183546,
   car_id: car12.id,
-  author_id: user4.id
+  author_id: user4.id,
+  lat: 37.868575,
+  lng: -122.274174,
+  address: "1824 Allston Way, Berkeley, CA 94703"
 )
 
 ad13 = Classified.create(
@@ -156,7 +193,10 @@ ad13 = Classified.create(
   price: 36500,
   odometer: 23546,
   car_id: car15.id,
-  author_id: user4.id
+  author_id: user4.id,
+  lat: 37.824228,
+  lng: -122.253725,
+  address: "43 Montell St, Oakland, CA 94611"
 )
 
 ad14 = Classified.create(
@@ -166,7 +206,10 @@ ad14 = Classified.create(
   price: 29500,
   odometer: 53546,
   car_id: car14.id,
-  author_id: user4.id
+  author_id: user4.id,
+  lat: 37.854920,
+  lng: -122.250673,
+  address: "2742 Prince St, Berkeley, CA 94705"
 )
 
 ad15 = Classified.create(
@@ -176,5 +219,8 @@ ad15 = Classified.create(
   price: 7500,
   odometer: 153546,
   car_id: car11.id,
-  author_id: user4.id
+  author_id: user4.id,
+  lat: 37.833143,
+  lng: -122.274950,
+  address: "969 43rd St, Oakland, CA 94608"
 )

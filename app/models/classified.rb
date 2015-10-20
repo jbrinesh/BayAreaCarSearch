@@ -32,6 +32,22 @@ class Classified < ActiveRecord::Base
       query = query.where("classifieds.price BETWEEN ? AND ?", min_price, max_price)
     end
 
+    unless params_hash[:location_params]["distance"].strip.empty? ||
+           params_hash[:location_params]["lat"].strip.empty? ||
+           params_hash[:location_params]["lat"].strip.empty?
+
+      distance = params_hash[:location_params]["distance"].to_f
+
+      min_lat = params_hash[:location_params]["lat"].to_f - (distance / 69)
+      max_lat = params_hash[:location_params]["lat"].to_f + (distance / 69)
+
+      min_lng = params_hash[:location_params]["lng"].to_f - (distance / 55)
+      max_lng = params_hash[:location_params]["lng"].to_f + (distance / 55)
+
+      query = query.where("classifieds.lat BETWEEN ? AND  ?", min_lat, max_lat)
+      query = query.where("classifieds.lng BETWEEN ? AND  ?", min_lng, max_lng)
+    end
+
     query = query.references(:cars)
 
     unless params_hash[:car_params]["make"].strip.empty?

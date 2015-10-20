@@ -12,6 +12,7 @@
             <li>Model: {classified.model}</li>
             <li>Year: {classified.year}</li>
             <li>Millage: {classified.odometer}</li>
+            <li>Location: {classified.address}</li>
           </ul><br/>
         <div>{classified.body}</div>
 
