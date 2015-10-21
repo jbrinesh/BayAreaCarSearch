@@ -22,14 +22,16 @@
       })
     },
 
-    post: function (attr){
+    post: function (params){
       $.ajax({
         url: "api/classified",
         type: "POST",
         dataType: "json",
-        data: attr,
+        data: params,
         success: function(response){
+          console.log('hellohellohello')
           AccountUtil.fetch();
+          // redirect back to account ?
         },
         error: function(response){
           var errors = response.responseJSON;

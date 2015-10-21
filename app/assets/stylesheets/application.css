@@ -200,8 +200,34 @@ h1, h2, p, strong, em, a, li, ul {
 .new-classified-container {
     position: relative;
     top: 50px;
-    width: 500px;
+    width: 300px;
     margin: auto;
+}
+
+.new-classified-container input {
+  position: relative;
+  float: right;
+  clear: right;
+  margin: 10px;
+}
+
+.new-classified-container textarea {
+  position: relative;
+  float: right;
+  clear: right;
+  margin: 5px;
+}
+
+.new-classified-container label {
+  position: relative;
+  float: left;
+  clear: left;
+  padding: 15px;
+}
+
+.new-classified-container button {
+  float: right;
+  clear: both;
 }
 
 .new-classified-button {

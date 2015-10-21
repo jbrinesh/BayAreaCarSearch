@@ -48,33 +48,6 @@
     _query_params["location_params"] = location_params;
   };
 
-  var parseLocationParams = function(location_params, callback){
-    var address_str =
-      location_params["address"] + " " +
-      location_params["city"] + " " +
-      location_params["state"] + " " +
-      location_params["zip"]
-    ;
-    if(address_str.trim().length === 0){
-      var parsed_location_params = {};
-      parsed_location_params["lat"] = "";
-      parsed_location_params["lng"] = "";
-      parsed_location_params["address"] = "";
-      callback(parsed_location_params);
-    }else {
-      ApiUtil.geocode({address: address_str}, function(response){
-        var parsed_location_params = {};
-        parsed_location_params["lat"] = response[0].geometry.location.lat();
-        parsed_location_params["lng"] = response[0].geometry.location.lng();
-        parsed_location_params["address"] = response[0].formatted_address;
-        callback(parsed_location_params);
-      })
-    }
-
-  };
-
-
-
   root.QueryStore = $.extend ({}, EventEmitter.prototype, {
 
     run: function(){
@@ -85,7 +58,7 @@
         params["location_params"] = parsed_location_params;
         ApiUtil.fetch(params);
       };
-      parseLocationParams(params["location_params"], callback);
+      ApiUtil.parseLocationParams(params["location_params"], callback);
     },
 
     all: function(){

@@ -27,7 +27,10 @@ class Api::ClassifiedController < ApplicationController
       title: params['title'],
       body: params['body'],
       price: params['price'],
-      odometer: params['odometer']
+      odometer: params['odometer'],
+      lat: params['lat'],
+      lng: params['lng'],
+      address: params['address']
     }
 
     car = Car.find_by(car_params)

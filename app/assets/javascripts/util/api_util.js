@@ -17,6 +17,31 @@
     geocode: function (address, callback){
       var Geocoder = new google.maps.Geocoder
       Geocoder.geocode(address, callback)
+    },
+
+    parseLocationParams: function(location_params, callback){
+      var address_str =
+        location_params["address"] + " " +
+        location_params["city"] + " " +
+        location_params["state"] + " " +
+        location_params["zip"]
+      ;
+      if(address_str.trim().length === 0){
+        var parsed_location_params = {};
+        parsed_location_params["lat"] = "";
+        parsed_location_params["lng"] = "";
+        parsed_location_params["address"] = "";
+        callback(parsed_location_params);
+      }else {
+        ApiUtil.geocode({address: address_str}, function(response){
+          var parsed_location_params = {};
+          parsed_location_params["lat"] = response[0].geometry.location.lat();
+          parsed_location_params["lng"] = response[0].geometry.location.lng();
+          parsed_location_params["address"] = response[0].formatted_address;
+          callback(parsed_location_params);
+        })
+      }
+
     }
 
   }
