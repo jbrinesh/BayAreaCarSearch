@@ -10,6 +10,7 @@
           <form className="sort-form" onChange={this.props.handleSortChange}>
             <label> Sort By:
               <select className="sort-selector">
+                <option value=""></option>
                 <option value="price, DEC">Price: High to Low</option>
                 <option value="price, ACE">Price: Low to High</option>
                 <option value="odometer, DEC">Mileage: High to Low</option>
