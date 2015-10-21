@@ -7,6 +7,7 @@
         <div className="show">
           <h2>{classified.title} ---- $ {classified.price}</h2>
           <ImageDisplay classified={classified}/>
+          <ShowMap classified={classified}/>
           <ul>
             <li>Make: {classified.make}</li>
             <li>Model: {classified.model}</li>

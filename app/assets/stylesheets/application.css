@@ -236,3 +236,8 @@ h1, h2, p, strong, em, a, li, ul {
     right: 100px;
     z-index: 5;
 }
+
+.show-map {
+  width: 400px;
+  height: 400px;
+}
