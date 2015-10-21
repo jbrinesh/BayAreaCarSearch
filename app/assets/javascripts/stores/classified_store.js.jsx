@@ -53,6 +53,11 @@
         ClassifiedStore.emit(ClassifiedConstants.CLASSIFIEDS_CHANGED);
         break;
 
+        case ClassifiedConstants.CREATED_NEW_CLASSIFIED:
+        AccountUtil.fetch();
+        ClassifiedStore.emit(ClassifiedConstants.CLASSIFIEDS_CHANGED);
+        break;
+
       }
     })
 

@@ -19,6 +19,7 @@
     },
 
     _accountClassifiedsChanged: function(){
+
       this.setState({ account_classifieds: ClassifiedStore.account_all() })
     },
 

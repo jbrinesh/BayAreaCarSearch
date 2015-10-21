@@ -29,9 +29,7 @@
         dataType: "json",
         data: params,
         success: function(response){
-          console.log('hellohellohello')
-          AccountUtil.fetch();
-          // redirect back to account ?
+          ApiActions.createdNewClassified();
         },
         error: function(response){
           var errors = response.responseJSON;

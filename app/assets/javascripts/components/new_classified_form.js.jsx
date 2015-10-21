@@ -70,7 +70,7 @@
 
     render: function (){
       return (
-        <div className="new-classified-container">
+        <div className="new-classified-container clearfix">
           <ErrorDisplay/>
           <form className="new-classified-form" onSubmit={this.handleSubmit}>
 
