@@ -42,7 +42,7 @@
         var images = this.props.classified.images;
       }
       return (
-        <div>
+        <div className="image-display">
           <img src={$.cloudinary.url( this.state.currentImgPath, { width: 500, height: 300, crop: 'fill' })} />
           <ul>
             {

@@ -18,12 +18,14 @@
       return (
         <li className="detail-index-item" onClick={this.handleClick}>
           <img src={$.cloudinary.url( img_path, { width: 100, height: 60, crop: 'fill' })}></img>
-          {
-          this.props.classified.title + "-----" +
-          this.props.classified.odometer + " miles -----" +
-          this.props.classified.address + "-----$" +
-          this.props.classified.price
-          }
+          <table className="detail-index-item-details">
+            <tr>
+              <td>{this.props.classified.title}</td>
+              <td>{this.props.classified.odometer + " miles"}</td>
+              <td>{this.props.classified.address}</td>
+              <td>{"$" + this.props.classified.price}</td>            
+            </tr>
+          </table>
         </li>
       )
     }
