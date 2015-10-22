@@ -5,41 +5,47 @@
     getInitialState: function (){
       return {
         account_classifieds: ClassifiedStore.account_all(),
-        view: ListIndexItem
+        view: FilterStore.view(),
+        sorting: FilterStore.sorting()
       };
     },
 
     componentDidMount: function(){
       ClassifiedStore.addChangeHandler(this._accountClassifiedsChanged);
+      FilterStore.addViewChangeHandler(this._updateView)
+      FilterStore.addSortingChangeHandler(this._updateSorting)
       AccountUtil.fetch();
     },
 
     componentWillUnmount: function(){
       ClassifiedStore.removeChangeHandler(this._accountClassifiedsChanged);
+      FilterStore.removeSortingChangeHandler(this._updateSorting);
+      FilterStore.removeViewChangeHandler(this._updateView);
     },
 
     _accountClassifiedsChanged: function(){
-
       this.setState({ account_classifieds: ClassifiedStore.account_all() })
     },
 
-    _handleSortChange: function(e){
-      var sortParams = e.target.value.split(", ");
-      this.setState({
-        account_classifieds: ClassifiedStore.account_all().sort(this._comparitor(sortParams[0], sortParams[1]))
-      })
+    _updateView: function(){
+      this.setState({ view: FilterStore.view() })
     },
 
-    _handleViewChange: function(e){
-      this.setState({ view: window[e.target.value] })
+    _updateSorting: function(){
+      this.setState({sorting: FilterStore.sorting()})
     },
 
-    _comparitor: function(attr, order){
+    _sort: function(classifieds){
+      return classifieds.sort(this._comparitor(FilterStore.sorting()))
+    },
+
+
+    _comparitor: function(sorting){
      return (function(a, b){
-        if(a[attr] < b[attr]){
-          return (order === "DEC" ? 1 : -1);
-        } else if(a[attr] > b[attr]){
-          return (order === "DEC" ? -1 : 1);
+        if(a[sorting[0]] < b[sorting[0]]){
+          return (sorting[1] === "DEC" ? 1 : -1);
+        } else if(a[sorting[0]] > b[sorting[0]]){
+          return (sorting[1] === "DEC" ? -1 : 1);
         } else {
           return 0;
         }
@@ -49,11 +55,11 @@
     render: function (){
       return (
         <div className="account-index clearfix">
-          <FilterBar handleSortChange={this._handleSortChange} handleViewChange={this._handleViewChange}/>
+          <FilterBar/>
           {this.state.view === MapView ? <MapView clickHandler={this.props.clickHandler} classifieds={this.state.account_classifieds}/> :
           <ul>
             {
-              this.state.account_classifieds.map(function(classified){
+              this._sort(this.state.account_classifieds).map(function(classified){
                 return React.createElement(this.state.view,
                         {key: classified.id,
                         classified: classified,

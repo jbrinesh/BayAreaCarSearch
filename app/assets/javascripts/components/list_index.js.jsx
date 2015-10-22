@@ -6,40 +6,46 @@
     getInitialState: function (){
       return {
         classifieds: ClassifiedStore.all(),
-        view: ListIndexItem
+        view: FilterStore.view(),
+        sorting: FilterStore.sorting()
       };
     },
 
     componentDidMount: function(){
-      ClassifiedStore.addChangeHandler(this._classifiedsChanged)
+      ClassifiedStore.addChangeHandler(this._classifiedsChanged);
+      FilterStore.addViewChangeHandler(this._updateView);
+      FilterStore.addSortingChangeHandler(this._updateSorting);
       QueryStore.run();
     },
 
     componentWillUnmount: function(){
-      ClassifiedStore.removeChangeHandler(this._classifiedsChanged)
+      ClassifiedStore.removeChangeHandler(this._classifiedsChanged);
+      FilterStore.removeViewChangeHandler(this._updateView);
+      FilterStore.removeSortingChangeHandler(this._updateSorting);
     },
 
     _classifiedsChanged: function (){
       this.setState({classifieds: ClassifiedStore.all()});
     },
 
-    _handleSortChange: function(e){
-      var sortParams = e.target.value.split(", ");
-      this.setState({
-        classifieds: ClassifiedStore.all().sort(this._comparitor(sortParams[0], sortParams[1]))
-      })
+    _updateView: function(){
+      this.setState({view: FilterStore.view()})
     },
 
-    _handleViewChange: function(e){
-      this.setState({ view: window[e.target.value] })
+    _updateSorting: function(){
+      this.setState({sorting: FilterStore.sorting()})
     },
 
-    _comparitor: function(attr, order){
+    _sort: function(classifieds){
+      return classifieds.sort(this._comparitor(FilterStore.sorting()))
+    },
+
+    _comparitor: function(sorting){
      return (function(a, b){
-        if(a[attr] < b[attr]){
-          return (order === "DEC" ? 1 : -1);
-        } else if(a[attr] > b[attr]){
-          return (order === "DEC" ? -1 : 1);
+        if(a[sorting[0]] < b[sorting[0]]){
+          return (sorting[1] === "DEC" ? 1 : -1);
+        } else if(a[sorting[0]] > b[sorting[0]]){
+          return (sorting[1] === "DEC" ? -1 : 1);
         } else {
           return 0;
         }
@@ -49,11 +55,11 @@
     render: function (){
       return (
         <div className="list-index clearfix">
-          <FilterBar selected={this.state.view} handleSortChange={this._handleSortChange} handleViewChange={this._handleViewChange}/>
+          <FilterBar/>
           {this.state.view === MapView ? <MapView clickHandler={this.props.clickHandler} classifieds={this.state.classifieds}/> :
           <ul>
             {
-              this.state.classifieds.map(function(classified){
+              this._sort(this.state.classifieds).map(function(classified){
                 return React.createElement(this.state.view,
                         {key: classified.id,
                         classified: classified,

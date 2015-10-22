@@ -48,7 +48,7 @@
     _query_params["location_params"] = location_params;
   };
 
-  root.QueryStore = $.extend ({}, EventEmitter.prototype, {
+  root.QueryStore = $.extend({}, EventEmitter.prototype, {
 
     run: function(){
       var params = QueryStore.all();
