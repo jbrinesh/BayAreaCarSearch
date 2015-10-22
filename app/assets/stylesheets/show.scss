@@ -1,0 +1,54 @@
+.show {
+    /* height: 300px; */
+    top: 60px;
+    position: relative;
+    width: 1050px;
+    margin: auto;
+}
+
+.show h2 {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.image-display {
+    width: 500px;
+    position: relative;
+    float: left;
+}
+
+.show-details {
+    width: 380px;
+    position: relative;
+    float: right;
+    clear: right;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    margin-right: 0px;
+}
+
+.show-body {
+    position: relative;
+    float: left;
+    clear: left;
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px;
+    width: 480px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.show-map {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    float: right;
+    clear: right;
+    margin: 20px;
+    margin-right: 0px;
+}
