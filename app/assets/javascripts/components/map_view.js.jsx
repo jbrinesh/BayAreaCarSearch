@@ -18,6 +18,7 @@
     },
 
     addMarkers: function (map){
+      var that = this;
       this.props.classifieds.map(function(classified){
         if(classified.lat && classified.lng){
           var position = {lat: classified.lat, lng: classified.lng}
@@ -26,9 +27,23 @@
             map: map,
             title: classified.title
           });
+          var HtmlString = that.buildHtmlString(classified);
+          var infoWindow = new google.maps.InfoWindow({
+            content: HtmlString
+          });
+
+
           marker.addListener('click', function (){
-            this.props.clickHandler(classified.id);
-          }.bind(this));
+            that.props.clickHandler(classified.id);
+          });
+
+          marker.addListener('mouseover', function (){
+            infoWindow.open(map, marker);
+          });
+
+          marker.addListener('mouseout', function (){
+            infoWindow.close(map, marker);
+          });
           this.setState({markers: this.state.markers.concat([marker])});
         }
       }.bind(this))
@@ -40,17 +55,19 @@
       })
     },
 
-    // handleClick: function(e){
-    //   var lat = e.latLng.lat();
-    //   var lng = e.latLng.lng();
-    //   var id;
-    //   this.props.classifieds.forEach(function(classified){
-    //     if(classified.lat === lat && classified.lng === lng){
-    //       id = classified.id;
-    //     }
-    //   })
-    //   this.props.handleClick(id);
-    // },
+    buildHtmlString: function(classified){
+      if (classified.images[0] === undefined){
+        var imgPath = 'no-image_zsxss7.jpg';
+      } else {
+        var imgPath = classified.images[0];
+      }
+      var imgUrl = $.cloudinary.url( imgPath, { width: 200, height: 120, crop: 'fill' });
+      var string = classified.title + " ----$ " + classified.price;
+      return (
+        "<img src=" + imgUrl + "></img>" + "<br>" +
+        "<h4>" + string + "</h4>"
+      )
+    },
 
     render: function(){
       return(
