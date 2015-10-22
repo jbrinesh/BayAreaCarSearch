@@ -49,7 +49,8 @@
     render: function (){
       return (
         <div className="list-index clearfix">
-          <FilterBar handleSortChange={this._handleSortChange} handleViewChange={this._handleViewChange}/>
+          <FilterBar selected={this.state.view} handleSortChange={this._handleSortChange} handleViewChange={this._handleViewChange}/>
+          {this.state.view === MapView ? <MapView clickHandler={this.props.clickHandler} classifieds={this.state.classifieds}/> :
           <ul>
             {
               this.state.classifieds.map(function(classified){
@@ -60,6 +61,7 @@
               }.bind(this))
             }
           </ul>
+        }
         </div>
       )
     }

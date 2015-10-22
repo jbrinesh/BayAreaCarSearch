@@ -3,7 +3,6 @@
 
   root.FilterBar = React.createClass({
 
-
     render: function (){
       return (
         <div className="filter-bar">
@@ -19,9 +18,15 @@
             </label>
           </form>
           <form className="view-form" onChange={this.props.handleViewChange}>
-            <input name="views" type="radio" value="ListIndexItem">List View</input>
+            <input name="views"
+                   type="radio"
+                   value="ListIndexItem"
+                   checked={this.props.selected === ListIndexItem ? true : false}>
+                   List View
+            </input>
             <input name="views" type="radio" value="DetailIndexItem">Details View</input>
             <input name="views" type="radio" value="GalleryIndexItem">Gallery View</input>
+            <input name="views" type="radio" value="MapView">Map View</input>
           </form>
         </div>
       )

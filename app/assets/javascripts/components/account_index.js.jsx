@@ -50,6 +50,7 @@
       return (
         <div className="account-index clearfix">
           <FilterBar handleSortChange={this._handleSortChange} handleViewChange={this._handleViewChange}/>
+          {this.state.view === MapView ? <MapView classifieds={this.state.account_classifieds}/> :
           <ul>
             {
               this.state.account_classifieds.map(function(classified){
@@ -60,6 +61,7 @@
               }.bind(this))
             }
           </ul>
+        }
         </div>
       )
     }
