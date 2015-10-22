@@ -17,6 +17,7 @@
         <form className="keyword-form">
           <label htmlFor="keyword"> Keyword </label>
           <input type="text" id="keyword" valueLink={this.linkState('keyword')}/>
+          <SearchButton/>
         </form>
       )
 
