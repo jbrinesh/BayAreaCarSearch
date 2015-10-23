@@ -15,12 +15,21 @@
 
     render: function(){
       return (
-        <form className="search-form" >
-          <label> Millage </label><br/>
-          <label htmlFor="min_odometer"> From </label>
-          <input type="text" id="min_odometer" valueLink={this.linkState('min_odometer')}/>
-          <label htmlFor="max_odometer"> To </label>
-          <input type="text" id="max_odometer" valueLink={this.linkState('max_odometer')}/>
+        <form className="odometer-form clearfix" >
+          <label> Mileage</label>
+          <input
+            type="text"
+            id="min_odometer"
+            placeholder="min"
+            valueLink={this.linkState('min_odometer')}
+          />
+
+          <input
+            type="text"
+            id="max_odometer"
+            placeholder="max"
+            valueLink={this.linkState('max_odometer')}
+          />
         </form>
       )
 

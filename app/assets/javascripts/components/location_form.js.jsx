@@ -15,17 +15,43 @@
 
     render: function(){
       return (
-        <form className="location-form">
-          <label htmlFor="address"> Address </label>
-          <input type="text" id="address" valueLink={this.linkState('address')}/>
-          <label htmlFor="city"> City </label>
-          <input type="text" id="city" valueLink={this.linkState('city')}/>
-          <label htmlFor="state"> State </label>
-          <input type="text" id="state" valueLink={this.linkState('state')}/>
-          <label htmlFor="zip"> Zip Code </label>
-          <input type="text" id="zip" valueLink={this.linkState('zip')}/>
-          <label htmlFor="distance"> Within </label>
-          <input type="text" id="zip" valueLink={this.linkState('distance')}/>
+        <form className="location-form clearfix">
+          <label> Location 
+            <input
+              type="text"
+              id="address"
+              placeholder="Address"
+              valueLink={this.linkState('address')}
+            />
+
+            <input
+              type="text"
+              id="city"
+              placeholder="City"
+              valueLink={this.linkState('city')}
+            />
+
+            <input
+              type="text"
+              id="state"
+              placeholder="State"
+              valueLink={this.linkState('state')}
+            />
+
+            <input
+              type="text"
+              id="zip"
+              placeholder="Zip Code"
+              valueLink={this.linkState('zip')}
+            />
+
+            <input
+              type="text"
+              id="distance"
+              placeholder="Within(miles)"
+              valueLink={this.linkState('distance')}
+            />
+          </label>
         </form>
       )
 

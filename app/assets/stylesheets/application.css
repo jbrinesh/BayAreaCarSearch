@@ -38,16 +38,16 @@ h1, h2, p, strong, em, a, li, ul {
   position: relative;
   left: 225px;
   width: CALC(100% - 225px);
-  min-width: 900px;
+  min-width: 750px;
   top: 100px;
   z-index: 0;
 }
 
 
 .account-index {
-  background-color: #E4E4E9;
   position: relative;
-  top: 60px;
-  width: 1050px;
+  top: 70px;
+  max-width: 1050px;
+  min-width: 750px;
   margin: auto;
 }

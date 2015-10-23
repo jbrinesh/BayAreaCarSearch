@@ -15,12 +15,21 @@
 
     render: function(){
       return (
-        <form className="search-form" >
-          <label> Price </label> <br/>
-          <label htmlFor="min_price"> From </label>
-          <input type="text" id="min_price" valueLink={this.linkState('min_price')}/>
-          <label htmlFor="max_price"> To </label>
-          <input type="text" id="max_price" valueLink={this.linkState('max_price')}/>
+        <form className="price-form clearfix" >
+          <label>Price</label>
+          <input
+            type="text"
+            id="min_price"
+            placeholder="min"
+            valueLink={this.linkState('min_price')}
+          />
+
+          <input
+            type="text"
+            id="max_price"
+            placeholder="max"
+            valueLink={this.linkState('max_price')}
+          />
         </form>
       )
 
