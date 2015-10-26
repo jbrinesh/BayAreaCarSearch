@@ -18,11 +18,7 @@
       }
       return (
         <li className="gallery-index-item" onClick={this.handleClick}>
-          <img
-            src={img_path}
-            width="300"
-            height="225"
-          />
+          <img src={img_path} />
           {string}
         </li>
       )

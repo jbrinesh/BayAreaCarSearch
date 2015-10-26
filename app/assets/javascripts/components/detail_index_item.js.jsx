@@ -17,11 +17,7 @@
       }
       return (
         <li className="detail-index-item" onClick={this.handleClick}>
-          <img
-            src={img_path}
-            width="100"
-            height="75"
-          />
+          <img src={img_path} />
           <table className="detail-index-item-details">
             <tr>
               <td>{this.props.classified.title}</td>

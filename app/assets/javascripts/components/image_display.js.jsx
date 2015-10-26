@@ -42,20 +42,17 @@
         var images = this.props.classified.images.slice(0,9);
       }
       return (
-        <div className="image-display">
+        <div className="image-display clearfix">
           <img
             src={this.state.currentImgPath}
-            width="500"
-            height="375"
+            className="image-main"
           />
-          <ul>
+        <ul className="image-thumbs">
             {
               images.map(function(image, idx){
                 return <img key={idx}
                         id={image.img_path}
                         src={image.img_path}
-                        width="100"
-                        height="75"
                         onClick={this.handleClick}
                         onMouseEnter={this.handleMouseEnter}
                         onMouseLeave={this.handleMouseLeave}
