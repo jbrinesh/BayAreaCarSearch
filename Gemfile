@@ -42,6 +42,7 @@ group :development do
   gem 'pry-rails'
   gem 'mechanize'
   gem 'httparty'
+  gem 'seed_dump'
 end
 
 group :development, :test do
