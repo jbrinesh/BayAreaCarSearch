@@ -39,7 +39,7 @@
       if(this.props.classified.images[0] === undefined ){
         var images = [{img_path: 'http://res.cloudinary.com/dfb4gjjt4/image/upload/v1445016807/no-image_zsxss7.jpg'}];
       } else {
-        var images = this.props.classified.images;
+        var images = this.props.classified.images.slice(0,9);
       }
       return (
         <div className="image-display">
