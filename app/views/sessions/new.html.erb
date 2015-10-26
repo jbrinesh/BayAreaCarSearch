@@ -1,22 +1,26 @@
-<h2>Sign In</h2>
+<section class="container">
+  <div class="login">
+    <h1>Sign In to Bay Area Car Search</h1>
+    <form action="<%= session_url %>" method="post">
+      <%= auth_token_input %>
+      <p><input type="text" name="user[username]" value="" placeholder="Email" class="username"></p>
+      <p><input type="password" name="user[password]" value="" placeholder="Password" class="passwrod"></p>
+      <p class="submit"><input type="submit" name="commit" value="Login"></p>
+    </form>
+  </div>
 
-<form action="<%= session_url %>" method="post">
-  <%= auth_token_input %>
-  <br/>
-  <label>
-    Username
-    <input type="text" name="user[username]" value="">
-  </label>
-  <br/>
-  <br/>
-  <label>
-    Password
-    <input type="password" name="user[password]" value="">
-  </label>
-  <br/>
-  <br/>
+  <div class="login-help">
+    <p>Not Registered? Make an Account <%= link_to("Create an Account", new_user_url) %>.</p>
+  </div>
+</section>
 
-  <input type="submit" value="Sign In">
-</form>
-<br/>
-<%= link_to("Create an Account", new_user_url) %>
+<section class="about">
+  <p class="about-links">
+    <a href="http://www.cssflow.com/snippets/login-form" target="_parent">View Article</a>
+    <a href="http://www.cssflow.com/snippets/login-form.zip" target="_parent">Download</a>
+  </p>
+  <p class="about-author">
+    &copy; 2012&ndash;2013 <a href="http://thibaut.me" target="_blank">Thibaut Courouble</a> -
+    <a href="http://www.cssflow.com/mit-license" target="_blank">MIT License</a><br>
+    Original PSD by <a href="http://www.premiumpixels.com/freebies/clean-simple-login-form-psd/" target="_blank">Orman Clark</a>
+</section>
