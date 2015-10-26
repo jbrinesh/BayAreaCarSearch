@@ -40,6 +40,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'pry-rails'
+  gem 'mechanize'
+  gem 'httparty'
 end
 
 group :development, :test do

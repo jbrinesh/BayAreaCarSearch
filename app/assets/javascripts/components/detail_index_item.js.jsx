@@ -13,17 +13,21 @@
       if (this.props.classified.images[0]){
         img_path = this.props.classified.images[0].img_path;
       } else {
-        img_path = 'no-image_zsxss7.jpg';
+        img_path = 'http://res.cloudinary.com/dfb4gjjt4/image/upload/v1445016807/no-image_zsxss7.jpg';
       }
       return (
         <li className="detail-index-item" onClick={this.handleClick}>
-          <img src={$.cloudinary.url( img_path, { width: 100, height: 60, crop: 'fill' })}></img>
+          <img
+            src={img_path}
+            width="100"
+            height="75"
+          />
           <table className="detail-index-item-details">
             <tr>
               <td>{this.props.classified.title}</td>
               <td>{this.props.classified.odometer + " miles"}</td>
               <td>{this.props.classified.address}</td>
-              <td>{"$" + this.props.classified.price}</td>            
+              <td>{"$" + this.props.classified.price}</td>
             </tr>
           </table>
         </li>

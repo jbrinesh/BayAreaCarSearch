@@ -1,39 +1,78 @@
 .new-classified-container {
     position: relative;
     top: 60px;
-    width: 300px;
+    width: 600px;
     margin: auto;
 }
 
-.new-classified-container input {
-  position: relative;
-  float: right;
-  clear: right;
-  margin: 10px;
-}
-
-.new-classified-container textarea {
-  position: relative;
-  float: right;
-  clear: right;
-  margin: 5px;
-}
-
-.new-classified-container label {
+.new-classified-form input {
   position: relative;
   float: left;
-  clear: left;
-  padding: 15px;
+  clear: right;
+  height: 20px;
+  margin-top: 10px;
+  width: 225px;
 }
 
-.new-classified-container button {
+.new-classified-form textarea {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+.new-classified-form #title {
+  float: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  width: 325px;
+}
+
+.new-classified-form #price {
   float: right;
-  clear: both;
+  margin-right: 45px;
+  margin-top: 10px;
+  width: 135px;
 }
 
-.new-classified-button {
-    position: fixed;
-    top: 15px;
-    right: 100px;
-    z-index: 5;
+.car-info {
+  float: left;
+  clear: left;
+  margin-left: 45px;
+  width: 220px;
+}
+
+
+.location-info {
+  float: right;
+  clear: right;
+  margin-right: 40px;
+  width: 220px;
+}
+
+.location-info input{
+  float: right;
+}
+
+.new-classified-form #submit {
+  position: relative;
+  margin: 10px;
+  margin-left: 45px;
+  width: 500px;
+
+}
+
+.image-upload-button {
+  float: right;
+  clear: right;
+  margin-top: 10px;
+  margin-right: 45px;
+  width: 100px;
+  height: 30px;
+}
+
+.error-display {
+  margin: 45px;
+  margin-bottom: 0px;
 }

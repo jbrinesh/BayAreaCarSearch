@@ -18,9 +18,9 @@ class Api::ClassifiedController < ApplicationController
   def create
     image_paths = params['image_paths']
     car_params = {
-      make: params['make'],
-      model: params['model'],
-      year: params['year']
+      make: params['make'].downcase,
+      model: params['model'].downcase,
+      year: params['year'].downcase
     }
 
     classified_params = {

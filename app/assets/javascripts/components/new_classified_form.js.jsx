@@ -62,7 +62,7 @@
         function(error, result) {
           var paths;
           paths = result.map(function(obj){
-            return obj.path
+            return obj.url
           });
           this.setState({ image_paths: paths });
         }.bind(this));
@@ -72,43 +72,94 @@
       return (
         <div className="new-classified-container clearfix">
           <ErrorDisplay/>
-          <form className="new-classified-form" onSubmit={this.handleSubmit}>
+          <form className="new-classified-form clearfix" onSubmit={this.handleSubmit}>
 
-            <label htmlFor="title">Title</label>
-            <input type="text" id="title" valueLink={this.linkState('title')}/>
+            <input
+              type="text"
+              id="title"
+              placeholder="Title"
+              valueLink={this.linkState('title')}
+            />
 
-            <label htmlFor="body">Body</label>
-            <textarea id="body" valueLink={this.linkState('body')}></textarea>
+            <input
+              type="text"
+              id="price"
+              placeholder="Price"
+              valueLink={this.linkState('price')}
+            />
 
-            <label htmlFor="price">Price</label>
-            <input type="text" id="price" valueLink={this.linkState('price')}/>
+          <textarea
+            id="body"
+            placeholder="Description"
+            valueLink={this.linkState('body')}
+            />
 
-            <label htmlFor="make"> Make </label>
-            <input type="text" id="make" valueLink={this.linkState('make')}/>
+            <div className="car-info clearfix">
+              <input
+                type="text"
+                id="make"
+                placeholder="Make"
+                valueLink={this.linkState('make')}
+              />
 
-            <label htmlFor="model"> Model </label>
-            <input type="text" id="model" valueLink={this.linkState('model')}/>
+              <input
+                type="text"
+                id="model"
+                placeholder="model"
+                valueLink={this.linkState('model')}
+              />
 
-            <label htmlFor="year">Year</label>
-            <input type="text" id="year" valueLink={this.linkState('year')}/>
+              <input
+                type="text"
+                id="year"
+                placeholder="Year"
+                valueLink={this.linkState('year')}
+              />
 
-            <label htmlFor="odometer">Current Millage</label>
-            <input type="text" id="odometer" valueLink={this.linkState('odometer')}/>
+              <input
+                type="text"
+                id="odometer"
+                placeholder="Mileage"
+                valueLink={this.linkState('odometer')}
+              />
+            </div>
 
-            <label htmlFor="address">Address</label>
-            <input type="text" id="address" valueLink={this.linkState('address')}/>
+            <div className="location-info clearfix">
+              <input
+                type="text"
+                id="address"
+                placeholder="Address"
+                valueLink={this.linkState('address')}
+              />
 
-            <label htmlFor="city">City</label>
-            <input type="text" id="city" valueLink={this.linkState('city')}/>
+              <input
+                type="text"
+                id="city"
+                placeholder="City"
+                valueLink={this.linkState('city')}
+              />
 
-            <label htmlFor="state">State</label>
-            <input type="text" id="state" valueLink={this.linkState('state')}/>
+              <input
+                type="text"
+                id="state"
+                placeholder="State"
+                valueLink={this.linkState('state')}
+              />
 
-            <label htmlFor="zip">Zip Code</label>
-            <input type="text" id="zip" valueLink={this.linkState('zip')}/>
+              <input
+                type="text"
+                id="zip"
+                placeholder="Zip"
+                valueLink={this.linkState('zip')}
+              />
+            </div>
 
-            <button className="image-upload-button" onClick={this.launch_widget}>Upload Image</button>
-            <input type="submit" value="Post Ad"/>
+            <button
+              className="image-upload-button"
+              onClick={this.launch_widget}
+            >Upload Image</button>
+
+          <input id="submit" type="submit" value="Post Ad"/>
           </form>
 
         </div>

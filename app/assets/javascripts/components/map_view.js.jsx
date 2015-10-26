@@ -57,14 +57,13 @@
 
     buildHtmlString: function(classified){
       if (classified.images[0] === undefined){
-        var imgPath = 'no-image_zsxss7.jpg';
+        var imgPath = 'http://res.cloudinary.com/dfb4gjjt4/image/upload/v1445016807/no-image_zsxss7.jpg';
       } else {
-        var imgPath = classified.images[0];
+        var imgPath = classified.images[0].img_path;
       }
-      var imgUrl = $.cloudinary.url( imgPath, { width: 200, height: 120, crop: 'fill' });
       var string = classified.title + " ----$ " + classified.price;
       return (
-        "<img src=" + imgUrl + "></img>" + "<br>" +
+        "<img width='200' height='150' src=" + imgPath + "></img>" + "<br>" +
         "<h4>" + string + "</h4>"
       )
     },
