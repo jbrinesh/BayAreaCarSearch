@@ -3,23 +3,41 @@
 
   root.MapView = React.createClass({
     getInitialState: function(){
-      return {markers: []}
+      return {
+        classifieds: []
+      }
     },
 
     componentDidMount: function (){
+      ClassifiedStore.addChangeHandler(this._resetClassifieds);
+      this.setState({classifieds: ClassifiedStore.all()})
+    },
+
+    componentWillUnmount: function (){
+      ClassifiedStore.removeChangeHandler(this._resetClassifieds)
+    },
+
+    componentDidUpdate: function(){
       var center = {lat: 37.780713,  lng: -122.412581};
       var mapOptions = {
         center: center,
-        zoom: 13
+        zoom: 10
       };
       var map = new google.maps.Map(document.getElementById('map'), mapOptions)
-      this.addMarkers(map);
-      this.placeMarkers(map);
+      var markers = this.addMarkers(map);
+      this.placeMarkers(map, markers);
+    },
+
+    _resetClassifieds: function (){
+      this.setState({
+        classifieds: ClassifiedStore.all()
+      })
     },
 
     addMarkers: function (map){
+      var markers = [];
       var that = this;
-      this.props.classifieds.map(function(classified){
+      this.state.classifieds.map(function(classified){
         if(classified.lat && classified.lng){
           var position = {lat: classified.lat, lng: classified.lng}
           var marker = new google.maps.Marker({
@@ -32,7 +50,6 @@
             content: HtmlString
           });
 
-
           marker.addListener('click', function (){
             that.props.clickHandler(classified.id);
           });
@@ -44,13 +61,15 @@
           marker.addListener('mouseout', function (){
             infoWindow.close(map, marker);
           });
-          this.setState({markers: this.state.markers.concat([marker])});
+
+          markers.push(marker);
         }
-      }.bind(this))
+      })
+      return markers;
     },
 
-    placeMarkers: function (map){
-      this.state.markers.forEach(function(marker){
+    placeMarkers: function (map, markers){
+      markers.forEach(function(marker){
         marker.setMap(map);
       })
     },
