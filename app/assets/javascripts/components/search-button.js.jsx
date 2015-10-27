@@ -12,7 +12,7 @@
     render: function(){
       return (
         <button
-          className="search-button"
+          className="search-button btn"
           onClick={this.runSearch}
           >Search
         </button>

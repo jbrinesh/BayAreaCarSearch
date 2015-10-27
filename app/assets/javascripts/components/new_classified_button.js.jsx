@@ -10,7 +10,7 @@
 
     render: function(){
       return (
-        <button className="new-classified-button" onClick={this.props.clickHandler}>Post a Classified</button>
+        <button className="new-classified-button btn" onClick={this.props.clickHandler}>Post a Classified</button>
       )
     }
   })

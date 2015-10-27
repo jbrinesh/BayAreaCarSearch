@@ -91,6 +91,14 @@
             <input
               name="views"
               type="radio"
+              value="GalleryIndexItem"
+              checked={this.state.view === GalleryIndexItem ? true : false}
+              >Gallery View
+            </input>
+
+            <input
+              name="views"
+              type="radio"
               value="ListIndexItem"
               checked={this.state.view === ListIndexItem ? true : false}
               >List View
@@ -102,14 +110,6 @@
               value="DetailIndexItem"
               checked={this.state.view === DetailIndexItem ? true : false}
               >Details View
-            </input>
-
-            <input
-              name="views"
-              type="radio"
-              value="GalleryIndexItem"
-              checked={this.state.view === GalleryIndexItem ? true : false}
-              >Gallery View
             </input>
 
             <input

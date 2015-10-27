@@ -72,7 +72,7 @@
       return (
         <div className="new-classified-container clearfix">
           <ErrorDisplay/>
-          <form className="new-classified-form clearfix" onSubmit={this.handleSubmit}>
+          <form className="new-classified-form clearfix">
 
             <input
               type="text"
@@ -154,12 +154,12 @@
               />
             </div>
 
+            <button id="submit" className="btn" onClick={this.handleSubmit}>Post Ad</button>
             <button
-              className="image-upload-button"
+              className="image-upload-button btn"
               onClick={this.launch_widget}
-            >Upload Image</button>
+            >Upload Images</button>
 
-          <input id="submit" type="submit" value="Post Ad"/>
           </form>
 
         </div>

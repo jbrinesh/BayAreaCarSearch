@@ -1,9 +1,13 @@
 .filter-bar {
   background-color: white;
-  position: relative;
+  position: fixed;
+  top: 100px;
   height: 40px;
+  width:100%;
+  min-width: 900px;
   padding: auto;
-  padding-left: 20px;
+  padding-left: 10px;
+  z-index: 2;
 }
 
 .filter-bar form {
@@ -14,4 +18,8 @@
 .filter-bar input {
   padding: 5px;
   margin-left: 10px;
+}
+
+.sort-selector {
+  margin-left: 5px;
 }

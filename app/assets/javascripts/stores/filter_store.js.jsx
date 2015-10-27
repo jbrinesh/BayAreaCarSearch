@@ -1,7 +1,7 @@
 (function(root) {
   'use strict';
 
-  var _view = ListIndexItem;
+  var _view = GalleryIndexItem;
   var _sorting = ["price", "DEC"];
 
   var updateView = function(view){

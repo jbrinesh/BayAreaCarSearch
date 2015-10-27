@@ -26,8 +26,37 @@ h1, h2, p, strong, em, a, li, ul {
   text-align: inherit;
   color: inherit;
   background: transparent;
+  font-family: Helvetica, Arial, Sans-Serif;
 }
 
+.btn {
+  background: #ebebeb;
+  background-image: -webkit-linear-gradient(top, #ebebeb, #fcfcfc);
+  background-image: -moz-linear-gradient(top, #ebebeb, #fcfcfc);
+  background-image: -ms-linear-gradient(top, #ebebeb, #fcfcfc);
+  background-image: -o-linear-gradient(top, #ebebeb, #fcfcfc);
+  background-image: linear-gradient(to bottom, #ebebeb, #fcfcfc);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #8a8a8a;
+  font-size: 14px;
+  background: #ffffff;
+  padding: 5px 15px 5px 15px;
+  border: solid #9e9b9e 1px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #f5f5f5;
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #e0dde0);
+  background-image: -moz-linear-gradient(top, #f5f5f5, #e0dde0);
+  background-image: -ms-linear-gradient(top, #f5f5f5, #e0dde0);
+  background-image: -o-linear-gradient(top, #f5f5f5, #e0dde0);
+  background-image: linear-gradient(to bottom, #f5f5f5, #e0dde0);
+  text-decoration: none;
+}
 .clearfix:after {
   content: "";
   display: block;
@@ -39,7 +68,7 @@ h1, h2, p, strong, em, a, li, ul {
   left: 225px;
   width: CALC(100% - 225px);
   min-width: 750px;
-  top: 100px;
+  top: 140px;
   z-index: 0;
 }
 

@@ -10,7 +10,7 @@
 
     render: function(){
       return (
-        <button className="account-button" onClick={this.handleClick}>Account</button>
+        <button className="account-button btn" onClick={this.handleClick}>Account</button>
       )
     }
   })

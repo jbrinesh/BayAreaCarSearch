@@ -10,7 +10,7 @@
 
     render: function(){
       return (
-        <button className="sign-out-button" onClick={this.handleClick}>Sign Out</button>
+        <button className="sign-out-button btn" onClick={this.handleClick}>Sign Out</button>
       )
     }
   })

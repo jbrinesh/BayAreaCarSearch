@@ -57,19 +57,16 @@
 
 .new-classified-form #submit {
   position: relative;
+  float: right;
   margin: 10px;
-  margin-left: 45px;
-  width: 500px;
+  margin-right: 45px;
+
 
 }
 
 .image-upload-button {
   float: right;
-  clear: right;
   margin-top: 10px;
-  margin-right: 45px;
-  width: 100px;
-  height: 30px;
 }
 
 .error-display {
