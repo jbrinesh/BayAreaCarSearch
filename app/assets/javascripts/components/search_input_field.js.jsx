@@ -23,6 +23,7 @@
           <button onClick={this.toggle_expanded}>
             { this.state.expanded ? "Less" : "More"}
           </button>
+          <SearchButton/>
         </div>
 
       )
