@@ -30,6 +30,9 @@ gem 'flux-rails-assets'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'cloudinary'
+
+gem 'mechanize'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'rails_12factor', group: :production
@@ -40,7 +43,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'pry-rails'
-  gem 'mechanize'
   gem 'httparty'
   gem 'seed_dump'
 end
