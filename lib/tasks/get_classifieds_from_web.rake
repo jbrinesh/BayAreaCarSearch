@@ -1,20 +1,22 @@
 task :get_classifieds_from_web, [:url] => :environment do |t|
 
-  def get_urls(scraper)
-    root_domain = "http://sfbay.craigslist.org/search/cto?s="
+  def get_urls(scraper, page_num)
+    root_domain = "http://sfbay.craigslist.org/search/cto"
     urls = []
-    1.times do |page_num|
-      domain =  root_domain + (page_num * 100).to_s
-      scraper.get(domain) do |index_page|
-        data = index_page.search('div.content p.row')
-        data.each do |row|
-          match = /href=\"(.*?)\"/.match(row.to_s)
-          url = "http://sfbay.craigslist.org" + match[1].to_s unless match.nil?
-          urls << url
-        end
+    if page_num == 0
+      domain = root_domain
+    else
+      domain = root_domain + "?s=" + (page_num * 100).to_s
+    end
+    scraper.get(domain) do |index_page|
+      data = index_page.search('div.content p.row')
+      data.each do |row|
+        match = /href=\"(.*?)\"/.match(row.to_s)
+        url = "http://sfbay.craigslist.org" + match[1].to_s unless match.nil?
+        urls << url
       end
     end
-    return urls.uniq
+    urls.uniq
   end
 
   def extract_car_data(page)
@@ -27,13 +29,17 @@ task :get_classifieds_from_web, [:url] => :environment do |t|
       year = model_year_arr[0].to_i
       make = model_year_arr[1].downcase
       model = model_year_arr[2].downcase
-      car = Car.find_by({year: year, make: make, model: model})
-      if car.nil? && model_year_arr.length > 3
+      car = Car.where('cars.year = ?', year)
+               .where('cars.make LIKE ?', make)
+               .where('cars.model LIKE ?', model)
+      if car.length > 1 && model_year_arr.length > 3
         model = model_year_arr[2].downcase + " " + model_year_arr[3].downcase
-        car = Car.find_by({year: year, make: make, model: model})
+        car = Car.where('cars.year = ?', year)
+                 .where('cars.make LIKE ?', make)
+                 .where('cars.model LIKE ?', model)
       end
     end
-    return car
+    return car.first unless car.nil?
   end
 
   def extract_title(page)
@@ -48,16 +54,30 @@ task :get_classifieds_from_web, [:url] => :environment do |t|
 
   def extract_body(page)
     body = page.search('section #postingbody').to_s[26...-10]
+    body.gsub!("<br>", " ")
+    body.gsub!(/<a.*?a>/, "contact information removed")
   end
 
   def extract_odometer(page)
-    odometer = /odometer: <b>(\d*)</.match(page.search('p.attrgroup').to_s)
-    odometer = odometer[1].to_i unless odometer.nil?
+    odometer_match = /odometer: <b>(\d*)</.match(page.search('p.attrgroup').to_s)
+    odometer = odometer_match[1].to_i unless odometer_match.nil?
   end
 
   def extract_location(page)
     city =  /\((.*?)\/|\)/.match(page.search('span.postingtitletext').to_s)
-    city = city[1][0...-1] unless city.nil?
+    city = city[1][0...-1] unless city.nil? || city[1].nil?
+  end
+
+  def extract_image_urls(page, classified)
+    image_urls = []
+    data = page.search('div#thumbs a')
+    data.each do |el|
+      url = /href=\"(.*?)\"/.match(el.to_s)
+      image_urls << url[1].to_s
+    end
+    image_urls.each do |img_path|
+      Image.create(classified_id: classified.id, img_path: img_path)
+    end
   end
 
   def parse_location(location)
@@ -88,52 +108,60 @@ task :get_classifieds_from_web, [:url] => :environment do |t|
 
 
   def scrape_page(url, scraper)
-    scraper.get(url) do |page|
-      car = extract_car_data(page)
-      unless car.nil?
-        title = extract_title(page)
-        price = extract_price(page)
-        body = extract_body(page)
-        odometer = extract_odometer(page)
-        location = extract_location(page)
-        unless title.nil? || price.nil? || body.nil? || odometer.nil?
-          classified = Classified.new({
-            car_id: car.id,
-            author_id: 1,
-            status: 'active',
-            title: title,
-            body: body,
-            price: price,
-            odometer: odometer,
-            source: url
-          })
-          unless location.nil?
-            parsed_location = parse_location(location)
-            classified["lat"] = parsed_location["lat"]
-            classified["lng"] = parsed_location["lng"]
-            classified["address"] = parsed_location["address"]
-          end
-          if classified.save
-            image_urls = []
-            data = page.search('div#thumbs a')
-            data.each do |el|
-              url = /href=\"(.*?)\"/.match(el.to_s)
-              image_urls << url[1].to_s
+    begin
+      scraper.get(url) do |page|
+        car = extract_car_data(page)
+        unless car.nil?
+          title = extract_title(page)
+          price = extract_price(page)
+          body = extract_body(page)
+          odometer = extract_odometer(page)
+          location = extract_location(page)
+          unless title.nil? || price.nil? || body.nil? || odometer.nil?
+            classified = Classified.new({
+              car_id: car.id,
+              author_id: 1,
+              status: 'active',
+              title: title,
+              body: body,
+              price: price,
+              odometer: odometer,
+              source: url
+            })
+            unless location.nil?
+              parsed_location = parse_location(location)
+              classified["lat"] = parsed_location["lat"]
+              classified["lng"] = parsed_location["lng"]
+              classified["address"] = parsed_location["address"]
             end
-            image_urls.each do |img_path|
-              Image.create(classified_id: classified.id, img_path: img_path)
+            existing_classified = Classified.find_by_source(url)
+            if existing_classified.nil? && classified.save
+              extract_image_urls(page, classified)
+              return true
             end
           end
         end
       end
+      return false
+    rescue
+      return false
     end
-    return nil
   end
 
   scraper = Mechanize.new
-  scraper.history_added = Proc.new { sleep 1 }
-  all_urls = get_urls(scraper)
-  all_urls.each do |url|
-    classified = scrape_page(url, scraper)
+  scraper.history_added = Proc.new { sleep 0.25 }
+  total_pages_added = 0
+  10.times do |page_num|
+    all_urls = get_urls(scraper, page_num)
+    pages_added = 0
+    all_urls.each do |url|
+      puts(".")
+      if scrape_page(url, scraper)
+        pages_added += 1
+      end
+    end
+    total_pages_added += pages_added
+    break if pages_added < 3
   end
+  puts total_pages_added.to_s + " " + "new classifieds where add to the database"
 end
