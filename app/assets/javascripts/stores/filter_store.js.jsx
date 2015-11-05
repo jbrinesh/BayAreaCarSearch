@@ -2,7 +2,7 @@
   'use strict';
 
   var _view = GalleryIndexItem;
-  var _sorting = ["price", "DEC"];
+  var _sorting = ["created_at", "DEC"];
 
   var updateView = function(view){
     _view = view;

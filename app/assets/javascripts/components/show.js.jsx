@@ -13,6 +13,7 @@
             <li>Year: {classified.year}</li>
             <li>Millage: {classified.odometer}</li>
             <li>Location: {classified.address}</li>
+            <li>Posted: {classified.created_at.slice(0,10)}</li>
             <li>Source:</li>
             <li><a href={classified.source}>{classified.source}</a></li>
           </ul>
