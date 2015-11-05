@@ -17,9 +17,13 @@
         img_path = 'http://res.cloudinary.com/dfb4gjjt4/image/upload/v1445016807/no-image_zsxss7.jpg';
       }
       return (
-        <li className="gallery-index-item" onClick={this.handleClick}>
-          <img src={img_path} />
-          {string}
+        <li className="gallery-index-item clearfix" onClick={this.handleClick}>
+          <div className="gallery-index-item-text-container">
+            {string}
+          </div>
+          <div className="gallery-index-item-image-container">
+            <img src={img_path} />
+          </div>
         </li>
       )
     }

@@ -1,13 +1,8 @@
 task :get_classifieds_from_web, [:url] => :environment do |t|
 
   def get_urls(scraper, page_num)
-    root_domain = "http://sfbay.craigslist.org/search/cto"
+    domain = "http://sfbay.craigslist.org/search/cto?s=#{page_num * 100}&hasPic=1"
     urls = []
-    if page_num == 0
-      domain = root_domain
-    else
-      domain = root_domain + "?s=" + (page_num * 100).to_s
-    end
     scraper.get(domain) do |index_page|
       data = index_page.search('div.content p.row')
       data.each do |row|
@@ -151,17 +146,20 @@ task :get_classifieds_from_web, [:url] => :environment do |t|
   scraper = Mechanize.new
   scraper.history_added = Proc.new { sleep 0.25 }
   total_pages_added = 0
+  total_pages = 0
   10.times do |page_num|
-    all_urls = get_urls(scraper, page_num)
     pages_added = 0
+    all_urls = get_urls(scraper, page_num)
     all_urls.each do |url|
-      puts(".")
+      total_pages += 1
+      puts "."
       if scrape_page(url, scraper)
+        puts "+"
         pages_added += 1
       end
     end
-    total_pages_added += pages_added
     break if pages_added < 3
+    total_pages_added += pages_added
   end
-  puts total_pages_added.to_s + " " + "new classifieds where add to the database"
+  puts total_pages_added.to_s + " " + "new classifieds, out of " + total_pages.to_s + " were add to the database successfully"
 end
