@@ -20,7 +20,7 @@
           <PriceForm/>
           { this.state.expanded ? <OdometerForm/> : null}
           { this.state.expanded ? <LocationForm/> : null}
-          <button onClick={this.toggle_expanded}>
+          <button className="btn" onClick={this.toggle_expanded}>
             { this.state.expanded ? "Less" : "More"}
           </button>
           <SearchButton/>

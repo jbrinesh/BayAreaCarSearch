@@ -5,21 +5,33 @@
     position: relative;
     margin: 10px;
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     list-style-type: none;
     padding: 5px;
 }
 
 .gallery-index-item-image-container {
   position: absolute;
-  margin-top: 10px;
-  border-width: 1px;
-  border: solid;
+  border-width: thin;
+  border-style: solid;
+  background-color: #ECEAEA;
   width: 300px;
   height: 225px;
 }
 
 .gallery-index-item-image-container img{
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   max-width: 300px;
   max-height: 225px;
+}
+
+.gallery-index-item-text-container {
+  position: absolute;
+  top: 240px;
 }

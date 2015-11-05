@@ -8,8 +8,8 @@
           <h2>{classified.title} ---- $ {classified.price}</h2>
           <ImageDisplay classified={classified}/>
           <ul className="show-details">
-            <li>Make: {classified.make.capitalize}</li>
-            <li>Model: {classified.model.capitalize}</li>
+            <li>Make: {classified.make}</li>
+            <li>Model: {classified.model}</li>
             <li>Year: {classified.year}</li>
             <li>Millage: {classified.odometer}</li>
             <li>Location: {classified.address}</li>
