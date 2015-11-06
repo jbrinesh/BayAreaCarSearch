@@ -147,7 +147,7 @@ task :get_classifieds_from_web, [:url] => :environment do |t|
   scraper.history_added = Proc.new { sleep 0.25 }
   total_pages_added = 0
   total_pages = 0
-  10.times do |page_num|
+  25.times do |page_num|
     pages_added = 0
     all_urls = get_urls(scraper, page_num)
     all_urls.each do |url|

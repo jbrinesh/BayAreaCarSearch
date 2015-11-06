@@ -5,9 +5,11 @@
 
     getInitialState: function (){
       return {
-        classifieds: ClassifiedStore.all(),
+        classifieds: ClassifiedStore.page(1),
         view: FilterStore.view(),
-        sorting: FilterStore.sorting()
+        sorting: FilterStore.sorting(),
+        currentPage: 1,
+        numOfPages: ClassifiedStore.numOfPages()
       };
     },
 
@@ -23,9 +25,20 @@
       FilterStore.removeViewChangeHandler(this._updateView);
       FilterStore.removeSortingChangeHandler(this._updateSorting);
     },
+    //
+    // componentDidUpdate() {
+    //   this.getDOMNode().scrollTop = 0;
+    // },
 
     _classifiedsChanged: function (){
-      this.setState({classifieds: ClassifiedStore.all()});
+      this.setState({
+        classifieds: ClassifiedStore.page(1),
+        view: FilterStore.view(),
+        sorting: FilterStore.sorting(),
+        currentPage: 1,
+        numOfPages: ClassifiedStore.numOfPages()
+      });
+      this.getDOMNode().scrollTop = 0;
     },
 
     _updateView: function(){
@@ -33,33 +46,46 @@
     },
 
     _updateSorting: function(){
-      this.setState({sorting: FilterStore.sorting()})
+      this.setState({
+        sorting: FilterStore.sorting(),
+        classifieds: ClassifiedStore.page(this.state.currentPage)
+      })
     },
 
-    _sort: function(classifieds){
-      return classifieds.sort(this._comparitor(FilterStore.sorting()))
+    _nextPage: function(){
+      var currentPage = this.state.currentPage;
+      if(currentPage < this.state.numOfPages){
+        this.setState({
+          classifieds: ClassifiedStore.page(currentPage + 1),
+          currentPage: currentPage + 1
+        })
+      }
     },
 
-    _comparitor: function(sorting){
-     return (function(a, b){
-        if(a[sorting[0]] < b[sorting[0]]){
-          return (sorting[1] === "DEC" ? 1 : -1);
-        } else if(a[sorting[0]] > b[sorting[0]]){
-          return (sorting[1] === "DEC" ? -1 : 1);
-        } else {
-          return 0;
-        }
-      });
+    _prevPage: function(){
+      var currentPage = this.state.currentPage;
+      if(currentPage > 1){
+        this.setState({
+          classifieds: ClassifiedStore.page(currentPage - 1),
+          currentPage: currentPage - 1
+        })
+      }
     },
 
     render: function (){
       return (
         <div className="list-index clearfix">
           <FilterBar/>
-          {this.state.view === MapView ? <MapView clickHandler={this.props.clickHandler} classifieds={this.state.classifieds}/> :
+          <PageButtons
+            handleNext={this._nextPage}
+            handlePrev={this._prevPage}
+            numOfPages={this.state.numOfPages}
+            currentPage={this.state.currentPage}
+          />
+        {this.state.view === MapView ? <MapView clickHandler={this.props.clickHandler} currentPage={this.state.currentPage}/> :
           <ul>
             {
-              this._sort(this.state.classifieds).map(function(classified){
+              this.state.classifieds.map(function(classified){
                 return React.createElement(this.state.view,
                         {key: classified.id,
                         classified: classified,

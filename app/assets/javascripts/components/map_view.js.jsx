@@ -10,7 +10,7 @@
 
     componentDidMount: function (){
       ClassifiedStore.addChangeHandler(this._resetClassifieds);
-      this.setState({classifieds: ClassifiedStore.all()})
+      this.setState({classifieds: ClassifiedStore.page(this.props.currentPage)});
     },
 
     componentWillUnmount: function (){
@@ -28,9 +28,13 @@
       this.placeMarkers(map, markers);
     },
 
+    componentWillReceiveProps: function(nextProps){
+      this.setState({classifieds: ClassifiedStore.page(nextProps.currentPage)})
+    },
+
     _resetClassifieds: function (){
       this.setState({
-        classifieds: ClassifiedStore.all()
+        classifieds: ClassifiedStore.page(this.props.currentPage)
       })
     },
 
@@ -82,8 +86,10 @@
       }
       var string = classified.title + " ----$ " + classified.price;
       return (
-        "<img width='200' height='150' src=" + imgPath + "></img>" + "<br>" +
-        "<h4>" + string + "</h4>"
+        "<div style='width:200px;height:175px;' >" +
+        "<img style='max-height:135px;max-width:180px;' src=" + imgPath + "></img>" + "<br>" +
+        "<text>" + string + "<text>" +
+        "</div>"
       )
     },
 

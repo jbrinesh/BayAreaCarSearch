@@ -18,3 +18,14 @@
 .list-index-item:nth-child(odd){
   background-color: #E1DDDD;
 }
+
+.page-buttons-container{
+  position: fixed;
+  top: 107px;
+  left: 925px;
+  z-index: 3;
+}
+
+.prev-button {
+  margin-right: 5px;
+}

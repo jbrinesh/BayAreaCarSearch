@@ -10,12 +10,36 @@
 
   var resetAccountClassifieds = function(classifieds){
     _account_classifieds = classifieds
-  }
+  };
 
   root.ClassifiedStore = $.extend ({}, EventEmitter.prototype, {
 
     all: function(){
       return _classifieds.slice(0);
+    },
+
+    page: function(page_num){
+      return this.sort(_classifieds).slice((page_num - 1) * 100, page_num * 100)
+    },
+
+    numOfPages: function(){
+      return Math.ceil(_classifieds.length/100)
+    },
+
+    comparitor: function(sorting){
+     return (function(a, b){
+        if(a[sorting[0]] < b[sorting[0]]){
+          return (sorting[1] === "DEC" ? 1 : -1);
+        } else if(a[sorting[0]] > b[sorting[0]]){
+          return (sorting[1] === "DEC" ? -1 : 1);
+        } else {
+          return 0;
+        }
+      })
+    },
+
+    sort: function(classifieds){
+      return classifieds.sort(this.comparitor(FilterStore.sorting()))
     },
 
     account_all: function(){
