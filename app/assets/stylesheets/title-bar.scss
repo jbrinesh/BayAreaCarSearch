@@ -19,16 +19,15 @@
 }
 
 .sign-out-button {
-    position: relative;
-    float: right;
-    margin: 15px;
-    margin-left: 0px;
+    position: fixed;
+    top: 15px;
+    right: 20px;
     z-index: 5;
 }
 
 .new-classified-button {
-    position: relative;
-    float: right;
-    margin: 15px;
+    position: fixed;
+    top: 15px;
+    right: 130px;
     z-index: 5;
 }

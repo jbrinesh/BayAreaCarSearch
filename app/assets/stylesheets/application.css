@@ -75,8 +75,11 @@ h1, h2, p, strong, em, a, li, ul {
 
 .account-index {
   position: relative;
-  top: 140px;
-  width: CALC(100% - 225px);
-  min-width: 750px;
-  margin: auto;
+  top: 100px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.account-index .filter-bar {
+  top: 60px;
 }
