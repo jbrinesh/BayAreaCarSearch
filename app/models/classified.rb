@@ -70,10 +70,8 @@ class Classified < ActiveRecord::Base
 
       query = query.where("cars.year BETWEEN ? AND ?", min_year, max_year)
     end
-    debugger
-  
 
-    return query.limit(params_hash["limit"].to_i)
+    return query.order(created_at: :desc).limit(params_hash["limit"].to_i)
   end
 
   def self.find_by_author_id(author_id)

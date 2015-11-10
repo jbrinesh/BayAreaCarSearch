@@ -17,7 +17,6 @@
       ClassifiedStore.addChangeHandler(this._classifiedsChanged);
       FilterStore.addViewChangeHandler(this._updateView);
       FilterStore.addSortingChangeHandler(this._updateSorting);
-      QueryStore.run();
     },
 
     componentWillUnmount: function(){
