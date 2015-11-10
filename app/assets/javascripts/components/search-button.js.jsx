@@ -6,7 +6,7 @@
 
     runSearch: function(e){
       e.preventDefault();
-      QueryStore.run();
+      QueryStore.run(100);
     },
 
     render: function(){

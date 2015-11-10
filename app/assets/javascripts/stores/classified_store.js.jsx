@@ -70,6 +70,9 @@
         case ClassifiedConstants.RECIVED_CLASSIFIEDS:
         resetClassifieds(payload.classifieds);
         ClassifiedStore.emit(ClassifiedConstants.CLASSIFIEDS_CHANGED);
+        if (payload.classifieds.length === 100){
+          QueryStore.run(10000);
+        }
         break;
 
         case ClassifiedConstants.RECIVED_ACCOUNT_CLASSIFIEDS:

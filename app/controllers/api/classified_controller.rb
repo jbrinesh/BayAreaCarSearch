@@ -1,6 +1,7 @@
 class Api::ClassifiedController < ApplicationController
 
   def index
+    debugger
     @classifieds = Classified.find_by_params(params)
     render 'index'
   end

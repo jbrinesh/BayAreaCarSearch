@@ -2,6 +2,7 @@
   'use strict';
 
   var _query_params = {
+    limit: 100,
     keyword: {
       keyword: ""
     },
@@ -50,12 +51,15 @@
 
   root.QueryStore = $.extend({}, EventEmitter.prototype, {
 
-    run: function(){
+    run: function(limit){
       var params = QueryStore.all();
       var callback = function(response){
         var parsed_location_params = response;
         parsed_location_params["distance"] = params["location_params"]["distance"];
         params["location_params"] = parsed_location_params;
+        if (limit){
+          params["limit"] = limit;
+        }
         ApiUtil.fetch(params);
       };
       ApiUtil.parseLocationParams(params["location_params"], callback);
