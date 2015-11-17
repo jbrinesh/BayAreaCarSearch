@@ -1,6 +1,6 @@
 # BayAreaCarSearch
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
+[Live link][heroku]
 
 [heroku]: www.bayareacarsearch.com
 
@@ -21,6 +21,7 @@ site is build on a Rails back-end and React.js and Flux front-end.
 - [X] CSS Styling
 - [X] Real world data scraped from Craigslist
 - [X] Search Optimization
+- [ ] Page Caching 
 
 <!-- ## Design Docs
 * [View Wireframes][view]
