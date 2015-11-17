@@ -71,7 +71,7 @@
         resetClassifieds(payload.classifieds);
         ClassifiedStore.emit(ClassifiedConstants.CLASSIFIEDS_CHANGED);
         if (payload.classifieds.length === 100){
-          QueryStore.run(10000);
+          QueryStore.run(2500);
         }
         break;
 

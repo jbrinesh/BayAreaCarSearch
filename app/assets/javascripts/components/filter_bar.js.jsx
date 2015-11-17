@@ -53,15 +53,15 @@
                   >Posted: Newest
                 </option>
 
-                <option
-                  value="created_at, ACE"
-                  selected={
-                    this.state.sorting[0] === "created_at" &&
-                    this.state.sorting[1] ===  "ACE" ?
-                    true : false
-                  }
-                  >Posted: Oldest
-                </option>
+                // <option
+                //   value="created_at, ACE"
+                //   selected={
+                //     this.state.sorting[0] === "created_at" &&
+                //     this.state.sorting[1] ===  "ACE" ?
+                //     true : false
+                //   }
+                //   >Posted: Oldest
+                // </option>
 
                 <option
                   value="price, DEC"
