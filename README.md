@@ -2,7 +2,7 @@
 
 [Live link][heroku]
 
-[heroku]: www.bayareacarsearch.com
+[heroku]: http://www.bayareacarsearch.com
 
 ## Overview
 
@@ -21,7 +21,7 @@ site is build on a Rails back-end and React.js and Flux front-end.
 - [X] CSS Styling
 - [X] Real world data scraped from Craigslist
 - [X] Search Optimization
-- [ ] Page Caching 
+- [ ] Page Caching
 
 <!-- ## Design Docs
 * [View Wireframes][view]
