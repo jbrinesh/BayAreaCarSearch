@@ -49,6 +49,8 @@ what view (i.e. list, gallery ...) the user sees. Finally the error store keeps
 track of any error messages send down from the server so appropriate component can
 display them to the user.
 
+https://github.com/jbrinesh/BayAreaCarSearch/blob/master/app/assets/javascripts/stores/classified_store.js.jsx
+
 In the interest of having a more responsive user experience. I decided to handle
 all sorting without needing to make a request to the server. When a user selects
 a different sorting option. The filter bar keeps track of the current sorting in
@@ -66,6 +68,8 @@ made. In order to maintain a secure site, user passwords are not stored in the
 database, instead a hashing of the password is stored using BCrypt. Then when a
 user signs in, they are issued a random 16 digit base 64 number as a session
 token to be stored in the cookies.
+
+https://github.com/jbrinesh/BayAreaCarSearch/blob/master/app/models/user.rb
 
 ### Database Schema
 
@@ -97,7 +101,9 @@ first 100 classifieds are loaded into the DOM, the user sees no difference betwe
 loading all the classifieds in two steps instead of one expect it loads much
 faster.
 
-The final issue of scaling i wanted to address is, my server send as many matching
+https://github.com/jbrinesh/BayAreaCarSearch/blob/master/app/models/classified.rb
+
+The final issue of scaling I wanted to address is, my server send as many matching
 classifieds as it can down to the client. While my database is small, this was
 not a problem, however if I had a database with 100,000 classifieds, the
 client side would have to store all those classifieds on the initial load. This
@@ -117,6 +123,8 @@ Regex to find key patterns and pull out the required information to build a clas
 in the sites database. Once the scrapper finds too many ads it has seen before it
 stops its collection for the night.
 
+https://github.com/jbrinesh/BayAreaCarSearch/blob/master/lib/tasks/get_classifieds_from_web.rake
+
 ### Integrated 3rd party API's, Google Maps and Cloudinary
 
 The first thing that was required was having some way of turning Addresses into
@@ -125,6 +133,8 @@ used Google's Geocoder API to look up the Latitude and Longitude of an optional
 address a user can provide when creating a new classified. Once I had the
 coordinates I store the information along with the plain text of the address in
 the classifieds table.
+
+https://github.com/jbrinesh/BayAreaCarSearch/blob/master/app/assets/javascripts/util/api_util.js#L22
 
 Once Classifieds had GPS coordinates associated with them it was easy to build
 another component to be added to the show page that is just a static google map
@@ -139,6 +149,8 @@ click event, the user is routed to the show page using the react router. If the
 Map View is selected in the filter bar. Instead of mounting the search results
 index and the respective list items, the browser just mounts the Map View
 component.
+
+https://github.com/jbrinesh/BayAreaCarSearch/blob/master/app/assets/javascripts/components/map_view.js.jsx
 
 In order to implement image support, a new table in our
 database is required to keep track of the source of each image. A foreign key
